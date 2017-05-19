@@ -1,0 +1,2551 @@
+Loading plugins phase: Elapsed time ==> 0s.374ms
+<CYPRESSTAG name="CyDsfit arguments...">
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\Platform Bootstrap.cyprj -d CY8C5888LTI-LP097 -s C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+<CYPRESSTAG name="Design elaboration results...">
+</CYPRESSTAG>
+Elaboration phase: Elapsed time ==> 1s.359ms
+<CYPRESSTAG name="HDL generation results...">
+</CYPRESSTAG>
+HDL generation phase: Elapsed time ==> 0s.062ms
+<CYPRESSTAG name="Synthesis results...">
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp Verilog Synthesis Compiler: Version 6.3 IR 41
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  Platform Bootstrap.v
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\Platform Bootstrap.cyprj -dcpsoc3 Platform Bootstrap.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  Platform Bootstrap.v
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\Platform Bootstrap.cyprj -dcpsoc3 Platform Bootstrap.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  Platform Bootstrap.v
+Program  :   vlogfe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\Platform Bootstrap.cyprj -dcpsoc3 -verilog Platform Bootstrap.v
+======================================================================
+
+vlogfe V6.3 IR 41:  Verilog parser
+Fri Apr 28 08:59:38 2017
+
+
+======================================================================
+Compiling:  Platform Bootstrap.v
+Program  :   vpp
+Options  :    -yv2 -q10 Platform Bootstrap.v
+======================================================================
+
+vpp V6.3 IR 41:  Verilog Pre-Processor
+Fri Apr 28 08:59:38 2017
+
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0\and_v1_0.v'
+
+vpp:  No errors.
+
+Library 'work' => directory 'lcpsoc3'
+General_symbol_table
+General_symbol_table
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Using control file 'Platform Bootstrap.ctl'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1113, col 55):  Note: Substituting module 'add_vv_vv' for '+'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1122, col 48):  Note: Substituting module 'cmp_vv_vv' for '<'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1122, col 77):  Note: Substituting module 'cmp_vv_vv' for '<'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1389, col 59):  Note: Substituting module 'cmp_vv_vv' for '<'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1424, col 61):  Note: Substituting module 'cmp_vv_vv' for '/='.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1547, col 106):  Note: Substituting module 'cmp_vv_vv' for '<'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1603, col 68):  Note: Substituting module 'cmp_vv_vv' for '<'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v (line 1604, col 68):  Note: Substituting module 'cmp_vv_vv' for '<'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+
+vlogfe:  No errors.
+
+
+======================================================================
+Compiling:  Platform Bootstrap.v
+Program  :   tovif
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\Platform Bootstrap.cyprj -dcpsoc3 -verilog Platform Bootstrap.v
+======================================================================
+
+tovif V6.3 IR 41:  High-level synthesis
+Fri Apr 28 08:59:38 2017
+
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\codegentemp\Platform Bootstrap.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\codegentemp\Platform Bootstrap.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0\and_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mcompare.vif'.
+
+tovif:  No errors.
+
+
+======================================================================
+Compiling:  Platform Bootstrap.v
+Program  :   topld
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\Platform Bootstrap.cyprj -dcpsoc3 -verilog Platform Bootstrap.v
+======================================================================
+
+topld V6.3 IR 41:  Synthesis and optimization
+Fri Apr 28 08:59:38 2017
+
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\codegentemp\Platform Bootstrap.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\codegentemp\Platform Bootstrap.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_UART_v2_50\B_UART_v2_50.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\and_v1_0\and_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\mcompare.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+    User names
+	\FT232_UART:BUART:reset_sr\
+	Net_25
+	\FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:b_1\
+	\FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:b_0\
+	\FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:gta_0\
+	\FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:gta_0\
+	Net_22
+	\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_0\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:albi_1\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:agbi_1\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:lt_0\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:gt_0\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:lti_0\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:gti_0\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:albi_0\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:agbi_0\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:xeq\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:xlt\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:xlte\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:xgt\
+	\FT232_UART:BUART:sRX:MODULE_5:g1:a0:xgte\
+	\FT232_UART:BUART:sRX:MODULE_5:lt\
+	\FT232_UART:BUART:sRX:MODULE_5:eq\
+	\FT232_UART:BUART:sRX:MODULE_5:gt\
+	\FT232_UART:BUART:sRX:MODULE_5:gte\
+	\FT232_UART:BUART:sRX:MODULE_5:lte\
+
+
+Deleted 26 User equations/components.
+Deleted 0 Synthesized equations/components.
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+Aliasing one to tmpOE__Status_LED_net_0
+Aliasing tmpOE__FT232_Detect_net_0 to tmpOE__Status_LED_net_0
+Aliasing Net_19 to zero
+Aliasing \FT232_UART:BUART:tx_hd_send_break\ to zero
+Aliasing \FT232_UART:BUART:HalfDuplexSend\ to zero
+Aliasing \FT232_UART:BUART:FinalParityType_1\ to zero
+Aliasing \FT232_UART:BUART:FinalParityType_0\ to zero
+Aliasing \FT232_UART:BUART:FinalAddrMode_2\ to zero
+Aliasing \FT232_UART:BUART:FinalAddrMode_1\ to zero
+Aliasing \FT232_UART:BUART:FinalAddrMode_0\ to zero
+Aliasing \FT232_UART:BUART:tx_ctrl_mark\ to zero
+Aliasing \FT232_UART:BUART:tx_status_6\ to zero
+Aliasing \FT232_UART:BUART:tx_status_5\ to zero
+Aliasing \FT232_UART:BUART:tx_status_4\ to zero
+Aliasing \FT232_UART:BUART:rx_count7_bit8_wire\ to zero
+Aliasing \FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ to tmpOE__Status_LED_net_0
+Aliasing \FT232_UART:BUART:sRX:s23Poll:MODIN2_1\ to \FT232_UART:BUART:sRX:s23Poll:MODIN1_1\
+Aliasing \FT232_UART:BUART:sRX:s23Poll:MODIN2_0\ to \FT232_UART:BUART:sRX:s23Poll:MODIN1_0\
+Aliasing \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_1\ to zero
+Aliasing \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_0\ to tmpOE__Status_LED_net_0
+Aliasing \FT232_UART:BUART:sRX:s23Poll:MODIN3_1\ to \FT232_UART:BUART:sRX:s23Poll:MODIN1_1\
+Aliasing \FT232_UART:BUART:sRX:s23Poll:MODIN3_0\ to \FT232_UART:BUART:sRX:s23Poll:MODIN1_0\
+Aliasing \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_1\ to tmpOE__Status_LED_net_0
+Aliasing \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_0\ to zero
+Aliasing \FT232_UART:BUART:rx_status_1\ to zero
+Aliasing \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newa_6\ to zero
+Aliasing \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newa_5\ to zero
+Aliasing \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newa_4\ to zero
+Aliasing \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_6\ to zero
+Aliasing \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_5\ to zero
+Aliasing \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_4\ to zero
+Aliasing \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_3\ to zero
+Aliasing \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_2\ to tmpOE__Status_LED_net_0
+Aliasing \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_1\ to tmpOE__Status_LED_net_0
+Aliasing \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_0\ to zero
+Aliasing \FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:aeqb_0\ to tmpOE__Status_LED_net_0
+Aliasing tmpOE__FT232_Rx_net_0 to tmpOE__Status_LED_net_0
+Aliasing tmpOE__FT232_Tx_net_0 to tmpOE__Status_LED_net_0
+Aliasing Net_23D to zero
+Aliasing \FT232_UART:BUART:rx_break_status\\D\ to zero
+Removing Lhs of wire one[6] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire tmpOE__FT232_Detect_net_0[9] = tmpOE__Status_LED_net_0[1]
+Removing Rhs of wire Net_26[17] = \FT232_UART:BUART:rx_interrupt_out\[37]
+Removing Lhs of wire \FT232_UART:Net_61\[18] = \FT232_UART:Net_9\[15]
+Removing Lhs of wire Net_19[22] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:tx_hd_send_break\[23] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:HalfDuplexSend\[24] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:FinalParityType_1\[25] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:FinalParityType_0\[26] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:FinalAddrMode_2\[27] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:FinalAddrMode_1\[28] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:FinalAddrMode_0\[29] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:tx_ctrl_mark\[30] = zero[2]
+Removing Rhs of wire \FT232_UART:BUART:tx_bitclk_enable_pre\[41] = \FT232_UART:BUART:tx_bitclk_dp\[77]
+Removing Lhs of wire \FT232_UART:BUART:tx_counter_tc\[87] = \FT232_UART:BUART:tx_counter_dp\[78]
+Removing Lhs of wire \FT232_UART:BUART:tx_status_6\[88] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:tx_status_5\[89] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:tx_status_4\[90] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:tx_status_1\[92] = \FT232_UART:BUART:tx_fifo_empty\[55]
+Removing Lhs of wire \FT232_UART:BUART:tx_status_3\[94] = \FT232_UART:BUART:tx_fifo_notfull\[54]
+Removing Lhs of wire \FT232_UART:BUART:rx_count7_bit8_wire\[154] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:add_vv_vv_MODGEN_1_1\[162] = \FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_1\[173]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:add_vv_vv_MODGEN_1_0\[164] = \FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_0\[174]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_2\[165] = \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_0\[190]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_3\[166] = \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_0\[204]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:a_1\[167] = \FT232_UART:BUART:sRX:s23Poll:MODIN1_1\[168]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODIN1_1\[168] = \FT232_UART:BUART:pollcount_1\[160]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:a_0\[169] = \FT232_UART:BUART:sRX:s23Poll:MODIN1_0\[170]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODIN1_0\[170] = \FT232_UART:BUART:pollcount_0\[163]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[176] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[177] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:newa_1\[178] = \FT232_UART:BUART:pollcount_1\[160]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODIN2_1\[179] = \FT232_UART:BUART:pollcount_1\[160]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:newa_0\[180] = \FT232_UART:BUART:pollcount_0\[163]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODIN2_0\[181] = \FT232_UART:BUART:pollcount_0\[163]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_1\[182] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:newb_0\[183] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:dataa_1\[184] = \FT232_UART:BUART:pollcount_1\[160]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:dataa_0\[185] = \FT232_UART:BUART:pollcount_0\[163]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:datab_1\[186] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:datab_0\[187] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:newa_1\[192] = \FT232_UART:BUART:pollcount_1\[160]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODIN3_1\[193] = \FT232_UART:BUART:pollcount_1\[160]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:newa_0\[194] = \FT232_UART:BUART:pollcount_0\[163]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODIN3_0\[195] = \FT232_UART:BUART:pollcount_0\[163]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_1\[196] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_0\[197] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:dataa_1\[198] = \FT232_UART:BUART:pollcount_1\[160]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:dataa_0\[199] = \FT232_UART:BUART:pollcount_0\[163]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:datab_1\[200] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:datab_0\[201] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:rx_status_1\[208] = zero[2]
+Removing Rhs of wire \FT232_UART:BUART:rx_status_2\[209] = \FT232_UART:BUART:rx_parity_error_status\[210]
+Removing Rhs of wire \FT232_UART:BUART:rx_status_3\[211] = \FT232_UART:BUART:rx_stop_bit_error\[212]
+Removing Lhs of wire \FT232_UART:BUART:sRX:cmp_vv_vv_MODGEN_4\[222] = \FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_0\[271]
+Removing Lhs of wire \FT232_UART:BUART:sRX:cmp_vv_vv_MODGEN_5\[226] = \FT232_UART:BUART:sRX:MODULE_5:g1:a0:xneq\[293]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newa_6\[227] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newa_5\[228] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newa_4\[229] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newa_3\[230] = \FT232_UART:BUART:sRX:MODIN4_6\[231]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODIN4_6\[231] = \FT232_UART:BUART:rx_count_6\[149]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newa_2\[232] = \FT232_UART:BUART:sRX:MODIN4_5\[233]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODIN4_5\[233] = \FT232_UART:BUART:rx_count_5\[150]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newa_1\[234] = \FT232_UART:BUART:sRX:MODIN4_4\[235]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODIN4_4\[235] = \FT232_UART:BUART:rx_count_4\[151]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newa_0\[236] = \FT232_UART:BUART:sRX:MODIN4_3\[237]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODIN4_3\[237] = \FT232_UART:BUART:rx_count_3\[152]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_6\[238] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_5\[239] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_4\[240] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_3\[241] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_2\[242] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_1\[243] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:newb_0\[244] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:dataa_6\[245] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:dataa_5\[246] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:dataa_4\[247] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:dataa_3\[248] = \FT232_UART:BUART:rx_count_6\[149]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:dataa_2\[249] = \FT232_UART:BUART:rx_count_5\[150]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:dataa_1\[250] = \FT232_UART:BUART:rx_count_4\[151]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:dataa_0\[251] = \FT232_UART:BUART:rx_count_3\[152]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:datab_6\[252] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:datab_5\[253] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:datab_4\[254] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:datab_3\[255] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:datab_2\[256] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:datab_1\[257] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_4:g2:a0:datab_0\[258] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_5:g1:a0:newa_0\[273] = \FT232_UART:BUART:rx_postpoll\[108]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_5:g1:a0:newb_0\[274] = \FT232_UART:BUART:rx_parity_bit\[225]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_5:g1:a0:dataa_0\[275] = \FT232_UART:BUART:rx_postpoll\[108]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_5:g1:a0:datab_0\[276] = \FT232_UART:BUART:rx_parity_bit\[225]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:a_0\[277] = \FT232_UART:BUART:rx_postpoll\[108]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:b_0\[278] = \FT232_UART:BUART:rx_parity_bit\[225]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:aeqb_0\[280] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:eq_0\[281] = \FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\[279]
+Removing Lhs of wire \FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:eqi_0\[282] = \FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\[279]
+Removing Lhs of wire tmpOE__FT232_Rx_net_0[304] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire tmpOE__FT232_Tx_net_0[310] = tmpOE__Status_LED_net_0[1]
+Removing Lhs of wire \FT232_UART:BUART:reset_reg\\D\[316] = zero[2]
+Removing Lhs of wire Net_23D[321] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:rx_bitclk\\D\[331] = \FT232_UART:BUART:rx_bitclk_pre\[143]
+Removing Lhs of wire \FT232_UART:BUART:rx_parity_error_pre\\D\[340] = \FT232_UART:BUART:rx_parity_error_pre\[220]
+Removing Lhs of wire \FT232_UART:BUART:rx_break_status\\D\[341] = zero[2]
+
+------------------------------------------------------
+Aliased 0 equations, 104 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+Substituting virtuals - pass 1:
+
+Note:  Expanding virtual equation for 'tmpOE__Status_LED_net_0' (cost = 0):
+tmpOE__Status_LED_net_0 <=  ('1') ;
+
+Note:  Expanding virtual equation for 'zero' (cost = 0):
+zero <=  ('0') ;
+
+Note:  Expanding virtual equation for 'Net_31' (cost = 0):
+Net_31 <= (not \FT232_UART:BUART:txn\);
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:rx_addressmatch\' (cost = 0):
+\FT232_UART:BUART:rx_addressmatch\ <= (\FT232_UART:BUART:rx_addressmatch2\
+	OR \FT232_UART:BUART:rx_addressmatch1\);
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:rx_bitclk_pre\' (cost = 1):
+\FT232_UART:BUART:rx_bitclk_pre\ <= ((not \FT232_UART:BUART:rx_count_2\ and not \FT232_UART:BUART:rx_count_1\ and not \FT232_UART:BUART:rx_count_0\));
+
+Note:  Expanding virtual equation for 'Net_12' (cost = 10):
+Net_12 <= ((Net_32 and Net_47));
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:rx_bitclk_pre16x\' (cost = 0):
+\FT232_UART:BUART:rx_bitclk_pre16x\ <= ((not \FT232_UART:BUART:rx_count_2\ and \FT232_UART:BUART:rx_count_1\ and \FT232_UART:BUART:rx_count_0\));
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:rx_poll_bit1\' (cost = 1):
+\FT232_UART:BUART:rx_poll_bit1\ <= ((not \FT232_UART:BUART:rx_count_2\ and not \FT232_UART:BUART:rx_count_1\ and \FT232_UART:BUART:rx_count_0\));
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:rx_poll_bit2\' (cost = 1):
+\FT232_UART:BUART:rx_poll_bit2\ <= ((not \FT232_UART:BUART:rx_count_2\ and not \FT232_UART:BUART:rx_count_1\ and not \FT232_UART:BUART:rx_count_0\));
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:pollingrange\' (cost = 6):
+\FT232_UART:BUART:pollingrange\ <= ((not \FT232_UART:BUART:rx_count_2\ and not \FT232_UART:BUART:rx_count_1\));
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\' (cost = 0):
+\FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ <= (\FT232_UART:BUART:pollcount_0\);
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_0\' (cost = 0):
+\FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_0\ <= (not \FT232_UART:BUART:pollcount_0\);
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_1\' (cost = 0):
+\FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_1\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:gta_1\' (cost = 0):
+\FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:gta_1\ <= (\FT232_UART:BUART:pollcount_1\);
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_1\' (cost = 0):
+\FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_1\ <= (not \FT232_UART:BUART:pollcount_1\);
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:gta_1\' (cost = 0):
+\FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:gta_1\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_6\' (cost = 0):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_6\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_6\' (cost = 0):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_6\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_5\' (cost = 0):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_5\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_5\' (cost = 0):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_5\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_4\' (cost = 0):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_4\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_4\' (cost = 0):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_4\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_3\' (cost = 0):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_3\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_3\' (cost = 0):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_3\ <= (\FT232_UART:BUART:rx_count_6\);
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_2\' (cost = 1):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_2\ <= ((not \FT232_UART:BUART:rx_count_6\ and not \FT232_UART:BUART:rx_count_5\));
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_2\' (cost = 0):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_2\ <= (\FT232_UART:BUART:rx_count_6\);
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_1\' (cost = 2):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_1\ <= ((not \FT232_UART:BUART:rx_count_6\ and not \FT232_UART:BUART:rx_count_4\)
+	OR (not \FT232_UART:BUART:rx_count_6\ and not \FT232_UART:BUART:rx_count_5\));
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_1\' (cost = 0):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:gta_1\ <= (\FT232_UART:BUART:rx_count_6\);
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_0\' (cost = 8):
+\FT232_UART:BUART:sRX:MODULE_4:g2:a0:lta_0\ <= ((not \FT232_UART:BUART:rx_count_6\ and not \FT232_UART:BUART:rx_count_4\)
+	OR (not \FT232_UART:BUART:rx_count_6\ and not \FT232_UART:BUART:rx_count_5\));
+
+
+Substituting virtuals - pass 2:
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_0\' (cost = 4):
+\FT232_UART:BUART:sRX:s23Poll:MODULE_2:g2:a0:lta_0\ <= ((not \FT232_UART:BUART:pollcount_1\ and not \FT232_UART:BUART:pollcount_0\));
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_0\' (cost = 0):
+\FT232_UART:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_0\ <= (not \FT232_UART:BUART:pollcount_1\);
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_1\' (cost = 2):
+\FT232_UART:BUART:sRX:s23Poll:MODULE_1:g2:a0:s_1\ <= ((not \FT232_UART:BUART:pollcount_0\ and \FT232_UART:BUART:pollcount_1\)
+	OR (not \FT232_UART:BUART:pollcount_1\ and \FT232_UART:BUART:pollcount_0\));
+
+
+Substituting virtuals - pass 3:
+
+Note:  Virtual signal \FT232_UART:BUART:rx_postpoll\ with ( cost: 96 or cost_inv: 3)  > 90 or with size: 2 > 102 has been made a (soft) node.
+\FT232_UART:BUART:rx_postpoll\ <= (\FT232_UART:BUART:pollcount_1\
+	OR (Net_32 and \FT232_UART:BUART:pollcount_0\ and Net_47));
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\' (cost = 2):
+\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:xnor_array_0\ <= ((not \FT232_UART:BUART:rx_postpoll\ and not \FT232_UART:BUART:rx_parity_bit\)
+	OR (\FT232_UART:BUART:rx_postpoll\ and \FT232_UART:BUART:rx_parity_bit\));
+
+Note:  Expanding virtual equation for '\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:aeqb_1\' (cost = 2):
+\FT232_UART:BUART:sRX:MODULE_5:g1:a0:gx:u0:aeqb_1\ <= ((not \FT232_UART:BUART:rx_postpoll\ and not \FT232_UART:BUART:rx_parity_bit\)
+	OR (\FT232_UART:BUART:rx_postpoll\ and \FT232_UART:BUART:rx_parity_bit\));
+
+
+Substituting virtuals - pass 4:
+
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 34 signals.
+	Turned 1 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+Aliasing \FT232_UART:BUART:rx_status_0\ to zero
+Aliasing \FT232_UART:BUART:rx_status_6\ to zero
+Aliasing \FT232_UART:BUART:rx_markspace_status\\D\ to zero
+Aliasing \FT232_UART:BUART:rx_parity_error_status\\D\ to zero
+Aliasing \FT232_UART:BUART:rx_addr_match_status\\D\ to zero
+Removing Rhs of wire \FT232_UART:BUART:rx_bitclk_enable\[107] = \FT232_UART:BUART:rx_bitclk\[155]
+Removing Lhs of wire \FT232_UART:BUART:rx_status_0\[206] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:rx_status_6\[215] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:tx_ctrl_mark_last\\D\[323] = \FT232_UART:BUART:tx_ctrl_mark_last\[98]
+Removing Lhs of wire \FT232_UART:BUART:rx_markspace_status\\D\[335] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:rx_parity_error_status\\D\[336] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:rx_addr_match_status\\D\[338] = zero[2]
+Removing Lhs of wire \FT232_UART:BUART:rx_markspace_pre\\D\[339] = \FT232_UART:BUART:rx_markspace_pre\[219]
+
+------------------------------------------------------
+Aliased 0 equations, 8 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+Eliminating unused logic - pass 1:
+
+Note:  Deleted unused equation:
+\FT232_UART:BUART:sRX:MODULE_5:g1:a0:xneq\ <= ((not \FT232_UART:BUART:rx_parity_bit\ and \FT232_UART:BUART:rx_postpoll\)
+	OR (not \FT232_UART:BUART:rx_postpoll\ and \FT232_UART:BUART:rx_parity_bit\));
+
+
+Eliminating unused logic - pass 2:
+
+
+Substituting virtuals - pass 1:
+
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 0 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+topld:  No errors.
+
+CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp
+Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\bin\warp.exe
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\Platform Bootstrap.cyprj" -dcpsoc3 "Platform Bootstrap.v" -verilog
+</CYPRESSTAG>
+Warp synthesis phase: Elapsed time ==> 0s.843ms
+<CYPRESSTAG name="Fitter results...">
+<CYPRESSTAG name="Fitter startup details...">
+cyp3fit: V4.0.0.432, Family: PSoC3, Started at: Friday, 28 April 2017 08:59:38
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\Platform Bootstrap.cyprj -d CY8C5888LTI-LP097 Platform Bootstrap.v -verilog
+</CYPRESSTAG>
+<CYPRESSTAG name="Design parsing">
+Design parsing phase: Elapsed time ==> 0s.015ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Tech Mapping">
+<CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
+    Converted constant MacroCell: \FT232_UART:BUART:reset_reg\ from registered to combinatorial
+    Converted constant MacroCell: Net_23 from registered to combinatorial
+    Converted constant MacroCell: \FT232_UART:BUART:rx_markspace_status\ from registered to combinatorial
+    Converted constant MacroCell: \FT232_UART:BUART:rx_status_2\ from registered to combinatorial
+    Converted constant MacroCell: \FT232_UART:BUART:rx_addr_match_status\ from registered to combinatorial
+    Converted constant MacroCell: \FT232_UART:BUART:rx_break_status\ from registered to combinatorial
+<CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
+    Digital Clock 0: Automatic-assigning  clock 'FT232_UART_IntClock'. Fanout=1, Signal=\FT232_UART:Net_9\
+</CYPRESSTAG>
+
+Removing unused cells resulting from optimization
+Done removing unused cells.
+<CYPRESSTAG name="UDB Clock/Enable Remapping Results">
+    UDB Clk/Enable \FT232_UART:BUART:ClkSync\: with output requested to be synchronous
+        ClockIn: FT232_UART_IntClock was determined to be a global clock that is synchronous to BUS_CLK
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: FT232_UART_IntClock, EnableOut: Constant 1
+</CYPRESSTAG>
+
+Removing unused cells resulting from optimization
+Done removing unused cells.
+<CYPRESSTAG name="Duplicate Macrocell detection">
+</CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Duplicate Macrocell detection">
+
+Removing duplicate macrocells
+    Removing \FT232_UART:BUART:rx_parity_bit\, Duplicate of \FT232_UART:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\FT232_UART:BUART:rx_parity_bit\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \FT232_UART:BUART:rx_parity_bit\ (fanout=0)
+
+    Removing \FT232_UART:BUART:rx_address_detected\, Duplicate of \FT232_UART:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\FT232_UART:BUART:rx_address_detected\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \FT232_UART:BUART:rx_address_detected\ (fanout=0)
+
+    Removing \FT232_UART:BUART:rx_parity_error_pre\, Duplicate of \FT232_UART:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\FT232_UART:BUART:rx_parity_error_pre\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \FT232_UART:BUART:rx_parity_error_pre\ (fanout=0)
+
+    Removing \FT232_UART:BUART:rx_markspace_pre\, Duplicate of \FT232_UART:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\FT232_UART:BUART:rx_markspace_pre\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \FT232_UART:BUART:rx_markspace_pre\ (fanout=0)
+
+    Removing \FT232_UART:BUART:rx_state_1\, Duplicate of \FT232_UART:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\FT232_UART:BUART:rx_state_1\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \FT232_UART:BUART:rx_state_1\ (fanout=8)
+
+    Removing \FT232_UART:BUART:tx_parity_bit\, Duplicate of \FT232_UART:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\FT232_UART:BUART:tx_parity_bit\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \FT232_UART:BUART:tx_parity_bit\ (fanout=0)
+
+    Removing \FT232_UART:BUART:tx_mark\, Duplicate of \FT232_UART:BUART:tx_ctrl_mark_last\ 
+    MacroCell: Name=\FT232_UART:BUART:tx_mark\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \FT232_UART:BUART:tx_mark\ (fanout=0)
+
+End removing duplicate macrocells: used 1 pass
+</CYPRESSTAG>
+<CYPRESSTAG name="Design Equations" icon="FILE_RPT_EQUATION">
+
+------------------------------------------------------------
+Design Equations
+------------------------------------------------------------
+    <CYPRESSTAG name="Pin listing">
+
+    ------------------------------------------------------------
+    Pin listing
+    ------------------------------------------------------------
+
+    Pin : Name = Status_LED(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => Status_LED(0)__PA ,
+            pad => Status_LED(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = FT232_Detect(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: AUTO
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: HI_Z_DIGITAL
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL, ROUTABLE
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => FT232_Detect(0)__PA ,
+            fb => Net_32 ,
+            pad => FT232_Detect(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = FT232_Rx(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: SYNC
+            Out Sync Option: AUTO
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: HI_Z_DIGITAL
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: True
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL, ROUTABLE
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => FT232_Rx(0)__PA ,
+            fb => Net_47 ,
+            pad => FT232_Rx(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = FT232_Tx(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL, ROUTABLE
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => FT232_Tx(0)__PA ,
+            input => Net_46 ,
+            pad => FT232_Tx(0)_PAD );
+        Properties:
+        {
+        }
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
+
+    ------------------------------------------------------------
+    Macrocell listing
+    ------------------------------------------------------------
+
+    MacroCell: Name=\FT232_UART:BUART:counter_load_not\, Mode=(Combinatorial)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\
+            + !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_state_2\
+        );
+        Output = \FT232_UART:BUART:counter_load_not\ (fanout=1)
+
+    MacroCell: Name=\FT232_UART:BUART:tx_status_0\, Mode=(Combinatorial)
+        Total # of inputs        : 5
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              \FT232_UART:BUART:tx_fifo_empty\ * 
+              \FT232_UART:BUART:tx_state_2\
+        );
+        Output = \FT232_UART:BUART:tx_status_0\ (fanout=1)
+
+    MacroCell: Name=\FT232_UART:BUART:tx_status_2\, Mode=(Combinatorial)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\FT232_UART:BUART:tx_fifo_notfull\
+        );
+        Output = \FT232_UART:BUART:tx_status_2\ (fanout=1)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_counter_load\, Mode=(Combinatorial)
+        Total # of inputs        : 4
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\
+        );
+        Output = \FT232_UART:BUART:rx_counter_load\ (fanout=1)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_postpoll\, Mode=(Combinatorial)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              Net_32 * \FT232_UART:BUART:pollcount_0\ * Net_47
+            + \FT232_UART:BUART:pollcount_1\
+        );
+        Output = \FT232_UART:BUART:rx_postpoll\ (fanout=3)
+        Properties               : 
+        {
+            soft = 1
+        }
+
+    MacroCell: Name=\FT232_UART:BUART:rx_status_4\, Mode=(Combinatorial)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \FT232_UART:BUART:rx_load_fifo\ * 
+              \FT232_UART:BUART:rx_fifofull\
+        );
+        Output = \FT232_UART:BUART:rx_status_4\ (fanout=1)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_status_5\, Mode=(Combinatorial)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \FT232_UART:BUART:rx_fifonotempty\ * 
+              \FT232_UART:BUART:rx_state_stop1_reg\
+        );
+        Output = \FT232_UART:BUART:rx_status_5\ (fanout=1)
+
+    MacroCell: Name=Net_46, Mode=(Combinatorial)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_32 * !\FT232_UART:BUART:txn\
+        );
+        Output = Net_46 (fanout=1)
+
+    MacroCell: Name=\FT232_UART:BUART:txn\, Mode=(D-Register)
+        Total # of inputs        : 7
+        Total # of product terms : 5
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        (
+              \FT232_UART:BUART:txn\ * \FT232_UART:BUART:tx_state_1\ * 
+              !\FT232_UART:BUART:tx_bitclk\
+            + \FT232_UART:BUART:txn\ * \FT232_UART:BUART:tx_state_2\
+            + !\FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_shift_out\ * 
+              !\FT232_UART:BUART:tx_state_2\
+            + !\FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_state_2\ * !\FT232_UART:BUART:tx_bitclk\
+            + \FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_shift_out\ * 
+              !\FT232_UART:BUART:tx_state_2\ * 
+              !\FT232_UART:BUART:tx_counter_dp\ * 
+              \FT232_UART:BUART:tx_bitclk\
+        );
+        Output = \FT232_UART:BUART:txn\ (fanout=2)
+
+    MacroCell: Name=\FT232_UART:BUART:tx_state_1\, Mode=(T-Register)
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              \FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              \FT232_UART:BUART:tx_state_2\
+            + \FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_2\ * 
+              \FT232_UART:BUART:tx_counter_dp\ * \FT232_UART:BUART:tx_bitclk\
+            + \FT232_UART:BUART:tx_state_0\ * !\FT232_UART:BUART:tx_state_2\ * 
+              \FT232_UART:BUART:tx_bitclk\
+        );
+        Output = \FT232_UART:BUART:tx_state_1\ (fanout=8)
+
+    MacroCell: Name=\FT232_UART:BUART:tx_state_0\, Mode=(T-Register)
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              !\FT232_UART:BUART:tx_fifo_empty\
+            + !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_fifo_empty\ * 
+              !\FT232_UART:BUART:tx_state_2\
+            + \FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              \FT232_UART:BUART:tx_fifo_empty\ * 
+              \FT232_UART:BUART:tx_state_2\
+            + \FT232_UART:BUART:tx_state_0\ * !\FT232_UART:BUART:tx_state_2\ * 
+              \FT232_UART:BUART:tx_bitclk\
+        );
+        Output = \FT232_UART:BUART:tx_state_0\ (fanout=8)
+
+    MacroCell: Name=\FT232_UART:BUART:tx_state_2\, Mode=(T-Register)
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              \FT232_UART:BUART:tx_state_2\
+            + \FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              \FT232_UART:BUART:tx_state_2\
+            + \FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_state_2\ * \FT232_UART:BUART:tx_bitclk\
+            + \FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_2\ * 
+              \FT232_UART:BUART:tx_counter_dp\ * \FT232_UART:BUART:tx_bitclk\
+        );
+        Output = \FT232_UART:BUART:tx_state_2\ (fanout=7)
+
+    MacroCell: Name=\FT232_UART:BUART:tx_bitclk\, Mode=(D-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_state_2\
+            + !\FT232_UART:BUART:tx_bitclk_enable_pre\
+        );
+        Output = \FT232_UART:BUART:tx_bitclk\ (fanout=4)
+
+    MacroCell: Name=\FT232_UART:BUART:tx_ctrl_mark_last\, Mode=(T-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \FT232_UART:BUART:tx_ctrl_mark_last\ (fanout=8)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_state_0\, Mode=(T-Register)
+        Total # of inputs        : 9
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              !\FT232_UART:BUART:rx_postpoll\ * 
+              !\FT232_UART:BUART:rx_state_3\ * \FT232_UART:BUART:rx_state_2\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_5\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_4\
+        );
+        Output = \FT232_UART:BUART:rx_state_0\ (fanout=8)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_load_fifo\, Mode=(D-Register)
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              \FT232_UART:BUART:rx_state_3\ * !\FT232_UART:BUART:rx_state_2\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_5\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_4\
+        );
+        Output = \FT232_UART:BUART:rx_load_fifo\ (fanout=2)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_state_3\, Mode=(T-Register)
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              \FT232_UART:BUART:rx_state_3\ * \FT232_UART:BUART:rx_state_2\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_5\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_4\
+        );
+        Output = \FT232_UART:BUART:rx_state_3\ (fanout=7)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_state_2\, Mode=(T-Register)
+        Total # of inputs        : 11
+        Total # of product terms : 6
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 6 pterms
+        (
+              !Net_32 * !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * \FT232_UART:BUART:rx_last\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              \FT232_UART:BUART:rx_state_3\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              \FT232_UART:BUART:rx_state_2\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * \FT232_UART:BUART:rx_last\ * 
+              !Net_47
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_5\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_4\
+        );
+        Output = \FT232_UART:BUART:rx_state_2\ (fanout=7)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_bitclk_enable\, Mode=(D-Register)
+        Total # of inputs        : 3
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\FT232_UART:BUART:rx_count_2\ * !\FT232_UART:BUART:rx_count_1\ * 
+              !\FT232_UART:BUART:rx_count_0\
+        );
+        Output = \FT232_UART:BUART:rx_bitclk_enable\ (fanout=6)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_state_stop1_reg\, Mode=(D-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * \FT232_UART:BUART:rx_state_3\ * 
+              \FT232_UART:BUART:rx_state_2\
+        );
+        Output = \FT232_UART:BUART:rx_state_stop1_reg\ (fanout=1)
+
+    MacroCell: Name=\FT232_UART:BUART:pollcount_1\, Mode=(T-Register)
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              Net_32 * !\FT232_UART:BUART:rx_count_2\ * 
+              !\FT232_UART:BUART:rx_count_1\ * \FT232_UART:BUART:pollcount_0\ * 
+              Net_47
+            + \FT232_UART:BUART:rx_count_2\ * \FT232_UART:BUART:pollcount_1\
+            + \FT232_UART:BUART:rx_count_1\ * \FT232_UART:BUART:pollcount_1\
+        );
+        Output = \FT232_UART:BUART:pollcount_1\ (fanout=2)
+
+    MacroCell: Name=\FT232_UART:BUART:pollcount_0\, Mode=(D-Register)
+        Total # of inputs        : 5
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !Net_32 * !\FT232_UART:BUART:rx_count_2\ * 
+              !\FT232_UART:BUART:rx_count_1\ * \FT232_UART:BUART:pollcount_0\
+            + Net_32 * !\FT232_UART:BUART:rx_count_2\ * 
+              !\FT232_UART:BUART:rx_count_1\ * 
+              !\FT232_UART:BUART:pollcount_0\ * Net_47
+            + !\FT232_UART:BUART:rx_count_2\ * !\FT232_UART:BUART:rx_count_1\ * 
+              \FT232_UART:BUART:pollcount_0\ * !Net_47
+        );
+        Output = \FT232_UART:BUART:pollcount_0\ (fanout=3)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_status_3\, Mode=(D-Register)
+        Total # of inputs        : 6
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              !\FT232_UART:BUART:rx_postpoll\ * \FT232_UART:BUART:rx_state_3\ * 
+              \FT232_UART:BUART:rx_state_2\
+        );
+        Output = \FT232_UART:BUART:rx_status_3\ (fanout=1)
+
+    MacroCell: Name=\FT232_UART:BUART:rx_last\, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_32 * Net_47
+        );
+        Output = \FT232_UART:BUART:rx_last\ (fanout=1)
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Datapath listing">
+
+    ------------------------------------------------------------
+    Datapath listing
+    ------------------------------------------------------------
+
+    datapathcell: Name =\FT232_UART:BUART:sTX:TxShifter:u0\
+        PORT MAP (
+            clock => \FT232_UART:Net_9\ ,
+            cs_addr_2 => \FT232_UART:BUART:tx_state_1\ ,
+            cs_addr_1 => \FT232_UART:BUART:tx_state_0\ ,
+            cs_addr_0 => \FT232_UART:BUART:tx_bitclk_enable_pre\ ,
+            so_comb => \FT232_UART:BUART:tx_shift_out\ ,
+            f0_bus_stat_comb => \FT232_UART:BUART:tx_fifo_notfull\ ,
+            f0_blk_stat_comb => \FT232_UART:BUART:tx_fifo_empty\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000000000000000000000000000000000000000000000000000011000000000000000000000000000010010000000000000000000000000000000000000011111111000000001111111111111111000000000000000001000100111100000000000000001100"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    datapathcell: Name =\FT232_UART:BUART:sTX:sCLOCK:TxBitClkGen\
+        PORT MAP (
+            clock => \FT232_UART:Net_9\ ,
+            cs_addr_0 => \FT232_UART:BUART:counter_load_not\ ,
+            ce0_reg => \FT232_UART:BUART:tx_bitclk_enable_pre\ ,
+            ce1_reg => \FT232_UART:BUART:tx_counter_dp\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "1010100001000000001000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111100000111001000000100000000000101111100000000000000001000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    datapathcell: Name =\FT232_UART:BUART:sRX:RxShifter:u0\
+        PORT MAP (
+            clock => \FT232_UART:Net_9\ ,
+            cs_addr_2 => \FT232_UART:BUART:tx_ctrl_mark_last\ ,
+            cs_addr_1 => \FT232_UART:BUART:rx_state_0\ ,
+            cs_addr_0 => \FT232_UART:BUART:rx_bitclk_enable\ ,
+            route_si => \FT232_UART:BUART:rx_postpoll\ ,
+            f0_load => \FT232_UART:BUART:rx_load_fifo\ ,
+            f0_bus_stat_comb => \FT232_UART:BUART:rx_fifonotempty\ ,
+            f0_blk_stat_comb => \FT232_UART:BUART:rx_fifofull\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000000000000000000000000000000000000000000000000001001000000000100000000000000010000001100000001000000000000000100100001000011111111000000001111111111111111101000000110001001000001111100000000000000001100"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Status register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="StatusI register listing">
+
+    ------------------------------------------------------------
+    StatusI register listing
+    ------------------------------------------------------------
+
+    statusicell: Name =\FT232_UART:BUART:sTX:TxSts\
+        PORT MAP (
+            clock => \FT232_UART:Net_9\ ,
+            status_3 => \FT232_UART:BUART:tx_fifo_notfull\ ,
+            status_2 => \FT232_UART:BUART:tx_status_2\ ,
+            status_1 => \FT232_UART:BUART:tx_fifo_empty\ ,
+            status_0 => \FT232_UART:BUART:tx_status_0\ );
+        Properties:
+        {
+            cy_force_order = 1
+            cy_int_mask = "1111111"
+            cy_md_select = "0000001"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    statusicell: Name =\FT232_UART:BUART:sRX:RxSts\
+        PORT MAP (
+            clock => \FT232_UART:Net_9\ ,
+            status_5 => \FT232_UART:BUART:rx_status_5\ ,
+            status_4 => \FT232_UART:BUART:rx_status_4\ ,
+            status_3 => \FT232_UART:BUART:rx_status_3\ ,
+            interrupt => Net_26 );
+        Properties:
+        {
+            cy_force_order = 1
+            cy_int_mask = "1111111"
+            cy_md_select = "1011111"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Sync listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Control register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Count7 listing">
+
+    ------------------------------------------------------------
+    Count7 listing
+    ------------------------------------------------------------
+
+    count7cell: Name =\FT232_UART:BUART:sRX:RxBitCounter\
+        PORT MAP (
+            clock => \FT232_UART:Net_9\ ,
+            load => \FT232_UART:BUART:rx_counter_load\ ,
+            count_6 => \FT232_UART:BUART:rx_count_6\ ,
+            count_5 => \FT232_UART:BUART:rx_count_5\ ,
+            count_4 => \FT232_UART:BUART:rx_count_4\ ,
+            count_3 => \FT232_UART:BUART:rx_count_3\ ,
+            count_2 => \FT232_UART:BUART:rx_count_2\ ,
+            count_1 => \FT232_UART:BUART:rx_count_1\ ,
+            count_0 => \FT232_UART:BUART:rx_count_0\ ,
+            tc => \FT232_UART:BUART:rx_count7_tc\ );
+        Properties:
+        {
+            cy_alt_mode = 0
+            cy_init_value = "0000000"
+            cy_period = "1110010"
+            cy_route_en = 1
+            cy_route_ld = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+    </CYPRESSTAG>
+    <CYPRESSTAG name="DRQ listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Interrupt listing">
+
+    ------------------------------------------------------------
+    Interrupt listing
+    ------------------------------------------------------------
+
+    interrupt: Name =\FT232_UART:RXInternalInterrupt\
+        PORT MAP (
+            interrupt => Net_26 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+    </CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Technology mapping summary" expanded>
+
+------------------------------------------------------------
+Technology mapping summary
+------------------------------------------------------------
+
+Resource Type                 : Used : Free :  Max :  % Used
+============================================================
+Digital Clocks                :    1 :    7 :    8 : 12.50 %
+Analog Clocks                 :    0 :    4 :    4 :  0.00 %
+CapSense Buffers              :    0 :    2 :    2 :  0.00 %
+Digital Filter Block          :    0 :    1 :    1 :  0.00 %
+Interrupts                    :    1 :   31 :   32 :  3.13 %
+IO                            :    4 :   44 :   48 :  8.33 %
+Segment LCD                   :    0 :    1 :    1 :  0.00 %
+CAN 2.0b                      :    0 :    1 :    1 :  0.00 %
+I2C                           :    0 :    1 :    1 :  0.00 %
+USB                           :    0 :    1 :    1 :  0.00 %
+DMA Channels                  :    0 :   24 :   24 :  0.00 %
+Timer                         :    0 :    4 :    4 :  0.00 %
+UDB                           :      :      :      :        
+  Macrocells                  :   24 :  168 :  192 : 12.50 %
+  Unique P-terms              :   44 :  340 :  384 : 11.46 %
+  Total P-terms               :   53 :      :      :        
+  Datapath Cells              :    3 :   21 :   24 : 12.50 %
+  Status Cells                :    3 :   21 :   24 : 12.50 %
+    StatusI Registers         :    2 :      :      :        
+    Routed Count7 Load/Enable :    1 :      :      :        
+  Control Cells               :    1 :   23 :   24 :  4.17 %
+    Count7 Cells              :    1 :      :      :        
+Opamp                         :    0 :    4 :    4 :  0.00 %
+Comparator                    :    0 :    4 :    4 :  0.00 %
+Delta-Sigma ADC               :    0 :    1 :    1 :  0.00 %
+LPF                           :    0 :    2 :    2 :  0.00 %
+SAR ADC                       :    0 :    2 :    2 :  0.00 %
+Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
+DAC                           :      :      :      :        
+  VIDAC                       :    0 :    4 :    4 :  0.00 %
+</CYPRESSTAG>
+Technology Mapping: Elapsed time ==> 0s.078ms
+Tech Mapping phase: Elapsed time ==> 0s.140ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Placement">
+Initial Analog Placement Results:
+IO_7@[IOP=(1)][IoId=(7)] : FT232_Detect(0) (fixed)
+IO_6@[IOP=(1)][IoId=(6)] : FT232_Rx(0) (fixed)
+IO_5@[IOP=(1)][IoId=(5)] : FT232_Tx(0) (fixed)
+IO_4@[IOP=(15)][IoId=(4)] : Status_LED(0) (fixed)
+Analog Placement phase: Elapsed time ==> 0s.015ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Routing">
+Analog Routing phase: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Code Generation">
+============ Analog Final Answer Routes ============
+Dump of CyAnalogRoutingResultsDB
+Map of net to items {
+}
+Map of item to net {
+}
+Mux Info {
+}
+Dump of CyP35AnalogRoutingResultsDB
+IsVddaHalfUsedForComp = False
+IsVddaHalfUsedForSar0 = False
+IsVddaHalfUsedForSar1 = False
+Analog Code Generation phase: Elapsed time ==> 0s.312ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Placement">
+<CYPRESSTAG name="Detailed placement messages">
+I2076: Total run-time: 0.8 sec.
+
+</CYPRESSTAG>
+<CYPRESSTAG name="PLD Packing">
+<CYPRESSTAG name="PLD Packing Summary" expanded>
+
+------------------------------------------------------------
+PLD Packing Summary
+------------------------------------------------------------
+            Resource Type : Used : Free :  Max :  % Used
+    ====================================================
+                     PLDs :   12 :   36 :   48 :  25.00%
+
+<CYPRESSTAG name="PLD Statistics">
+
+        PLD Resource Type :     Average/LAB
+    =======================================
+                   Inputs :            7.67
+                   Pterms :            4.25
+               Macrocells :            2.00
+</CYPRESSTAG>
+<CYPRESSTAG name="Packed PLD Contents">
+Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
+</CYPRESSTAG>
+PLD Packing: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Partitioning">
+<CYPRESSTAG name="Initial Partitioning Summary">
+Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+<CYPRESSTAG name="Final Partitioning Summary">
+Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+Partitioning: Elapsed time ==> 0s.015ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Final Placement Summary">
+
+------------------------------------------------------------
+Final Placement Summary
+------------------------------------------------------------
+
+       Resource Type :      Count : Avg Inputs : Avg Outputs
+    ========================================================
+                 UDB :          6 :      12.17 :       4.00
+<CYPRESSTAG name="Final Placement Details">
+<CYPRESSTAG name="Component Details">
+
+------------------------------------------------------------
+Component Placement Details
+------------------------------------------------------------
+UDB [UDB=(0,0)] contents:
+LAB@[UDB=(0,0)][LB=0] #macrocells=3, #inputs=11, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\FT232_UART:BUART:rx_load_fifo\, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              \FT232_UART:BUART:rx_state_3\ * !\FT232_UART:BUART:rx_state_2\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_5\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_4\
+        );
+        Output = \FT232_UART:BUART:rx_load_fifo\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FT232_UART:BUART:rx_status_4\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \FT232_UART:BUART:rx_load_fifo\ * 
+              \FT232_UART:BUART:rx_fifofull\
+        );
+        Output = \FT232_UART:BUART:rx_status_4\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\FT232_UART:BUART:tx_status_2\, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\FT232_UART:BUART:tx_fifo_notfull\
+        );
+        Output = \FT232_UART:BUART:tx_status_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,0)][LB=1] #macrocells=2, #inputs=8, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\FT232_UART:BUART:tx_state_0\, Mode=(T-Register) @ [UDB=(0,0)][LB=1][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              !\FT232_UART:BUART:tx_fifo_empty\
+            + !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_fifo_empty\ * 
+              !\FT232_UART:BUART:tx_state_2\
+            + \FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              \FT232_UART:BUART:tx_fifo_empty\ * 
+              \FT232_UART:BUART:tx_state_2\
+            + \FT232_UART:BUART:tx_state_0\ * !\FT232_UART:BUART:tx_state_2\ * 
+              \FT232_UART:BUART:tx_bitclk\
+        );
+        Output = \FT232_UART:BUART:tx_state_0\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\FT232_UART:BUART:rx_last\, Mode=(D-Register) @ [UDB=(0,0)][LB=1][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_32 * Net_47
+        );
+        Output = \FT232_UART:BUART:rx_last\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\FT232_UART:BUART:sRX:RxShifter:u0\
+    PORT MAP (
+        clock => \FT232_UART:Net_9\ ,
+        cs_addr_2 => \FT232_UART:BUART:tx_ctrl_mark_last\ ,
+        cs_addr_1 => \FT232_UART:BUART:rx_state_0\ ,
+        cs_addr_0 => \FT232_UART:BUART:rx_bitclk_enable\ ,
+        route_si => \FT232_UART:BUART:rx_postpoll\ ,
+        f0_load => \FT232_UART:BUART:rx_load_fifo\ ,
+        f0_bus_stat_comb => \FT232_UART:BUART:rx_fifonotempty\ ,
+        f0_blk_stat_comb => \FT232_UART:BUART:rx_fifofull\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000000000000000000000000000000000000000001001000000000100000000000000010000001100000001000000000000000100100001000011111111000000001111111111111111101000000110001001000001111100000000000000001100"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+statusicell: Name =\FT232_UART:BUART:sTX:TxSts\
+    PORT MAP (
+        clock => \FT232_UART:Net_9\ ,
+        status_3 => \FT232_UART:BUART:tx_fifo_notfull\ ,
+        status_2 => \FT232_UART:BUART:tx_status_2\ ,
+        status_1 => \FT232_UART:BUART:tx_fifo_empty\ ,
+        status_0 => \FT232_UART:BUART:tx_status_0\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0000001"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(0,1)] contents:
+LAB@[UDB=(0,1)][LB=0] #macrocells=2, #inputs=12, #pterms=7
+{
+    [McSlotId=0]:     MacroCell: Name=\FT232_UART:BUART:rx_state_2\, Mode=(T-Register) @ [UDB=(0,1)][LB=0][MC=0]
+        Total # of inputs        : 11
+        Total # of product terms : 6
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 6 pterms
+        (
+              !Net_32 * !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * \FT232_UART:BUART:rx_last\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              \FT232_UART:BUART:rx_state_3\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              \FT232_UART:BUART:rx_state_2\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * \FT232_UART:BUART:rx_last\ * 
+              !Net_47
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_5\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_4\
+        );
+        Output = \FT232_UART:BUART:rx_state_2\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=Net_46, Mode=(Combinatorial) @ [UDB=(0,1)][LB=0][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_32 * !\FT232_UART:BUART:txn\
+        );
+        Output = Net_46 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(0,1)][LB=1] #macrocells=3, #inputs=9, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\FT232_UART:BUART:rx_state_0\, Mode=(T-Register) @ [UDB=(0,1)][LB=1][MC=0]
+        Total # of inputs        : 9
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              !\FT232_UART:BUART:rx_postpoll\ * 
+              !\FT232_UART:BUART:rx_state_3\ * \FT232_UART:BUART:rx_state_2\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_5\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_4\
+        );
+        Output = \FT232_UART:BUART:rx_state_0\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FT232_UART:BUART:rx_state_3\, Mode=(T-Register) @ [UDB=(0,1)][LB=1][MC=1]
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              \FT232_UART:BUART:rx_state_3\ * \FT232_UART:BUART:rx_state_2\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_5\
+            + !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              \FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\ * !\FT232_UART:BUART:rx_count_6\ * 
+              !\FT232_UART:BUART:rx_count_4\
+        );
+        Output = \FT232_UART:BUART:rx_state_3\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FT232_UART:BUART:rx_status_3\, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=2]
+        Total # of inputs        : 6
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * 
+              \FT232_UART:BUART:rx_bitclk_enable\ * 
+              !\FT232_UART:BUART:rx_postpoll\ * \FT232_UART:BUART:rx_state_3\ * 
+              \FT232_UART:BUART:rx_state_2\
+        );
+        Output = \FT232_UART:BUART:rx_status_3\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\FT232_UART:BUART:sTX:TxShifter:u0\
+    PORT MAP (
+        clock => \FT232_UART:Net_9\ ,
+        cs_addr_2 => \FT232_UART:BUART:tx_state_1\ ,
+        cs_addr_1 => \FT232_UART:BUART:tx_state_0\ ,
+        cs_addr_0 => \FT232_UART:BUART:tx_bitclk_enable_pre\ ,
+        so_comb => \FT232_UART:BUART:tx_shift_out\ ,
+        f0_bus_stat_comb => \FT232_UART:BUART:tx_fifo_notfull\ ,
+        f0_blk_stat_comb => \FT232_UART:BUART:tx_fifo_empty\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000000000000000000000000000000000000000000011000000000000000000000000000010010000000000000000000000000000000000000011111111000000001111111111111111000000000000000001000100111100000000000000001100"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(0,2)] contents:
+LAB@[UDB=(0,2)][LB=0] #macrocells=2, #inputs=9, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=\FT232_UART:BUART:tx_status_0\, Mode=(Combinatorial) @ [UDB=(0,2)][LB=0][MC=0]
+        Total # of inputs        : 5
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              \FT232_UART:BUART:tx_fifo_empty\ * 
+              \FT232_UART:BUART:tx_state_2\
+        );
+        Output = \FT232_UART:BUART:tx_status_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\FT232_UART:BUART:rx_state_stop1_reg\, Mode=(D-Register) @ [UDB=(0,2)][LB=0][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * \FT232_UART:BUART:rx_state_3\ * 
+              \FT232_UART:BUART:rx_state_2\
+        );
+        Output = \FT232_UART:BUART:rx_state_stop1_reg\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(0,2)][LB=1] #macrocells=1, #inputs=2, #pterms=1
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\FT232_UART:BUART:rx_status_5\, Mode=(Combinatorial) @ [UDB=(0,2)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \FT232_UART:BUART:rx_fifonotempty\ * 
+              \FT232_UART:BUART:rx_state_stop1_reg\
+        );
+        Output = \FT232_UART:BUART:rx_status_5\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+statusicell: Name =\FT232_UART:BUART:sRX:RxSts\
+    PORT MAP (
+        clock => \FT232_UART:Net_9\ ,
+        status_5 => \FT232_UART:BUART:rx_status_5\ ,
+        status_4 => \FT232_UART:BUART:rx_status_4\ ,
+        status_3 => \FT232_UART:BUART:rx_status_3\ ,
+        interrupt => Net_26 );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "1011111"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(0,3)] is empty.
+UDB [UDB=(0,4)] is empty.
+UDB [UDB=(0,5)] is empty.
+UDB [UDB=(1,0)] contents:
+LAB@[UDB=(1,0)][LB=0] #macrocells=1, #inputs=6, #pterms=3
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\FT232_UART:BUART:tx_state_1\, Mode=(T-Register) @ [UDB=(1,0)][LB=0][MC=3]
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              \FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              \FT232_UART:BUART:tx_state_2\
+            + \FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_2\ * 
+              \FT232_UART:BUART:tx_counter_dp\ * \FT232_UART:BUART:tx_bitclk\
+            + \FT232_UART:BUART:tx_state_0\ * !\FT232_UART:BUART:tx_state_2\ * 
+              \FT232_UART:BUART:tx_bitclk\
+        );
+        Output = \FT232_UART:BUART:tx_state_1\ (fanout=8)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,0)][LB=1] #macrocells=1, #inputs=7, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\FT232_UART:BUART:txn\, Mode=(D-Register) @ [UDB=(1,0)][LB=1][MC=0]
+        Total # of inputs        : 7
+        Total # of product terms : 5
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        (
+              \FT232_UART:BUART:txn\ * \FT232_UART:BUART:tx_state_1\ * 
+              !\FT232_UART:BUART:tx_bitclk\
+            + \FT232_UART:BUART:txn\ * \FT232_UART:BUART:tx_state_2\
+            + !\FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_shift_out\ * 
+              !\FT232_UART:BUART:tx_state_2\
+            + !\FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_state_2\ * !\FT232_UART:BUART:tx_bitclk\
+            + \FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_shift_out\ * 
+              !\FT232_UART:BUART:tx_state_2\ * 
+              !\FT232_UART:BUART:tx_counter_dp\ * 
+              \FT232_UART:BUART:tx_bitclk\
+        );
+        Output = \FT232_UART:BUART:txn\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+UDB [UDB=(1,1)] contents:
+LAB@[UDB=(1,1)][LB=0] #macrocells=1, #inputs=3, #pterms=1
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\FT232_UART:BUART:rx_bitclk_enable\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=2]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\FT232_UART:BUART:rx_count_2\ * !\FT232_UART:BUART:rx_count_1\ * 
+              !\FT232_UART:BUART:rx_count_0\
+        );
+        Output = \FT232_UART:BUART:rx_bitclk_enable\ (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(1,1)][LB=1] #macrocells=1, #inputs=5, #pterms=3
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\FT232_UART:BUART:pollcount_0\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !Net_32 * !\FT232_UART:BUART:rx_count_2\ * 
+              !\FT232_UART:BUART:rx_count_1\ * \FT232_UART:BUART:pollcount_0\
+            + Net_32 * !\FT232_UART:BUART:rx_count_2\ * 
+              !\FT232_UART:BUART:rx_count_1\ * 
+              !\FT232_UART:BUART:pollcount_0\ * Net_47
+            + !\FT232_UART:BUART:rx_count_2\ * !\FT232_UART:BUART:rx_count_1\ * 
+              \FT232_UART:BUART:pollcount_0\ * !Net_47
+        );
+        Output = \FT232_UART:BUART:pollcount_0\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+count7cell: Name =\FT232_UART:BUART:sRX:RxBitCounter\
+    PORT MAP (
+        clock => \FT232_UART:Net_9\ ,
+        load => \FT232_UART:BUART:rx_counter_load\ ,
+        count_6 => \FT232_UART:BUART:rx_count_6\ ,
+        count_5 => \FT232_UART:BUART:rx_count_5\ ,
+        count_4 => \FT232_UART:BUART:rx_count_4\ ,
+        count_3 => \FT232_UART:BUART:rx_count_3\ ,
+        count_2 => \FT232_UART:BUART:rx_count_2\ ,
+        count_1 => \FT232_UART:BUART:rx_count_1\ ,
+        count_0 => \FT232_UART:BUART:rx_count_0\ ,
+        tc => \FT232_UART:BUART:rx_count7_tc\ );
+    Properties:
+    {
+        cy_alt_mode = 0
+        cy_init_value = "0000000"
+        cy_period = "1110010"
+        cy_route_en = 1
+        cy_route_ld = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(1,2)] contents:
+LAB@[UDB=(1,2)][LB=0] #macrocells=3, #inputs=10, #pterms=7
+{
+    [McSlotId=0]:     MacroCell: Name=\FT232_UART:BUART:tx_state_2\, Mode=(T-Register) @ [UDB=(1,2)][LB=0][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              \FT232_UART:BUART:tx_state_2\
+            + \FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\ * 
+              \FT232_UART:BUART:tx_state_2\
+            + \FT232_UART:BUART:tx_state_1\ * \FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_state_2\ * \FT232_UART:BUART:tx_bitclk\
+            + \FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_2\ * 
+              \FT232_UART:BUART:tx_counter_dp\ * \FT232_UART:BUART:tx_bitclk\
+        );
+        Output = \FT232_UART:BUART:tx_state_2\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FT232_UART:BUART:tx_bitclk\, Mode=(D-Register) @ [UDB=(1,2)][LB=0][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_state_2\
+            + !\FT232_UART:BUART:tx_bitclk_enable_pre\
+        );
+        Output = \FT232_UART:BUART:tx_bitclk\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FT232_UART:BUART:rx_counter_load\, Mode=(Combinatorial) @ [UDB=(1,2)][LB=0][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\FT232_UART:BUART:tx_ctrl_mark_last\ * 
+              !\FT232_UART:BUART:rx_state_0\ * !\FT232_UART:BUART:rx_state_3\ * 
+              !\FT232_UART:BUART:rx_state_2\
+        );
+        Output = \FT232_UART:BUART:rx_counter_load\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(1,2)][LB=1] #macrocells=4, #inputs=10, #pterms=7
+{
+    [McSlotId=0]:     MacroCell: Name=\FT232_UART:BUART:pollcount_1\, Mode=(T-Register) @ [UDB=(1,2)][LB=1][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              Net_32 * !\FT232_UART:BUART:rx_count_2\ * 
+              !\FT232_UART:BUART:rx_count_1\ * \FT232_UART:BUART:pollcount_0\ * 
+              Net_47
+            + \FT232_UART:BUART:rx_count_2\ * \FT232_UART:BUART:pollcount_1\
+            + \FT232_UART:BUART:rx_count_1\ * \FT232_UART:BUART:pollcount_1\
+        );
+        Output = \FT232_UART:BUART:pollcount_1\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FT232_UART:BUART:counter_load_not\, Mode=(Combinatorial) @ [UDB=(1,2)][LB=1][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              \FT232_UART:BUART:tx_bitclk_enable_pre\
+            + !\FT232_UART:BUART:tx_state_1\ * !\FT232_UART:BUART:tx_state_0\ * 
+              !\FT232_UART:BUART:tx_state_2\
+        );
+        Output = \FT232_UART:BUART:counter_load_not\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FT232_UART:BUART:rx_postpoll\, Mode=(Combinatorial) @ [UDB=(1,2)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              Net_32 * \FT232_UART:BUART:pollcount_0\ * Net_47
+            + \FT232_UART:BUART:pollcount_1\
+        );
+        Output = \FT232_UART:BUART:rx_postpoll\ (fanout=3)
+        Properties               : 
+        {
+            soft = 1
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\FT232_UART:BUART:tx_ctrl_mark_last\, Mode=(T-Register) @ [UDB=(1,2)][LB=1][MC=3]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (\FT232_UART:Net_9\) => Global
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        (
+            0
+        );
+        Output = \FT232_UART:BUART:tx_ctrl_mark_last\ (fanout=8)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\FT232_UART:BUART:sTX:sCLOCK:TxBitClkGen\
+    PORT MAP (
+        clock => \FT232_UART:Net_9\ ,
+        cs_addr_0 => \FT232_UART:BUART:counter_load_not\ ,
+        ce0_reg => \FT232_UART:BUART:tx_bitclk_enable_pre\ ,
+        ce1_reg => \FT232_UART:BUART:tx_counter_dp\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001000000001000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111100000111001000000100000000000101111100000000000000001000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(1,3)] is empty.
+UDB [UDB=(1,4)] is empty.
+UDB [UDB=(1,5)] is empty.
+UDB [UDB=(2,0)] is empty.
+UDB [UDB=(2,1)] is empty.
+UDB [UDB=(2,2)] is empty.
+UDB [UDB=(2,3)] is empty.
+UDB [UDB=(2,4)] is empty.
+UDB [UDB=(2,5)] is empty.
+UDB [UDB=(3,0)] is empty.
+UDB [UDB=(3,1)] is empty.
+UDB [UDB=(3,2)] is empty.
+UDB [UDB=(3,3)] is empty.
+UDB [UDB=(3,4)] is empty.
+UDB [UDB=(3,5)] is empty.
+Intr container @ [IntrContainer=(0)]: 
+  Intr@ [IntrContainer=(0)][IntrId=(0)] 
+    interrupt: Name =\FT232_UART:RXInternalInterrupt\
+        PORT MAP (
+            interrupt => Net_26 );
+        Properties:
+        {
+            int_type = "10"
+            is_nmi = 0
+        }
+Drq container @ [DrqContainer=(0)]: empty
+Port 0 is empty
+Port 1 contains the following IO cells:
+[IoId=5]: 
+Pin : Name = FT232_Tx(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => FT232_Tx(0)__PA ,
+        input => Net_46 ,
+        pad => FT232_Tx(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=6]: 
+Pin : Name = FT232_Rx(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: SYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: True
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => FT232_Rx(0)__PA ,
+        fb => Net_47 ,
+        pad => FT232_Rx(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=7]: 
+Pin : Name = FT232_Detect(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => FT232_Detect(0)__PA ,
+        fb => Net_32 ,
+        pad => FT232_Detect(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 2 is empty
+Port 3 is empty
+Port 12 is empty
+Port 15 contains the following IO cells:
+[IoId=4]: 
+Pin : Name = Status_LED(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Status_LED(0)__PA ,
+        pad => Status_LED(0)_PAD );
+    Properties:
+    {
+    }
+
+ARM group 0: empty
+CAN 2.0b group 0: empty
+Cache group 0: empty
+CapSense group 0: empty
+Clock group 0: 
+    Clock Block @ F(Clock,0): 
+    clockblockcell: Name =ClockBlock
+        PORT MAP (
+            imo => ClockBlock_IMO ,
+            pllout => ClockBlock_PLL_OUT ,
+            ilo => ClockBlock_ILO ,
+            clk_100k => ClockBlock_100k ,
+            clk_1k => ClockBlock_1k ,
+            clk_32k => ClockBlock_32k ,
+            xtal => ClockBlock_XTAL ,
+            clk_32k_xtal => ClockBlock_XTAL_32KHZ ,
+            clk_sync => ClockBlock_MASTER_CLK ,
+            clk_bus_glb => ClockBlock_BUS_CLK ,
+            clk_bus => ClockBlock_BUS_CLK_local ,
+            dclk_glb_0 => \FT232_UART:Net_9\ ,
+            dclk_0 => \FT232_UART:Net_9_local\ );
+        Properties:
+        {
+        }
+Comparator group 0: empty
+Digital Filter Block group 0: empty
+Delta-Sigma ADC group 0: empty
+Decimator group 0: empty
+EMIF group 0: empty
+I2C group 0: empty
+Segment LCD group 0: empty
+LVD group 0: empty
+PM group 0: empty
+Analog (SC/CT) Blocks group 0: empty
+SPC group 0: empty
+Timer group 0: empty
+USB group 0: empty
+VIDAC group 0: empty
+Opamp group 0: empty
+CapSense Buffers group 0: empty
+Vref group 0: empty
+LPF group 0: empty
+SAR ADC group 0: empty
+</CYPRESSTAG>
+<CYPRESSTAG name="Port Configuration Details">
+
+------------------------------------------------------------
+Port Configuration report
+------------------------------------------------------------
+     |     |       | Interrupt |                  |                 | 
+Port | Pin | Fixed |      Type |       Drive Mode |            Name | Connections
+-----+-----+-------+-----------+------------------+-----------------+------------
+   1 |   5 |     * |      NONE |         CMOS_OUT |     FT232_Tx(0) | In(Net_46)
+     |   6 |     * |      NONE |     HI_Z_DIGITAL |     FT232_Rx(0) | FB(Net_47)
+     |   7 |     * |      NONE |     HI_Z_DIGITAL | FT232_Detect(0) | FB(Net_32)
+-----+-----+-------+-----------+------------------+-----------------+------------
+  15 |   4 |     * |      NONE |         CMOS_OUT |   Status_LED(0) | 
+---------------------------------------------------------------------------------
+</CYPRESSTAG>
+</CYPRESSTAG>
+</CYPRESSTAG>
+Digital component placer commit/Report: Elapsed time ==> 0s.000ms
+Digital Placement phase: Elapsed time ==> 1s.171ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Routing">
+Routing successful.
+Digital Routing phase: Elapsed time ==> 1s.843ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream Generation">
+Bitstream Generation phase: Elapsed time ==> 0s.253ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream Verification">
+Bitstream Verification phase: Elapsed time ==> 0s.046ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Static timing analysis">
+Timing report is in Platform Bootstrap_timing.html.
+Static timing analysis phase: Elapsed time ==> 0s.390ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Data reporting">
+Data reporting phase: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Database update...">
+Design database save phase: Elapsed time ==> 0s.250ms
+</CYPRESSTAG>
+cydsfit: Elapsed time ==> 4s.472ms
+</CYPRESSTAG>
+Fitter phase: Elapsed time ==> 4s.472ms
+API generation phase: Elapsed time ==> 1s.203ms
+Dependency generation phase: Elapsed time ==> 0s.015ms
+Cleanup phase: Elapsed time ==> 0s.000ms

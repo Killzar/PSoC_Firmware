@@ -1,0 +1,2865 @@
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"esp07.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.ESP07_Boot,"ax",%progbits
+  19              		.align	2
+  20              		.global	ESP07_Boot
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	ESP07_Boot, %function
+  24              	ESP07_Boot:
+  25              	.LFB63:
+  26              		.file 1 "esp07.c"
+   1:esp07.c       **** /////////////////////////////////////////////////////////////////////////////////
+   2:esp07.c       **** /////////////////////////////////////////////////////////////////////////////////
+   3:esp07.c       **** /// Copyright Chad Hensley 2017                                               ///
+   4:esp07.c       **** /// All Rights Reserved                                                       ///
+   5:esp07.c       **** /// UNPUBLISHED, LICENSED SOFTWARE.                                           ///
+   6:esp07.c       **** ///                                                                           ///
+   7:esp07.c       **** /// CONFIDENTIAL AND PROPRIETARY INFORMATION                                  ///
+   8:esp07.c       **** /// WHICH IS THE PROPERTY OF THE COPYRIGHT HOLDER                             ///
+   9:esp07.c       **** ///                                                                           ///
+  10:esp07.c       **** /// File:       esp07.c                                                       ///
+  11:esp07.c       **** /// Function:   4DShoot Controller ESP07 Wireless Firmware                    ///
+  12:esp07.c       **** /// Date:       28 January 2017                                               ///
+  13:esp07.c       **** /// Target:     CY8C5888LTI-LP097                                             ///
+  14:esp07.c       **** /// Software:   PSoC Creator 4.0 Update 1                                     ///
+  15:esp07.c       **** /// Author:     Matt Cauvel, Ryan Kelley                                      ///
+  16:esp07.c       **** /// Revisions:                                                                ///
+  17:esp07.c       **** ///             0.A - 28/01/2017 - File Created                               ///
+  18:esp07.c       **** ///                                                                           ///
+  19:esp07.c       **** /////////////////////////////////////////////////////////////////////////////////
+  20:esp07.c       **** /////////////////////////////////////////////////////////////////////////////////
+  21:esp07.c       **** #include "esp07.h"                                                            ///
+  22:esp07.c       **** /////////////////////////////////////////////////////////////////////////////////
+  23:esp07.c       **** 
+  24:esp07.c       **** void ESP07_Boot(void)
+  25:esp07.c       **** {
+  27              		.loc 1 25 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 08B5     		push	{r3, lr}
+  32              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 2
+
+
+  33              		.cfi_offset 3, -8
+  34              		.cfi_offset 14, -4
+  26:esp07.c       ****     ESP07_UART_PutString("AT+RST\r\n");
+  35              		.loc 1 26 0
+  36 0002 1648     		ldr	r0, .L3
+  37 0004 FFF7FEFF 		bl	ESP07_UART_PutString
+  38              	.LVL0:
+  27:esp07.c       ****     CyDelay(500);
+  39              		.loc 1 27 0
+  40 0008 4FF4FA70 		mov	r0, #500
+  41 000c FFF7FEFF 		bl	CyDelay
+  42              	.LVL1:
+  28:esp07.c       **** 
+  29:esp07.c       ****     ESP07_UART_PutString("AT\r\n");
+  43              		.loc 1 29 0
+  44 0010 1348     		ldr	r0, .L3+4
+  45 0012 FFF7FEFF 		bl	ESP07_UART_PutString
+  46              	.LVL2:
+  30:esp07.c       ****     CyDelay(50);
+  47              		.loc 1 30 0
+  48 0016 3220     		movs	r0, #50
+  49 0018 FFF7FEFF 		bl	CyDelay
+  50              	.LVL3:
+  31:esp07.c       ****     
+  32:esp07.c       ****     ESP07_UART_PutString("ATE0\r\n");
+  51              		.loc 1 32 0
+  52 001c 1148     		ldr	r0, .L3+8
+  53 001e FFF7FEFF 		bl	ESP07_UART_PutString
+  54              	.LVL4:
+  33:esp07.c       ****     CyDelay(50);
+  55              		.loc 1 33 0
+  56 0022 3220     		movs	r0, #50
+  57 0024 FFF7FEFF 		bl	CyDelay
+  58              	.LVL5:
+  34:esp07.c       ****     
+  35:esp07.c       ****     ESP07_UART_PutString("AT+CIPMODE=0\r\n");
+  59              		.loc 1 35 0
+  60 0028 0F48     		ldr	r0, .L3+12
+  61 002a FFF7FEFF 		bl	ESP07_UART_PutString
+  62              	.LVL6:
+  36:esp07.c       ****     CyDelay(50);
+  63              		.loc 1 36 0
+  64 002e 3220     		movs	r0, #50
+  65 0030 FFF7FEFF 		bl	CyDelay
+  66              	.LVL7:
+  37:esp07.c       ****     
+  38:esp07.c       ****     ESP07_UART_PutString("AT+CIPMUX=1\r\n");
+  67              		.loc 1 38 0
+  68 0034 0D48     		ldr	r0, .L3+16
+  69 0036 FFF7FEFF 		bl	ESP07_UART_PutString
+  70              	.LVL8:
+  39:esp07.c       ****     CyDelay(50);
+  71              		.loc 1 39 0
+  72 003a 3220     		movs	r0, #50
+  73 003c FFF7FEFF 		bl	CyDelay
+  74              	.LVL9:
+  40:esp07.c       ****     
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 3
+
+
+  41:esp07.c       ****     ESP07_UART_PutString("AT+CWSAP=\"4DShoot Prototype\",\"hhwwguak\",1,3,4,0\r\n");
+  75              		.loc 1 41 0
+  76 0040 0B48     		ldr	r0, .L3+20
+  77 0042 FFF7FEFF 		bl	ESP07_UART_PutString
+  78              	.LVL10:
+  42:esp07.c       ****     CyDelay(50);
+  79              		.loc 1 42 0
+  80 0046 3220     		movs	r0, #50
+  81 0048 FFF7FEFF 		bl	CyDelay
+  82              	.LVL11:
+  43:esp07.c       ****     
+  44:esp07.c       ****     ESP07_UART_PutString("AT+CIPSERVER=1,80\r\n");
+  83              		.loc 1 44 0
+  84 004c 0948     		ldr	r0, .L3+24
+  85 004e FFF7FEFF 		bl	ESP07_UART_PutString
+  86              	.LVL12:
+  45:esp07.c       ****     CyDelay(50);
+  87              		.loc 1 45 0
+  88 0052 3220     		movs	r0, #50
+  89 0054 FFF7FEFF 		bl	CyDelay
+  90              	.LVL13:
+  91 0058 08BD     		pop	{r3, pc}
+  92              	.L4:
+  93 005a 00BF     		.align	2
+  94              	.L3:
+  95 005c 00000000 		.word	.LC0
+  96 0060 0C000000 		.word	.LC1
+  97 0064 14000000 		.word	.LC2
+  98 0068 1C000000 		.word	.LC3
+  99 006c 2C000000 		.word	.LC4
+ 100 0070 3C000000 		.word	.LC5
+ 101 0074 70000000 		.word	.LC6
+ 102              		.cfi_endproc
+ 103              	.LFE63:
+ 104              		.size	ESP07_Boot, .-ESP07_Boot
+ 105              		.section	.text.ESP07_Parse,"ax",%progbits
+ 106              		.align	2
+ 107              		.global	ESP07_Parse
+ 108              		.thumb
+ 109              		.thumb_func
+ 110              		.type	ESP07_Parse, %function
+ 111              	ESP07_Parse:
+ 112              	.LFB64:
+  46:esp07.c       ****     
+  47:esp07.c       ****     return;
+  48:esp07.c       **** }
+  49:esp07.c       **** 
+  50:esp07.c       **** struct ESP07_Datagram ESP07_Parse(const char data[])
+  51:esp07.c       **** {
+ 113              		.loc 1 51 0
+ 114              		.cfi_startproc
+ 115              		@ args = 0, pretend = 0, frame = 136
+ 116              		@ frame_needed = 0, uses_anonymous_args = 0
+ 117              	.LVL14:
+ 118 0000 70B5     		push	{r4, r5, r6, lr}
+ 119              		.cfi_def_cfa_offset 16
+ 120              		.cfi_offset 4, -16
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 4
+
+
+ 121              		.cfi_offset 5, -12
+ 122              		.cfi_offset 6, -8
+ 123              		.cfi_offset 14, -4
+ 124 0002 A2B0     		sub	sp, sp, #136
+ 125              		.cfi_def_cfa_offset 152
+ 126 0004 0646     		mov	r6, r0
+ 127 0006 0C46     		mov	r4, r1
+  52:esp07.c       ****     struct ESP07_Datagram working;
+  53:esp07.c       ****     
+  54:esp07.c       ****     // Copy raw string to datagram object
+  55:esp07.c       ****     strcpy(working.raw, data);
+ 128              		.loc 1 55 0
+ 129 0008 11A8     		add	r0, sp, #68
+ 130              	.LVL15:
+ 131 000a FFF7FEFF 		bl	strcpy
+ 132              	.LVL16:
+  56:esp07.c       ****     working.length_raw = strlen(data);
+ 133              		.loc 1 56 0
+ 134 000e 2046     		mov	r0, r4
+ 135 0010 FFF7FEFF 		bl	strlen
+ 136              	.LVL17:
+ 137 0014 8DF88600 		strb	r0, [sp, #134]
+  57:esp07.c       ****     
+  58:esp07.c       ****     // Check for +IPD header substring
+  59:esp07.c       ****     if(strstr(data, "+IPD,") != NULL)
+ 138              		.loc 1 59 0
+ 139 0018 2046     		mov	r0, r4
+ 140 001a 8F49     		ldr	r1, .L36
+ 141 001c FFF7FEFF 		bl	strstr
+ 142              	.LVL18:
+ 143 0020 A0B1     		cbz	r0, .L6
+  60:esp07.c       ****     {   
+  61:esp07.c       ****         // Get payload substring, length after ':'
+  62:esp07.c       ****         working.length_payload = (data + strlen(data)) - strchr(data, ':') - 1;
+ 144              		.loc 1 62 0
+ 145 0022 2046     		mov	r0, r4
+ 146 0024 FFF7FEFF 		bl	strlen
+ 147              	.LVL19:
+ 148 0028 2518     		adds	r5, r4, r0
+ 149 002a 2046     		mov	r0, r4
+ 150 002c 3A21     		movs	r1, #58
+ 151 002e FFF7FEFF 		bl	strchr
+ 152              	.LVL20:
+ 153 0032 281A     		subs	r0, r5, r0
+ 154 0034 0138     		subs	r0, r0, #1
+ 155 0036 8DF88500 		strb	r0, [sp, #133]
+  63:esp07.c       ****         strcpy(working.payload, strchr(data, ':') + 1);
+ 156              		.loc 1 63 0
+ 157 003a 2046     		mov	r0, r4
+ 158 003c 3A21     		movs	r1, #58
+ 159 003e FFF7FEFF 		bl	strchr
+ 160              	.LVL21:
+ 161 0042 411C     		adds	r1, r0, #1
+ 162 0044 01A8     		add	r0, sp, #4
+ 163 0046 FFF7FEFF 		bl	strcpy
+ 164              	.LVL22:
+ 165 004a 08E0     		b	.L7
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 5
+
+
+ 166              	.L6:
+  64:esp07.c       ****     }
+  65:esp07.c       ****     else
+  66:esp07.c       ****     {
+  67:esp07.c       ****         strcpy(working.payload, data);
+ 167              		.loc 1 67 0
+ 168 004c 01A8     		add	r0, sp, #4
+ 169 004e 2146     		mov	r1, r4
+ 170 0050 FFF7FEFF 		bl	strcpy
+ 171              	.LVL23:
+  68:esp07.c       ****         working.length_payload = strlen(data);
+ 172              		.loc 1 68 0
+ 173 0054 2046     		mov	r0, r4
+ 174 0056 FFF7FEFF 		bl	strlen
+ 175              	.LVL24:
+ 176 005a 8DF88500 		strb	r0, [sp, #133]
+ 177              	.L7:
+  69:esp07.c       ****     }
+  70:esp07.c       ****     
+  71:esp07.c       ****     // Get command identifier
+  72:esp07.c       ****     if      (!strcmp(working.payload, ""))
+ 178              		.loc 1 72 0
+ 179 005e 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+ 180 0062 1BB9     		cbnz	r3, .L8
+  73:esp07.c       ****         working.id = 1;
+ 181              		.loc 1 73 0
+ 182 0064 0123     		movs	r3, #1
+ 183 0066 8DF88430 		strb	r3, [sp, #132]
+ 184 006a EDE0     		b	.L9
+ 185              	.L8:
+  74:esp07.c       ****     else if (!strcmp(working.payload, "LED ON"))
+ 186              		.loc 1 74 0
+ 187 006c 01A8     		add	r0, sp, #4
+ 188 006e 7B49     		ldr	r1, .L36+4
+ 189 0070 FFF7FEFF 		bl	strcmp
+ 190              	.LVL25:
+ 191 0074 18B9     		cbnz	r0, .L10
+  75:esp07.c       ****         working.id = 2;
+ 192              		.loc 1 75 0
+ 193 0076 0223     		movs	r3, #2
+ 194 0078 8DF88430 		strb	r3, [sp, #132]
+ 195 007c E4E0     		b	.L9
+ 196              	.L10:
+  76:esp07.c       ****     else if (!strcmp(working.payload, "LED OFF"))
+ 197              		.loc 1 76 0
+ 198 007e 01A8     		add	r0, sp, #4
+ 199 0080 7749     		ldr	r1, .L36+8
+ 200 0082 FFF7FEFF 		bl	strcmp
+ 201              	.LVL26:
+ 202 0086 18B9     		cbnz	r0, .L11
+  77:esp07.c       ****         working.id = 3;
+ 203              		.loc 1 77 0
+ 204 0088 0323     		movs	r3, #3
+ 205 008a 8DF88430 		strb	r3, [sp, #132]
+ 206 008e DBE0     		b	.L9
+ 207              	.L11:
+  78:esp07.c       ****     else if (!strcmp(working.payload, "OK"))
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 6
+
+
+ 208              		.loc 1 78 0
+ 209 0090 01A8     		add	r0, sp, #4
+ 210 0092 7449     		ldr	r1, .L36+12
+ 211 0094 FFF7FEFF 		bl	strcmp
+ 212              	.LVL27:
+ 213 0098 18B9     		cbnz	r0, .L12
+  79:esp07.c       ****         working.id = 4;
+ 214              		.loc 1 79 0
+ 215 009a 0423     		movs	r3, #4
+ 216 009c 8DF88430 		strb	r3, [sp, #132]
+ 217 00a0 D2E0     		b	.L9
+ 218              	.L12:
+  80:esp07.c       ****     else if (!strcmp(working.payload, "ready"))
+ 219              		.loc 1 80 0
+ 220 00a2 01A8     		add	r0, sp, #4
+ 221 00a4 7049     		ldr	r1, .L36+16
+ 222 00a6 FFF7FEFF 		bl	strcmp
+ 223              	.LVL28:
+ 224 00aa 18B9     		cbnz	r0, .L13
+  81:esp07.c       ****         working.id = 5;
+ 225              		.loc 1 81 0
+ 226 00ac 0523     		movs	r3, #5
+ 227 00ae 8DF88430 		strb	r3, [sp, #132]
+ 228 00b2 C9E0     		b	.L9
+ 229              	.L13:
+  82:esp07.c       ****     else if (!strcmp(working.payload, "> "))
+ 230              		.loc 1 82 0
+ 231 00b4 01A8     		add	r0, sp, #4
+ 232 00b6 6D49     		ldr	r1, .L36+20
+ 233 00b8 FFF7FEFF 		bl	strcmp
+ 234              	.LVL29:
+ 235 00bc 18B9     		cbnz	r0, .L14
+  83:esp07.c       ****         working.id = 6;
+ 236              		.loc 1 83 0
+ 237 00be 0623     		movs	r3, #6
+ 238 00c0 8DF88430 		strb	r3, [sp, #132]
+ 239 00c4 C0E0     		b	.L9
+ 240              	.L14:
+  84:esp07.c       ****     else if (!strncmp(working.payload, "Recv", 4))
+ 241              		.loc 1 84 0
+ 242 00c6 01A8     		add	r0, sp, #4
+ 243 00c8 6949     		ldr	r1, .L36+24
+ 244 00ca 0422     		movs	r2, #4
+ 245 00cc FFF7FEFF 		bl	strncmp
+ 246              	.LVL30:
+ 247 00d0 18B9     		cbnz	r0, .L15
+  85:esp07.c       ****         working.id = 7;
+ 248              		.loc 1 85 0
+ 249 00d2 0723     		movs	r3, #7
+ 250 00d4 8DF88430 		strb	r3, [sp, #132]
+ 251 00d8 B6E0     		b	.L9
+ 252              	.L15:
+  86:esp07.c       ****     else if (!strcmp(working.payload, "SEND OK"))
+ 253              		.loc 1 86 0
+ 254 00da 01A8     		add	r0, sp, #4
+ 255 00dc 6549     		ldr	r1, .L36+28
+ 256 00de FFF7FEFF 		bl	strcmp
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 7
+
+
+ 257              	.LVL31:
+ 258 00e2 18B9     		cbnz	r0, .L16
+  87:esp07.c       ****         working.id = 8;
+ 259              		.loc 1 87 0
+ 260 00e4 0823     		movs	r3, #8
+ 261 00e6 8DF88430 		strb	r3, [sp, #132]
+ 262 00ea ADE0     		b	.L9
+ 263              	.L16:
+  88:esp07.c       ****     else if (!strcmp(working.payload, "ERROR"))
+ 264              		.loc 1 88 0
+ 265 00ec 01A8     		add	r0, sp, #4
+ 266 00ee 6249     		ldr	r1, .L36+32
+ 267 00f0 FFF7FEFF 		bl	strcmp
+ 268              	.LVL32:
+ 269 00f4 18B9     		cbnz	r0, .L17
+  89:esp07.c       ****         working.id = 9;
+ 270              		.loc 1 89 0
+ 271 00f6 0923     		movs	r3, #9
+ 272 00f8 8DF88430 		strb	r3, [sp, #132]
+ 273 00fc A4E0     		b	.L9
+ 274              	.L17:
+  90:esp07.c       ****     else if (!strcmp(working.payload, "0,CONNECT"))
+ 275              		.loc 1 90 0
+ 276 00fe 01A8     		add	r0, sp, #4
+ 277 0100 5E49     		ldr	r1, .L36+36
+ 278 0102 FFF7FEFF 		bl	strcmp
+ 279              	.LVL33:
+ 280 0106 18B9     		cbnz	r0, .L18
+  91:esp07.c       ****         working.id = 10;
+ 281              		.loc 1 91 0
+ 282 0108 0A23     		movs	r3, #10
+ 283 010a 8DF88430 		strb	r3, [sp, #132]
+ 284 010e 9BE0     		b	.L9
+ 285              	.L18:
+  92:esp07.c       ****     else if (!strcmp(working.payload, "0,CLOSED"))
+ 286              		.loc 1 92 0
+ 287 0110 01A8     		add	r0, sp, #4
+ 288 0112 5B49     		ldr	r1, .L36+40
+ 289 0114 FFF7FEFF 		bl	strcmp
+ 290              	.LVL34:
+ 291 0118 18B9     		cbnz	r0, .L19
+  93:esp07.c       ****         working.id = 11;
+ 292              		.loc 1 93 0
+ 293 011a 0B23     		movs	r3, #11
+ 294 011c 8DF88430 		strb	r3, [sp, #132]
+ 295 0120 92E0     		b	.L9
+ 296              	.L19:
+  94:esp07.c       ****     else if (!strcmp(working.payload, "DUMP"))
+ 297              		.loc 1 94 0
+ 298 0122 01A8     		add	r0, sp, #4
+ 299 0124 5749     		ldr	r1, .L36+44
+ 300 0126 FFF7FEFF 		bl	strcmp
+ 301              	.LVL35:
+ 302 012a 18B9     		cbnz	r0, .L20
+  95:esp07.c       ****         working.id = 12;
+ 303              		.loc 1 95 0
+ 304 012c 0C23     		movs	r3, #12
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 8
+
+
+ 305 012e 8DF88430 		strb	r3, [sp, #132]
+ 306 0132 89E0     		b	.L9
+ 307              	.L20:
+  96:esp07.c       ****     else if (!strcmp(working.payload, "0,CONNECT FAIL"))
+ 308              		.loc 1 96 0
+ 309 0134 01A8     		add	r0, sp, #4
+ 310 0136 5449     		ldr	r1, .L36+48
+ 311 0138 FFF7FEFF 		bl	strcmp
+ 312              	.LVL36:
+ 313 013c 18B9     		cbnz	r0, .L21
+  97:esp07.c       ****         working.id = 13;
+ 314              		.loc 1 97 0
+ 315 013e 0D23     		movs	r3, #13
+ 316 0140 8DF88430 		strb	r3, [sp, #132]
+ 317 0144 80E0     		b	.L9
+ 318              	.L21:
+  98:esp07.c       ****     else if (!strcmp(working.payload, "RESET"))
+ 319              		.loc 1 98 0
+ 320 0146 01A8     		add	r0, sp, #4
+ 321 0148 5049     		ldr	r1, .L36+52
+ 322 014a FFF7FEFF 		bl	strcmp
+ 323              	.LVL37:
+ 324 014e 18B9     		cbnz	r0, .L22
+  99:esp07.c       ****         working.id = 14;
+ 325              		.loc 1 99 0
+ 326 0150 0E23     		movs	r3, #14
+ 327 0152 8DF88430 		strb	r3, [sp, #132]
+ 328 0156 77E0     		b	.L9
+ 329              	.L22:
+ 100:esp07.c       ****     else if (!strncmp(working.payload, "LFT_FWD", 7))
+ 330              		.loc 1 100 0
+ 331 0158 01A8     		add	r0, sp, #4
+ 332 015a 4D49     		ldr	r1, .L36+56
+ 333 015c 0722     		movs	r2, #7
+ 334 015e FFF7FEFF 		bl	strncmp
+ 335              	.LVL38:
+ 336 0162 18B9     		cbnz	r0, .L23
+ 101:esp07.c       ****         working.id = 16;
+ 337              		.loc 1 101 0
+ 338 0164 1023     		movs	r3, #16
+ 339 0166 8DF88430 		strb	r3, [sp, #132]
+ 340 016a 6DE0     		b	.L9
+ 341              	.L23:
+ 102:esp07.c       ****     else if (!strncmp(working.payload, "LFT_BCK", 7))
+ 342              		.loc 1 102 0
+ 343 016c 01A8     		add	r0, sp, #4
+ 344 016e 4949     		ldr	r1, .L36+60
+ 345 0170 0722     		movs	r2, #7
+ 346 0172 FFF7FEFF 		bl	strncmp
+ 347              	.LVL39:
+ 348 0176 18B9     		cbnz	r0, .L24
+ 103:esp07.c       ****         working.id = 17;
+ 349              		.loc 1 103 0
+ 350 0178 1123     		movs	r3, #17
+ 351 017a 8DF88430 		strb	r3, [sp, #132]
+ 352 017e 63E0     		b	.L9
+ 353              	.L24:
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 9
+
+
+ 104:esp07.c       ****     else if (!strncmp(working.payload, "RGT_FWD", 7))
+ 354              		.loc 1 104 0
+ 355 0180 01A8     		add	r0, sp, #4
+ 356 0182 4549     		ldr	r1, .L36+64
+ 357 0184 0722     		movs	r2, #7
+ 358 0186 FFF7FEFF 		bl	strncmp
+ 359              	.LVL40:
+ 360 018a 18B9     		cbnz	r0, .L25
+ 105:esp07.c       ****         working.id = 18;
+ 361              		.loc 1 105 0
+ 362 018c 1223     		movs	r3, #18
+ 363 018e 8DF88430 		strb	r3, [sp, #132]
+ 364 0192 59E0     		b	.L9
+ 365              	.L25:
+ 106:esp07.c       ****     else if (!strncmp(working.payload, "RGT_BCK", 7))
+ 366              		.loc 1 106 0
+ 367 0194 01A8     		add	r0, sp, #4
+ 368 0196 4149     		ldr	r1, .L36+68
+ 369 0198 0722     		movs	r2, #7
+ 370 019a FFF7FEFF 		bl	strncmp
+ 371              	.LVL41:
+ 372 019e 18B9     		cbnz	r0, .L26
+ 107:esp07.c       ****         working.id = 19;
+ 373              		.loc 1 107 0
+ 374 01a0 1323     		movs	r3, #19
+ 375 01a2 8DF88430 		strb	r3, [sp, #132]
+ 376 01a6 4FE0     		b	.L9
+ 377              	.L26:
+ 108:esp07.c       ****     else if (!strncmp(working.payload, "ALL_FWD", 7))
+ 378              		.loc 1 108 0
+ 379 01a8 01A8     		add	r0, sp, #4
+ 380 01aa 3D49     		ldr	r1, .L36+72
+ 381 01ac 0722     		movs	r2, #7
+ 382 01ae FFF7FEFF 		bl	strncmp
+ 383              	.LVL42:
+ 384 01b2 18B9     		cbnz	r0, .L27
+ 109:esp07.c       ****         working.id = 20;
+ 385              		.loc 1 109 0
+ 386 01b4 1423     		movs	r3, #20
+ 387 01b6 8DF88430 		strb	r3, [sp, #132]
+ 388 01ba 45E0     		b	.L9
+ 389              	.L27:
+ 110:esp07.c       ****     else if (!strncmp(working.payload, "ALL_BCK", 7))
+ 390              		.loc 1 110 0
+ 391 01bc 01A8     		add	r0, sp, #4
+ 392 01be 3949     		ldr	r1, .L36+76
+ 393 01c0 0722     		movs	r2, #7
+ 394 01c2 FFF7FEFF 		bl	strncmp
+ 395              	.LVL43:
+ 396 01c6 18B9     		cbnz	r0, .L28
+ 111:esp07.c       ****         working.id = 21;
+ 397              		.loc 1 111 0
+ 398 01c8 1523     		movs	r3, #21
+ 399 01ca 8DF88430 		strb	r3, [sp, #132]
+ 400 01ce 3BE0     		b	.L9
+ 401              	.L28:
+ 112:esp07.c       ****     else if (!strncmp(working.payload, "ROTATE", 6))
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 10
+
+
+ 402              		.loc 1 112 0
+ 403 01d0 01A8     		add	r0, sp, #4
+ 404 01d2 3549     		ldr	r1, .L36+80
+ 405 01d4 0622     		movs	r2, #6
+ 406 01d6 FFF7FEFF 		bl	strncmp
+ 407              	.LVL44:
+ 408 01da 18B9     		cbnz	r0, .L29
+ 113:esp07.c       ****         working.id = 22;
+ 409              		.loc 1 113 0
+ 410 01dc 1623     		movs	r3, #22
+ 411 01de 8DF88430 		strb	r3, [sp, #132]
+ 412 01e2 31E0     		b	.L9
+ 413              	.L29:
+ 114:esp07.c       ****     else if (!strncmp(working.payload, "MOVE", 4)) //Uses Command - Speed - Distance
+ 414              		.loc 1 114 0
+ 415 01e4 01A8     		add	r0, sp, #4
+ 416 01e6 3149     		ldr	r1, .L36+84
+ 417 01e8 0422     		movs	r2, #4
+ 418 01ea FFF7FEFF 		bl	strncmp
+ 419              	.LVL45:
+ 420 01ee 18B9     		cbnz	r0, .L30
+ 115:esp07.c       ****         working.id = 23;
+ 421              		.loc 1 115 0
+ 422 01f0 1723     		movs	r3, #23
+ 423 01f2 8DF88430 		strb	r3, [sp, #132]
+ 424 01f6 27E0     		b	.L9
+ 425              	.L30:
+ 116:esp07.c       ****     else if (!strcmp(working.payload, "COORD"))
+ 426              		.loc 1 116 0
+ 427 01f8 01A8     		add	r0, sp, #4
+ 428 01fa 2D49     		ldr	r1, .L36+88
+ 429 01fc FFF7FEFF 		bl	strcmp
+ 430              	.LVL46:
+ 431 0200 18B9     		cbnz	r0, .L31
+ 117:esp07.c       ****         working.id = 24;
+ 432              		.loc 1 117 0
+ 433 0202 1823     		movs	r3, #24
+ 434 0204 8DF88430 		strb	r3, [sp, #132]
+ 435 0208 1EE0     		b	.L9
+ 436              	.L31:
+ 118:esp07.c       ****     else if (!strcmp(working.payload, "HEADING"))
+ 437              		.loc 1 118 0
+ 438 020a 01A8     		add	r0, sp, #4
+ 439 020c 2949     		ldr	r1, .L36+92
+ 440 020e FFF7FEFF 		bl	strcmp
+ 441              	.LVL47:
+ 442 0212 18B9     		cbnz	r0, .L32
+ 119:esp07.c       ****         working.id = 25;
+ 443              		.loc 1 119 0
+ 444 0214 1923     		movs	r3, #25
+ 445 0216 8DF88430 		strb	r3, [sp, #132]
+ 446 021a 15E0     		b	.L9
+ 447              	.L32:
+ 120:esp07.c       ****     else if (!strncmp(working.payload, "NPOLYG", 6))
+ 448              		.loc 1 120 0
+ 449 021c 01A8     		add	r0, sp, #4
+ 450 021e 2649     		ldr	r1, .L36+96
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 11
+
+
+ 451 0220 0622     		movs	r2, #6
+ 452 0222 FFF7FEFF 		bl	strncmp
+ 453              	.LVL48:
+ 454 0226 18B9     		cbnz	r0, .L33
+ 121:esp07.c       ****         working.id = 26;
+ 455              		.loc 1 121 0
+ 456 0228 1A23     		movs	r3, #26
+ 457 022a 8DF88430 		strb	r3, [sp, #132]
+ 458 022e 0BE0     		b	.L9
+ 459              	.L33:
+ 122:esp07.c       ****     else if (!strcmp(working.payload, "STOP"))
+ 460              		.loc 1 122 0
+ 461 0230 01A8     		add	r0, sp, #4
+ 462 0232 2249     		ldr	r1, .L36+100
+ 463 0234 FFF7FEFF 		bl	strcmp
+ 464              	.LVL49:
+ 465 0238 18B9     		cbnz	r0, .L34
+ 123:esp07.c       ****         working.id = 27;
+ 466              		.loc 1 123 0
+ 467 023a 1B23     		movs	r3, #27
+ 468 023c 8DF88430 		strb	r3, [sp, #132]
+ 469 0240 02E0     		b	.L9
+ 470              	.L34:
+ 124:esp07.c       ****     else
+ 125:esp07.c       ****         working.id = 0;   
+ 471              		.loc 1 125 0
+ 472 0242 0023     		movs	r3, #0
+ 473 0244 8DF88430 		strb	r3, [sp, #132]
+ 474              	.L9:
+ 126:esp07.c       **** 
+ 127:esp07.c       ****     return working;
+ 475              		.loc 1 127 0
+ 476 0248 3046     		mov	r0, r6
+ 477 024a 01A9     		add	r1, sp, #4
+ 478 024c 8322     		movs	r2, #131
+ 479 024e FFF7FEFF 		bl	memcpy
+ 480              	.LVL50:
+ 128:esp07.c       **** }
+ 481              		.loc 1 128 0
+ 482 0252 3046     		mov	r0, r6
+ 483 0254 22B0     		add	sp, sp, #136
+ 484              		.cfi_def_cfa_offset 16
+ 485              		@ sp needed
+ 486 0256 70BD     		pop	{r4, r5, r6, pc}
+ 487              	.LVL51:
+ 488              	.L37:
+ 489              		.align	2
+ 490              	.L36:
+ 491 0258 84000000 		.word	.LC7
+ 492 025c 8C000000 		.word	.LC8
+ 493 0260 94000000 		.word	.LC9
+ 494 0264 9C000000 		.word	.LC10
+ 495 0268 A0000000 		.word	.LC11
+ 496 026c A8000000 		.word	.LC12
+ 497 0270 AC000000 		.word	.LC13
+ 498 0274 B4000000 		.word	.LC14
+ 499 0278 BC000000 		.word	.LC15
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 12
+
+
+ 500 027c C4000000 		.word	.LC16
+ 501 0280 D0000000 		.word	.LC17
+ 502 0284 DC000000 		.word	.LC18
+ 503 0288 E4000000 		.word	.LC19
+ 504 028c F4000000 		.word	.LC20
+ 505 0290 FC000000 		.word	.LC21
+ 506 0294 04010000 		.word	.LC22
+ 507 0298 0C010000 		.word	.LC23
+ 508 029c 14010000 		.word	.LC24
+ 509 02a0 1C010000 		.word	.LC25
+ 510 02a4 24010000 		.word	.LC26
+ 511 02a8 2C010000 		.word	.LC27
+ 512 02ac 34010000 		.word	.LC28
+ 513 02b0 3C010000 		.word	.LC29
+ 514 02b4 44010000 		.word	.LC30
+ 515 02b8 4C010000 		.word	.LC31
+ 516 02bc 54010000 		.word	.LC32
+ 517              		.cfi_endproc
+ 518              	.LFE64:
+ 519              		.size	ESP07_Parse, .-ESP07_Parse
+ 520              		.section	.text.ESP07_SendAck,"ax",%progbits
+ 521              		.align	2
+ 522              		.global	ESP07_SendAck
+ 523              		.thumb
+ 524              		.thumb_func
+ 525              		.type	ESP07_SendAck, %function
+ 526              	ESP07_SendAck:
+ 527              	.LFB65:
+ 129:esp07.c       **** 
+ 130:esp07.c       **** void ESP07_SendAck()
+ 131:esp07.c       **** {
+ 528              		.loc 1 131 0
+ 529              		.cfi_startproc
+ 530              		@ args = 0, pretend = 0, frame = 0
+ 531              		@ frame_needed = 0, uses_anonymous_args = 0
+ 532 0000 08B5     		push	{r3, lr}
+ 533              		.cfi_def_cfa_offset 8
+ 534              		.cfi_offset 3, -8
+ 535              		.cfi_offset 14, -4
+ 132:esp07.c       ****     ESP07_UART_PutString("AT+CIPSEND=0,12\r\n");
+ 536              		.loc 1 132 0
+ 537 0002 0548     		ldr	r0, .L40
+ 538 0004 FFF7FEFF 		bl	ESP07_UART_PutString
+ 539              	.LVL52:
+ 133:esp07.c       ****     CyDelay(20);
+ 540              		.loc 1 133 0
+ 541 0008 1420     		movs	r0, #20
+ 542 000a FFF7FEFF 		bl	CyDelay
+ 543              	.LVL53:
+ 134:esp07.c       ****     ESP07_UART_PutString("ESP07> ACK\r\n");
+ 544              		.loc 1 134 0
+ 545 000e 0348     		ldr	r0, .L40+4
+ 546 0010 FFF7FEFF 		bl	ESP07_UART_PutString
+ 547              	.LVL54:
+ 548 0014 08BD     		pop	{r3, pc}
+ 549              	.L41:
+ 550 0016 00BF     		.align	2
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 13
+
+
+ 551              	.L40:
+ 552 0018 5C010000 		.word	.LC33
+ 553 001c 70010000 		.word	.LC34
+ 554              		.cfi_endproc
+ 555              	.LFE65:
+ 556              		.size	ESP07_SendAck, .-ESP07_SendAck
+ 557              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 558              		.align	2
+ 559              	.LC0:
+ 560 0000 41542B52 		.ascii	"AT+RST\015\012\000"
+ 560      53540D0A 
+ 560      00
+ 561 0009 000000   		.space	3
+ 562              	.LC1:
+ 563 000c 41540D0A 		.ascii	"AT\015\012\000"
+ 563      00
+ 564 0011 000000   		.space	3
+ 565              	.LC2:
+ 566 0014 41544530 		.ascii	"ATE0\015\012\000"
+ 566      0D0A00
+ 567 001b 00       		.space	1
+ 568              	.LC3:
+ 569 001c 41542B43 		.ascii	"AT+CIPMODE=0\015\012\000"
+ 569      49504D4F 
+ 569      44453D30 
+ 569      0D0A00
+ 570 002b 00       		.space	1
+ 571              	.LC4:
+ 572 002c 41542B43 		.ascii	"AT+CIPMUX=1\015\012\000"
+ 572      49504D55 
+ 572      583D310D 
+ 572      0A00
+ 573 003a 0000     		.space	2
+ 574              	.LC5:
+ 575 003c 41542B43 		.ascii	"AT+CWSAP=\"4DShoot Prototype\",\"hhwwguak\",1,3,4,0"
+ 575      57534150 
+ 575      3D223444 
+ 575      53686F6F 
+ 575      74205072 
+ 576 006b 0D0A00   		.ascii	"\015\012\000"
+ 577 006e 0000     		.space	2
+ 578              	.LC6:
+ 579 0070 41542B43 		.ascii	"AT+CIPSERVER=1,80\015\012\000"
+ 579      49505345 
+ 579      52564552 
+ 579      3D312C38 
+ 579      300D0A00 
+ 580              	.LC7:
+ 581 0084 2B495044 		.ascii	"+IPD,\000"
+ 581      2C00
+ 582 008a 0000     		.space	2
+ 583              	.LC8:
+ 584 008c 4C454420 		.ascii	"LED ON\000"
+ 584      4F4E00
+ 585 0093 00       		.space	1
+ 586              	.LC9:
+ 587 0094 4C454420 		.ascii	"LED OFF\000"
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 14
+
+
+ 587      4F464600 
+ 588              	.LC10:
+ 589 009c 4F4B00   		.ascii	"OK\000"
+ 590 009f 00       		.space	1
+ 591              	.LC11:
+ 592 00a0 72656164 		.ascii	"ready\000"
+ 592      7900
+ 593 00a6 0000     		.space	2
+ 594              	.LC12:
+ 595 00a8 3E2000   		.ascii	"> \000"
+ 596 00ab 00       		.space	1
+ 597              	.LC13:
+ 598 00ac 52656376 		.ascii	"Recv\000"
+ 598      00
+ 599 00b1 000000   		.space	3
+ 600              	.LC14:
+ 601 00b4 53454E44 		.ascii	"SEND OK\000"
+ 601      204F4B00 
+ 602              	.LC15:
+ 603 00bc 4552524F 		.ascii	"ERROR\000"
+ 603      5200
+ 604 00c2 0000     		.space	2
+ 605              	.LC16:
+ 606 00c4 302C434F 		.ascii	"0,CONNECT\000"
+ 606      4E4E4543 
+ 606      5400
+ 607 00ce 0000     		.space	2
+ 608              	.LC17:
+ 609 00d0 302C434C 		.ascii	"0,CLOSED\000"
+ 609      4F534544 
+ 609      00
+ 610 00d9 000000   		.space	3
+ 611              	.LC18:
+ 612 00dc 44554D50 		.ascii	"DUMP\000"
+ 612      00
+ 613 00e1 000000   		.space	3
+ 614              	.LC19:
+ 615 00e4 302C434F 		.ascii	"0,CONNECT FAIL\000"
+ 615      4E4E4543 
+ 615      54204641 
+ 615      494C00
+ 616 00f3 00       		.space	1
+ 617              	.LC20:
+ 618 00f4 52455345 		.ascii	"RESET\000"
+ 618      5400
+ 619 00fa 0000     		.space	2
+ 620              	.LC21:
+ 621 00fc 4C46545F 		.ascii	"LFT_FWD\000"
+ 621      46574400 
+ 622              	.LC22:
+ 623 0104 4C46545F 		.ascii	"LFT_BCK\000"
+ 623      42434B00 
+ 624              	.LC23:
+ 625 010c 5247545F 		.ascii	"RGT_FWD\000"
+ 625      46574400 
+ 626              	.LC24:
+ 627 0114 5247545F 		.ascii	"RGT_BCK\000"
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 15
+
+
+ 627      42434B00 
+ 628              	.LC25:
+ 629 011c 414C4C5F 		.ascii	"ALL_FWD\000"
+ 629      46574400 
+ 630              	.LC26:
+ 631 0124 414C4C5F 		.ascii	"ALL_BCK\000"
+ 631      42434B00 
+ 632              	.LC27:
+ 633 012c 524F5441 		.ascii	"ROTATE\000"
+ 633      544500
+ 634 0133 00       		.space	1
+ 635              	.LC28:
+ 636 0134 4D4F5645 		.ascii	"MOVE\000"
+ 636      00
+ 637 0139 000000   		.space	3
+ 638              	.LC29:
+ 639 013c 434F4F52 		.ascii	"COORD\000"
+ 639      4400
+ 640 0142 0000     		.space	2
+ 641              	.LC30:
+ 642 0144 48454144 		.ascii	"HEADING\000"
+ 642      494E4700 
+ 643              	.LC31:
+ 644 014c 4E504F4C 		.ascii	"NPOLYG\000"
+ 644      594700
+ 645 0153 00       		.space	1
+ 646              	.LC32:
+ 647 0154 53544F50 		.ascii	"STOP\000"
+ 647      00
+ 648 0159 000000   		.space	3
+ 649              	.LC33:
+ 650 015c 41542B43 		.ascii	"AT+CIPSEND=0,12\015\012\000"
+ 650      49505345 
+ 650      4E443D30 
+ 650      2C31320D 
+ 650      0A00
+ 651 016e 0000     		.space	2
+ 652              	.LC34:
+ 653 0170 45535030 		.ascii	"ESP07> ACK\015\012\000"
+ 653      373E2041 
+ 653      434B0D0A 
+ 653      00
+ 654 017d 000000   		.text
+ 655              	.Letext0:
+ 656              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 657              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 658              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 659              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 660              		.file 6 "esp07.h"
+ 661              		.file 7 "Generated_Source\\PSoC5/ESP07_UART.h"
+ 662              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
+ 663              		.file 9 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 664              		.file 10 "Generated_Source\\PSoC5/core_cm3.h"
+ 665              		.section	.debug_info,"",%progbits
+ 666              	.Ldebug_info0:
+ 667 0000 80080000 		.4byte	0x880
+ 668 0004 0400     		.2byte	0x4
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 16
+
+
+ 669 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 670 000a 04       		.byte	0x4
+ 671 000b 01       		.uleb128 0x1
+ 672 000c 27010000 		.4byte	.LASF36
+ 673 0010 01       		.byte	0x1
+ 674 0011 45000000 		.4byte	.LASF37
+ 675 0015 E3010000 		.4byte	.LASF38
+ 676 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 677 001d 00000000 		.4byte	0
+ 678 0021 00000000 		.4byte	.Ldebug_line0
+ 679 0025 02       		.uleb128 0x2
+ 680 0026 01       		.byte	0x1
+ 681 0027 06       		.byte	0x6
+ 682 0028 91020000 		.4byte	.LASF0
+ 683 002c 03       		.uleb128 0x3
+ 684 002d 34000000 		.4byte	.LASF4
+ 685 0031 02       		.byte	0x2
+ 686 0032 1D       		.byte	0x1d
+ 687 0033 37000000 		.4byte	0x37
+ 688 0037 02       		.uleb128 0x2
+ 689 0038 01       		.byte	0x1
+ 690 0039 08       		.byte	0x8
+ 691 003a 98000000 		.4byte	.LASF1
+ 692 003e 02       		.uleb128 0x2
+ 693 003f 02       		.byte	0x2
+ 694 0040 05       		.byte	0x5
+ 695 0041 0E010000 		.4byte	.LASF2
+ 696 0045 02       		.uleb128 0x2
+ 697 0046 02       		.byte	0x2
+ 698 0047 07       		.byte	0x7
+ 699 0048 D4000000 		.4byte	.LASF3
+ 700 004c 03       		.uleb128 0x3
+ 701 004d 4D000000 		.4byte	.LASF5
+ 702 0051 02       		.byte	0x2
+ 703 0052 3F       		.byte	0x3f
+ 704 0053 57000000 		.4byte	0x57
+ 705 0057 02       		.uleb128 0x2
+ 706 0058 04       		.byte	0x4
+ 707 0059 05       		.byte	0x5
+ 708 005a 7D020000 		.4byte	.LASF6
+ 709 005e 02       		.uleb128 0x2
+ 710 005f 04       		.byte	0x4
+ 711 0060 07       		.byte	0x7
+ 712 0061 C2000000 		.4byte	.LASF7
+ 713 0065 02       		.uleb128 0x2
+ 714 0066 08       		.byte	0x8
+ 715 0067 05       		.byte	0x5
+ 716 0068 50020000 		.4byte	.LASF8
+ 717 006c 02       		.uleb128 0x2
+ 718 006d 08       		.byte	0x8
+ 719 006e 07       		.byte	0x7
+ 720 006f BC010000 		.4byte	.LASF9
+ 721 0073 04       		.uleb128 0x4
+ 722 0074 04       		.byte	0x4
+ 723 0075 05       		.byte	0x5
+ 724 0076 696E7400 		.ascii	"int\000"
+ 725 007a 02       		.uleb128 0x2
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 17
+
+
+ 726 007b 04       		.byte	0x4
+ 727 007c 07       		.byte	0x7
+ 728 007d 78000000 		.4byte	.LASF10
+ 729 0081 03       		.uleb128 0x3
+ 730 0082 D3010000 		.4byte	.LASF11
+ 731 0086 03       		.byte	0x3
+ 732 0087 15       		.byte	0x15
+ 733 0088 2C000000 		.4byte	0x2c
+ 734 008c 03       		.uleb128 0x3
+ 735 008d 85000000 		.4byte	.LASF12
+ 736 0091 03       		.byte	0x3
+ 737 0092 2C       		.byte	0x2c
+ 738 0093 4C000000 		.4byte	0x4c
+ 739 0097 05       		.uleb128 0x5
+ 740 0098 20010000 		.4byte	.LASF13
+ 741 009c 04       		.byte	0x4
+ 742 009d 9401     		.2byte	0x194
+ 743 009f 5E000000 		.4byte	0x5e
+ 744 00a3 02       		.uleb128 0x2
+ 745 00a4 04       		.byte	0x4
+ 746 00a5 04       		.byte	0x4
+ 747 00a6 8D000000 		.4byte	.LASF14
+ 748 00aa 02       		.uleb128 0x2
+ 749 00ab 08       		.byte	0x8
+ 750 00ac 04       		.byte	0x4
+ 751 00ad 00010000 		.4byte	.LASF15
+ 752 00b1 05       		.uleb128 0x5
+ 753 00b2 B5000000 		.4byte	.LASF16
+ 754 00b6 04       		.byte	0x4
+ 755 00b7 A301     		.2byte	0x1a3
+ 756 00b9 BD000000 		.4byte	0xbd
+ 757 00bd 02       		.uleb128 0x2
+ 758 00be 01       		.byte	0x1
+ 759 00bf 08       		.byte	0x8
+ 760 00c0 5E020000 		.4byte	.LASF17
+ 761 00c4 03       		.uleb128 0x3
+ 762 00c5 2D000000 		.4byte	.LASF18
+ 763 00c9 05       		.byte	0x5
+ 764 00ca D4       		.byte	0xd4
+ 765 00cb 7A000000 		.4byte	0x7a
+ 766 00cf 02       		.uleb128 0x2
+ 767 00d0 04       		.byte	0x4
+ 768 00d1 07       		.byte	0x7
+ 769 00d2 47020000 		.4byte	.LASF19
+ 770 00d6 06       		.uleb128 0x6
+ 771 00d7 04       		.byte	0x4
+ 772 00d8 07       		.uleb128 0x7
+ 773 00d9 04       		.byte	0x4
+ 774 00da BD000000 		.4byte	0xbd
+ 775 00de 07       		.uleb128 0x7
+ 776 00df 04       		.byte	0x4
+ 777 00e0 E4000000 		.4byte	0xe4
+ 778 00e4 08       		.uleb128 0x8
+ 779 00e5 BD000000 		.4byte	0xbd
+ 780 00e9 09       		.uleb128 0x9
+ 781 00ea A6000000 		.4byte	.LASF39
+ 782 00ee 83       		.byte	0x83
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 18
+
+
+ 783 00ef 06       		.byte	0x6
+ 784 00f0 23       		.byte	0x23
+ 785 00f1 31010000 		.4byte	0x131
+ 786 00f5 0A       		.uleb128 0xa
+ 787 00f6 DB010000 		.4byte	.LASF20
+ 788 00fa 06       		.byte	0x6
+ 789 00fb 25       		.byte	0x25
+ 790 00fc 31010000 		.4byte	0x131
+ 791 0100 00       		.byte	0
+ 792 0101 0B       		.uleb128 0xb
+ 793 0102 72617700 		.ascii	"raw\000"
+ 794 0106 06       		.byte	0x6
+ 795 0107 26       		.byte	0x26
+ 796 0108 31010000 		.4byte	0x131
+ 797 010c 40       		.byte	0x40
+ 798 010d 0B       		.uleb128 0xb
+ 799 010e 696400   		.ascii	"id\000"
+ 800 0111 06       		.byte	0x6
+ 801 0112 27       		.byte	0x27
+ 802 0113 81000000 		.4byte	0x81
+ 803 0117 80       		.byte	0x80
+ 804 0118 0A       		.uleb128 0xa
+ 805 0119 10000000 		.4byte	.LASF21
+ 806 011d 06       		.byte	0x6
+ 807 011e 28       		.byte	0x28
+ 808 011f 81000000 		.4byte	0x81
+ 809 0123 81       		.byte	0x81
+ 810 0124 0A       		.uleb128 0xa
+ 811 0125 3C020000 		.4byte	.LASF22
+ 812 0129 06       		.byte	0x6
+ 813 012a 29       		.byte	0x29
+ 814 012b 81000000 		.4byte	0x81
+ 815 012f 82       		.byte	0x82
+ 816 0130 00       		.byte	0
+ 817 0131 0C       		.uleb128 0xc
+ 818 0132 BD000000 		.4byte	0xbd
+ 819 0136 41010000 		.4byte	0x141
+ 820 013a 0D       		.uleb128 0xd
+ 821 013b CF000000 		.4byte	0xcf
+ 822 013f 3F       		.byte	0x3f
+ 823 0140 00       		.byte	0
+ 824 0141 0E       		.uleb128 0xe
+ 825 0142 72020000 		.4byte	.LASF40
+ 826 0146 01       		.byte	0x1
+ 827 0147 18       		.byte	0x18
+ 828 0148 00000000 		.4byte	.LFB63
+ 829 014c 78000000 		.4byte	.LFE63-.LFB63
+ 830 0150 01       		.uleb128 0x1
+ 831 0151 9C       		.byte	0x9c
+ 832 0152 81020000 		.4byte	0x281
+ 833 0156 0F       		.uleb128 0xf
+ 834 0157 08000000 		.4byte	.LVL0
+ 835 015b 96070000 		.4byte	0x796
+ 836 015f 6D010000 		.4byte	0x16d
+ 837 0163 10       		.uleb128 0x10
+ 838 0164 01       		.uleb128 0x1
+ 839 0165 50       		.byte	0x50
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 19
+
+
+ 840 0166 05       		.uleb128 0x5
+ 841 0167 03       		.byte	0x3
+ 842 0168 00000000 		.4byte	.LC0
+ 843 016c 00       		.byte	0
+ 844 016d 0F       		.uleb128 0xf
+ 845 016e 10000000 		.4byte	.LVL1
+ 846 0172 B2070000 		.4byte	0x7b2
+ 847 0176 82010000 		.4byte	0x182
+ 848 017a 10       		.uleb128 0x10
+ 849 017b 01       		.uleb128 0x1
+ 850 017c 50       		.byte	0x50
+ 851 017d 03       		.uleb128 0x3
+ 852 017e 0A       		.byte	0xa
+ 853 017f F401     		.2byte	0x1f4
+ 854 0181 00       		.byte	0
+ 855 0182 0F       		.uleb128 0xf
+ 856 0183 16000000 		.4byte	.LVL2
+ 857 0187 96070000 		.4byte	0x796
+ 858 018b 99010000 		.4byte	0x199
+ 859 018f 10       		.uleb128 0x10
+ 860 0190 01       		.uleb128 0x1
+ 861 0191 50       		.byte	0x50
+ 862 0192 05       		.uleb128 0x5
+ 863 0193 03       		.byte	0x3
+ 864 0194 0C000000 		.4byte	.LC1
+ 865 0198 00       		.byte	0
+ 866 0199 0F       		.uleb128 0xf
+ 867 019a 1C000000 		.4byte	.LVL3
+ 868 019e B2070000 		.4byte	0x7b2
+ 869 01a2 AD010000 		.4byte	0x1ad
+ 870 01a6 10       		.uleb128 0x10
+ 871 01a7 01       		.uleb128 0x1
+ 872 01a8 50       		.byte	0x50
+ 873 01a9 02       		.uleb128 0x2
+ 874 01aa 08       		.byte	0x8
+ 875 01ab 32       		.byte	0x32
+ 876 01ac 00       		.byte	0
+ 877 01ad 0F       		.uleb128 0xf
+ 878 01ae 22000000 		.4byte	.LVL4
+ 879 01b2 96070000 		.4byte	0x796
+ 880 01b6 C4010000 		.4byte	0x1c4
+ 881 01ba 10       		.uleb128 0x10
+ 882 01bb 01       		.uleb128 0x1
+ 883 01bc 50       		.byte	0x50
+ 884 01bd 05       		.uleb128 0x5
+ 885 01be 03       		.byte	0x3
+ 886 01bf 14000000 		.4byte	.LC2
+ 887 01c3 00       		.byte	0
+ 888 01c4 0F       		.uleb128 0xf
+ 889 01c5 28000000 		.4byte	.LVL5
+ 890 01c9 B2070000 		.4byte	0x7b2
+ 891 01cd D8010000 		.4byte	0x1d8
+ 892 01d1 10       		.uleb128 0x10
+ 893 01d2 01       		.uleb128 0x1
+ 894 01d3 50       		.byte	0x50
+ 895 01d4 02       		.uleb128 0x2
+ 896 01d5 08       		.byte	0x8
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 20
+
+
+ 897 01d6 32       		.byte	0x32
+ 898 01d7 00       		.byte	0
+ 899 01d8 0F       		.uleb128 0xf
+ 900 01d9 2E000000 		.4byte	.LVL6
+ 901 01dd 96070000 		.4byte	0x796
+ 902 01e1 EF010000 		.4byte	0x1ef
+ 903 01e5 10       		.uleb128 0x10
+ 904 01e6 01       		.uleb128 0x1
+ 905 01e7 50       		.byte	0x50
+ 906 01e8 05       		.uleb128 0x5
+ 907 01e9 03       		.byte	0x3
+ 908 01ea 1C000000 		.4byte	.LC3
+ 909 01ee 00       		.byte	0
+ 910 01ef 0F       		.uleb128 0xf
+ 911 01f0 34000000 		.4byte	.LVL7
+ 912 01f4 B2070000 		.4byte	0x7b2
+ 913 01f8 03020000 		.4byte	0x203
+ 914 01fc 10       		.uleb128 0x10
+ 915 01fd 01       		.uleb128 0x1
+ 916 01fe 50       		.byte	0x50
+ 917 01ff 02       		.uleb128 0x2
+ 918 0200 08       		.byte	0x8
+ 919 0201 32       		.byte	0x32
+ 920 0202 00       		.byte	0
+ 921 0203 0F       		.uleb128 0xf
+ 922 0204 3A000000 		.4byte	.LVL8
+ 923 0208 96070000 		.4byte	0x796
+ 924 020c 1A020000 		.4byte	0x21a
+ 925 0210 10       		.uleb128 0x10
+ 926 0211 01       		.uleb128 0x1
+ 927 0212 50       		.byte	0x50
+ 928 0213 05       		.uleb128 0x5
+ 929 0214 03       		.byte	0x3
+ 930 0215 2C000000 		.4byte	.LC4
+ 931 0219 00       		.byte	0
+ 932 021a 0F       		.uleb128 0xf
+ 933 021b 40000000 		.4byte	.LVL9
+ 934 021f B2070000 		.4byte	0x7b2
+ 935 0223 2E020000 		.4byte	0x22e
+ 936 0227 10       		.uleb128 0x10
+ 937 0228 01       		.uleb128 0x1
+ 938 0229 50       		.byte	0x50
+ 939 022a 02       		.uleb128 0x2
+ 940 022b 08       		.byte	0x8
+ 941 022c 32       		.byte	0x32
+ 942 022d 00       		.byte	0
+ 943 022e 0F       		.uleb128 0xf
+ 944 022f 46000000 		.4byte	.LVL10
+ 945 0233 96070000 		.4byte	0x796
+ 946 0237 45020000 		.4byte	0x245
+ 947 023b 10       		.uleb128 0x10
+ 948 023c 01       		.uleb128 0x1
+ 949 023d 50       		.byte	0x50
+ 950 023e 05       		.uleb128 0x5
+ 951 023f 03       		.byte	0x3
+ 952 0240 3C000000 		.4byte	.LC5
+ 953 0244 00       		.byte	0
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 21
+
+
+ 954 0245 0F       		.uleb128 0xf
+ 955 0246 4C000000 		.4byte	.LVL11
+ 956 024a B2070000 		.4byte	0x7b2
+ 957 024e 59020000 		.4byte	0x259
+ 958 0252 10       		.uleb128 0x10
+ 959 0253 01       		.uleb128 0x1
+ 960 0254 50       		.byte	0x50
+ 961 0255 02       		.uleb128 0x2
+ 962 0256 08       		.byte	0x8
+ 963 0257 32       		.byte	0x32
+ 964 0258 00       		.byte	0
+ 965 0259 0F       		.uleb128 0xf
+ 966 025a 52000000 		.4byte	.LVL12
+ 967 025e 96070000 		.4byte	0x796
+ 968 0262 70020000 		.4byte	0x270
+ 969 0266 10       		.uleb128 0x10
+ 970 0267 01       		.uleb128 0x1
+ 971 0268 50       		.byte	0x50
+ 972 0269 05       		.uleb128 0x5
+ 973 026a 03       		.byte	0x3
+ 974 026b 70000000 		.4byte	.LC6
+ 975 026f 00       		.byte	0
+ 976 0270 11       		.uleb128 0x11
+ 977 0271 58000000 		.4byte	.LVL13
+ 978 0275 B2070000 		.4byte	0x7b2
+ 979 0279 10       		.uleb128 0x10
+ 980 027a 01       		.uleb128 0x1
+ 981 027b 50       		.byte	0x50
+ 982 027c 02       		.uleb128 0x2
+ 983 027d 08       		.byte	0x8
+ 984 027e 32       		.byte	0x32
+ 985 027f 00       		.byte	0
+ 986 0280 00       		.byte	0
+ 987 0281 12       		.uleb128 0x12
+ 988 0282 F4000000 		.4byte	.LASF41
+ 989 0286 01       		.byte	0x1
+ 990 0287 32       		.byte	0x32
+ 991 0288 E9000000 		.4byte	0xe9
+ 992 028c 00000000 		.4byte	.LFB64
+ 993 0290 C0020000 		.4byte	.LFE64-.LFB64
+ 994 0294 01       		.uleb128 0x1
+ 995 0295 9C       		.byte	0x9c
+ 996 0296 CE060000 		.4byte	0x6ce
+ 997 029a 13       		.uleb128 0x13
+ 998 029b 93000000 		.4byte	.LASF42
+ 999 029f 01       		.byte	0x1
+ 1000 02a0 32       		.byte	0x32
+ 1001 02a1 DE000000 		.4byte	0xde
+ 1002 02a5 00000000 		.4byte	.LLST0
+ 1003 02a9 14       		.uleb128 0x14
+ 1004 02aa 18010000 		.4byte	.LASF23
+ 1005 02ae 01       		.byte	0x1
+ 1006 02af 34       		.byte	0x34
+ 1007 02b0 E9000000 		.4byte	0xe9
+ 1008 02b4 03       		.uleb128 0x3
+ 1009 02b5 91       		.byte	0x91
+ 1010 02b6 EC7E     		.sleb128 -148
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 22
+
+
+ 1011 02b8 0F       		.uleb128 0xf
+ 1012 02b9 0E000000 		.4byte	.LVL16
+ 1013 02bd C3070000 		.4byte	0x7c3
+ 1014 02c1 D3020000 		.4byte	0x2d3
+ 1015 02c5 10       		.uleb128 0x10
+ 1016 02c6 01       		.uleb128 0x1
+ 1017 02c7 51       		.byte	0x51
+ 1018 02c8 02       		.uleb128 0x2
+ 1019 02c9 74       		.byte	0x74
+ 1020 02ca 00       		.sleb128 0
+ 1021 02cb 10       		.uleb128 0x10
+ 1022 02cc 01       		.uleb128 0x1
+ 1023 02cd 50       		.byte	0x50
+ 1024 02ce 03       		.uleb128 0x3
+ 1025 02cf 91       		.byte	0x91
+ 1026 02d0 AC7F     		.sleb128 -84
+ 1027 02d2 00       		.byte	0
+ 1028 02d3 0F       		.uleb128 0xf
+ 1029 02d4 14000000 		.4byte	.LVL17
+ 1030 02d8 DD070000 		.4byte	0x7dd
+ 1031 02dc E7020000 		.4byte	0x2e7
+ 1032 02e0 10       		.uleb128 0x10
+ 1033 02e1 01       		.uleb128 0x1
+ 1034 02e2 50       		.byte	0x50
+ 1035 02e3 02       		.uleb128 0x2
+ 1036 02e4 74       		.byte	0x74
+ 1037 02e5 00       		.sleb128 0
+ 1038 02e6 00       		.byte	0
+ 1039 02e7 0F       		.uleb128 0xf
+ 1040 02e8 20000000 		.4byte	.LVL18
+ 1041 02ec F2070000 		.4byte	0x7f2
+ 1042 02f0 04030000 		.4byte	0x304
+ 1043 02f4 10       		.uleb128 0x10
+ 1044 02f5 01       		.uleb128 0x1
+ 1045 02f6 51       		.byte	0x51
+ 1046 02f7 05       		.uleb128 0x5
+ 1047 02f8 03       		.byte	0x3
+ 1048 02f9 84000000 		.4byte	.LC7
+ 1049 02fd 10       		.uleb128 0x10
+ 1050 02fe 01       		.uleb128 0x1
+ 1051 02ff 50       		.byte	0x50
+ 1052 0300 02       		.uleb128 0x2
+ 1053 0301 74       		.byte	0x74
+ 1054 0302 00       		.sleb128 0
+ 1055 0303 00       		.byte	0
+ 1056 0304 0F       		.uleb128 0xf
+ 1057 0305 28000000 		.4byte	.LVL19
+ 1058 0309 DD070000 		.4byte	0x7dd
+ 1059 030d 18030000 		.4byte	0x318
+ 1060 0311 10       		.uleb128 0x10
+ 1061 0312 01       		.uleb128 0x1
+ 1062 0313 50       		.byte	0x50
+ 1063 0314 02       		.uleb128 0x2
+ 1064 0315 74       		.byte	0x74
+ 1065 0316 00       		.sleb128 0
+ 1066 0317 00       		.byte	0
+ 1067 0318 0F       		.uleb128 0xf
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 23
+
+
+ 1068 0319 32000000 		.4byte	.LVL20
+ 1069 031d 0C080000 		.4byte	0x80c
+ 1070 0321 32030000 		.4byte	0x332
+ 1071 0325 10       		.uleb128 0x10
+ 1072 0326 01       		.uleb128 0x1
+ 1073 0327 51       		.byte	0x51
+ 1074 0328 02       		.uleb128 0x2
+ 1075 0329 08       		.byte	0x8
+ 1076 032a 3A       		.byte	0x3a
+ 1077 032b 10       		.uleb128 0x10
+ 1078 032c 01       		.uleb128 0x1
+ 1079 032d 50       		.byte	0x50
+ 1080 032e 02       		.uleb128 0x2
+ 1081 032f 74       		.byte	0x74
+ 1082 0330 00       		.sleb128 0
+ 1083 0331 00       		.byte	0
+ 1084 0332 0F       		.uleb128 0xf
+ 1085 0333 42000000 		.4byte	.LVL21
+ 1086 0337 0C080000 		.4byte	0x80c
+ 1087 033b 4C030000 		.4byte	0x34c
+ 1088 033f 10       		.uleb128 0x10
+ 1089 0340 01       		.uleb128 0x1
+ 1090 0341 51       		.byte	0x51
+ 1091 0342 02       		.uleb128 0x2
+ 1092 0343 08       		.byte	0x8
+ 1093 0344 3A       		.byte	0x3a
+ 1094 0345 10       		.uleb128 0x10
+ 1095 0346 01       		.uleb128 0x1
+ 1096 0347 50       		.byte	0x50
+ 1097 0348 02       		.uleb128 0x2
+ 1098 0349 74       		.byte	0x74
+ 1099 034a 00       		.sleb128 0
+ 1100 034b 00       		.byte	0
+ 1101 034c 0F       		.uleb128 0xf
+ 1102 034d 4A000000 		.4byte	.LVL22
+ 1103 0351 C3070000 		.4byte	0x7c3
+ 1104 0355 61030000 		.4byte	0x361
+ 1105 0359 10       		.uleb128 0x10
+ 1106 035a 01       		.uleb128 0x1
+ 1107 035b 50       		.byte	0x50
+ 1108 035c 03       		.uleb128 0x3
+ 1109 035d 91       		.byte	0x91
+ 1110 035e EC7E     		.sleb128 -148
+ 1111 0360 00       		.byte	0
+ 1112 0361 0F       		.uleb128 0xf
+ 1113 0362 54000000 		.4byte	.LVL23
+ 1114 0366 C3070000 		.4byte	0x7c3
+ 1115 036a 7C030000 		.4byte	0x37c
+ 1116 036e 10       		.uleb128 0x10
+ 1117 036f 01       		.uleb128 0x1
+ 1118 0370 51       		.byte	0x51
+ 1119 0371 02       		.uleb128 0x2
+ 1120 0372 74       		.byte	0x74
+ 1121 0373 00       		.sleb128 0
+ 1122 0374 10       		.uleb128 0x10
+ 1123 0375 01       		.uleb128 0x1
+ 1124 0376 50       		.byte	0x50
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 24
+
+
+ 1125 0377 03       		.uleb128 0x3
+ 1126 0378 91       		.byte	0x91
+ 1127 0379 EC7E     		.sleb128 -148
+ 1128 037b 00       		.byte	0
+ 1129 037c 0F       		.uleb128 0xf
+ 1130 037d 5A000000 		.4byte	.LVL24
+ 1131 0381 DD070000 		.4byte	0x7dd
+ 1132 0385 90030000 		.4byte	0x390
+ 1133 0389 10       		.uleb128 0x10
+ 1134 038a 01       		.uleb128 0x1
+ 1135 038b 50       		.byte	0x50
+ 1136 038c 02       		.uleb128 0x2
+ 1137 038d 74       		.byte	0x74
+ 1138 038e 00       		.sleb128 0
+ 1139 038f 00       		.byte	0
+ 1140 0390 0F       		.uleb128 0xf
+ 1141 0391 74000000 		.4byte	.LVL25
+ 1142 0395 26080000 		.4byte	0x826
+ 1143 0399 AE030000 		.4byte	0x3ae
+ 1144 039d 10       		.uleb128 0x10
+ 1145 039e 01       		.uleb128 0x1
+ 1146 039f 51       		.byte	0x51
+ 1147 03a0 05       		.uleb128 0x5
+ 1148 03a1 03       		.byte	0x3
+ 1149 03a2 8C000000 		.4byte	.LC8
+ 1150 03a6 10       		.uleb128 0x10
+ 1151 03a7 01       		.uleb128 0x1
+ 1152 03a8 50       		.byte	0x50
+ 1153 03a9 03       		.uleb128 0x3
+ 1154 03aa 91       		.byte	0x91
+ 1155 03ab EC7E     		.sleb128 -148
+ 1156 03ad 00       		.byte	0
+ 1157 03ae 0F       		.uleb128 0xf
+ 1158 03af 86000000 		.4byte	.LVL26
+ 1159 03b3 26080000 		.4byte	0x826
+ 1160 03b7 CC030000 		.4byte	0x3cc
+ 1161 03bb 10       		.uleb128 0x10
+ 1162 03bc 01       		.uleb128 0x1
+ 1163 03bd 51       		.byte	0x51
+ 1164 03be 05       		.uleb128 0x5
+ 1165 03bf 03       		.byte	0x3
+ 1166 03c0 94000000 		.4byte	.LC9
+ 1167 03c4 10       		.uleb128 0x10
+ 1168 03c5 01       		.uleb128 0x1
+ 1169 03c6 50       		.byte	0x50
+ 1170 03c7 03       		.uleb128 0x3
+ 1171 03c8 91       		.byte	0x91
+ 1172 03c9 EC7E     		.sleb128 -148
+ 1173 03cb 00       		.byte	0
+ 1174 03cc 0F       		.uleb128 0xf
+ 1175 03cd 98000000 		.4byte	.LVL27
+ 1176 03d1 26080000 		.4byte	0x826
+ 1177 03d5 EA030000 		.4byte	0x3ea
+ 1178 03d9 10       		.uleb128 0x10
+ 1179 03da 01       		.uleb128 0x1
+ 1180 03db 51       		.byte	0x51
+ 1181 03dc 05       		.uleb128 0x5
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 25
+
+
+ 1182 03dd 03       		.byte	0x3
+ 1183 03de 9C000000 		.4byte	.LC10
+ 1184 03e2 10       		.uleb128 0x10
+ 1185 03e3 01       		.uleb128 0x1
+ 1186 03e4 50       		.byte	0x50
+ 1187 03e5 03       		.uleb128 0x3
+ 1188 03e6 91       		.byte	0x91
+ 1189 03e7 EC7E     		.sleb128 -148
+ 1190 03e9 00       		.byte	0
+ 1191 03ea 0F       		.uleb128 0xf
+ 1192 03eb AA000000 		.4byte	.LVL28
+ 1193 03ef 26080000 		.4byte	0x826
+ 1194 03f3 08040000 		.4byte	0x408
+ 1195 03f7 10       		.uleb128 0x10
+ 1196 03f8 01       		.uleb128 0x1
+ 1197 03f9 51       		.byte	0x51
+ 1198 03fa 05       		.uleb128 0x5
+ 1199 03fb 03       		.byte	0x3
+ 1200 03fc A0000000 		.4byte	.LC11
+ 1201 0400 10       		.uleb128 0x10
+ 1202 0401 01       		.uleb128 0x1
+ 1203 0402 50       		.byte	0x50
+ 1204 0403 03       		.uleb128 0x3
+ 1205 0404 91       		.byte	0x91
+ 1206 0405 EC7E     		.sleb128 -148
+ 1207 0407 00       		.byte	0
+ 1208 0408 0F       		.uleb128 0xf
+ 1209 0409 BC000000 		.4byte	.LVL29
+ 1210 040d 26080000 		.4byte	0x826
+ 1211 0411 26040000 		.4byte	0x426
+ 1212 0415 10       		.uleb128 0x10
+ 1213 0416 01       		.uleb128 0x1
+ 1214 0417 51       		.byte	0x51
+ 1215 0418 05       		.uleb128 0x5
+ 1216 0419 03       		.byte	0x3
+ 1217 041a A8000000 		.4byte	.LC12
+ 1218 041e 10       		.uleb128 0x10
+ 1219 041f 01       		.uleb128 0x1
+ 1220 0420 50       		.byte	0x50
+ 1221 0421 03       		.uleb128 0x3
+ 1222 0422 91       		.byte	0x91
+ 1223 0423 EC7E     		.sleb128 -148
+ 1224 0425 00       		.byte	0
+ 1225 0426 0F       		.uleb128 0xf
+ 1226 0427 D0000000 		.4byte	.LVL30
+ 1227 042b 40080000 		.4byte	0x840
+ 1228 042f 49040000 		.4byte	0x449
+ 1229 0433 10       		.uleb128 0x10
+ 1230 0434 01       		.uleb128 0x1
+ 1231 0435 52       		.byte	0x52
+ 1232 0436 01       		.uleb128 0x1
+ 1233 0437 34       		.byte	0x34
+ 1234 0438 10       		.uleb128 0x10
+ 1235 0439 01       		.uleb128 0x1
+ 1236 043a 51       		.byte	0x51
+ 1237 043b 05       		.uleb128 0x5
+ 1238 043c 03       		.byte	0x3
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 26
+
+
+ 1239 043d AC000000 		.4byte	.LC13
+ 1240 0441 10       		.uleb128 0x10
+ 1241 0442 01       		.uleb128 0x1
+ 1242 0443 50       		.byte	0x50
+ 1243 0444 03       		.uleb128 0x3
+ 1244 0445 91       		.byte	0x91
+ 1245 0446 EC7E     		.sleb128 -148
+ 1246 0448 00       		.byte	0
+ 1247 0449 0F       		.uleb128 0xf
+ 1248 044a E2000000 		.4byte	.LVL31
+ 1249 044e 26080000 		.4byte	0x826
+ 1250 0452 67040000 		.4byte	0x467
+ 1251 0456 10       		.uleb128 0x10
+ 1252 0457 01       		.uleb128 0x1
+ 1253 0458 51       		.byte	0x51
+ 1254 0459 05       		.uleb128 0x5
+ 1255 045a 03       		.byte	0x3
+ 1256 045b B4000000 		.4byte	.LC14
+ 1257 045f 10       		.uleb128 0x10
+ 1258 0460 01       		.uleb128 0x1
+ 1259 0461 50       		.byte	0x50
+ 1260 0462 03       		.uleb128 0x3
+ 1261 0463 91       		.byte	0x91
+ 1262 0464 EC7E     		.sleb128 -148
+ 1263 0466 00       		.byte	0
+ 1264 0467 0F       		.uleb128 0xf
+ 1265 0468 F4000000 		.4byte	.LVL32
+ 1266 046c 26080000 		.4byte	0x826
+ 1267 0470 85040000 		.4byte	0x485
+ 1268 0474 10       		.uleb128 0x10
+ 1269 0475 01       		.uleb128 0x1
+ 1270 0476 51       		.byte	0x51
+ 1271 0477 05       		.uleb128 0x5
+ 1272 0478 03       		.byte	0x3
+ 1273 0479 BC000000 		.4byte	.LC15
+ 1274 047d 10       		.uleb128 0x10
+ 1275 047e 01       		.uleb128 0x1
+ 1276 047f 50       		.byte	0x50
+ 1277 0480 03       		.uleb128 0x3
+ 1278 0481 91       		.byte	0x91
+ 1279 0482 EC7E     		.sleb128 -148
+ 1280 0484 00       		.byte	0
+ 1281 0485 0F       		.uleb128 0xf
+ 1282 0486 06010000 		.4byte	.LVL33
+ 1283 048a 26080000 		.4byte	0x826
+ 1284 048e A3040000 		.4byte	0x4a3
+ 1285 0492 10       		.uleb128 0x10
+ 1286 0493 01       		.uleb128 0x1
+ 1287 0494 51       		.byte	0x51
+ 1288 0495 05       		.uleb128 0x5
+ 1289 0496 03       		.byte	0x3
+ 1290 0497 C4000000 		.4byte	.LC16
+ 1291 049b 10       		.uleb128 0x10
+ 1292 049c 01       		.uleb128 0x1
+ 1293 049d 50       		.byte	0x50
+ 1294 049e 03       		.uleb128 0x3
+ 1295 049f 91       		.byte	0x91
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 27
+
+
+ 1296 04a0 EC7E     		.sleb128 -148
+ 1297 04a2 00       		.byte	0
+ 1298 04a3 0F       		.uleb128 0xf
+ 1299 04a4 18010000 		.4byte	.LVL34
+ 1300 04a8 26080000 		.4byte	0x826
+ 1301 04ac C1040000 		.4byte	0x4c1
+ 1302 04b0 10       		.uleb128 0x10
+ 1303 04b1 01       		.uleb128 0x1
+ 1304 04b2 51       		.byte	0x51
+ 1305 04b3 05       		.uleb128 0x5
+ 1306 04b4 03       		.byte	0x3
+ 1307 04b5 D0000000 		.4byte	.LC17
+ 1308 04b9 10       		.uleb128 0x10
+ 1309 04ba 01       		.uleb128 0x1
+ 1310 04bb 50       		.byte	0x50
+ 1311 04bc 03       		.uleb128 0x3
+ 1312 04bd 91       		.byte	0x91
+ 1313 04be EC7E     		.sleb128 -148
+ 1314 04c0 00       		.byte	0
+ 1315 04c1 0F       		.uleb128 0xf
+ 1316 04c2 2A010000 		.4byte	.LVL35
+ 1317 04c6 26080000 		.4byte	0x826
+ 1318 04ca DF040000 		.4byte	0x4df
+ 1319 04ce 10       		.uleb128 0x10
+ 1320 04cf 01       		.uleb128 0x1
+ 1321 04d0 51       		.byte	0x51
+ 1322 04d1 05       		.uleb128 0x5
+ 1323 04d2 03       		.byte	0x3
+ 1324 04d3 DC000000 		.4byte	.LC18
+ 1325 04d7 10       		.uleb128 0x10
+ 1326 04d8 01       		.uleb128 0x1
+ 1327 04d9 50       		.byte	0x50
+ 1328 04da 03       		.uleb128 0x3
+ 1329 04db 91       		.byte	0x91
+ 1330 04dc EC7E     		.sleb128 -148
+ 1331 04de 00       		.byte	0
+ 1332 04df 0F       		.uleb128 0xf
+ 1333 04e0 3C010000 		.4byte	.LVL36
+ 1334 04e4 26080000 		.4byte	0x826
+ 1335 04e8 FD040000 		.4byte	0x4fd
+ 1336 04ec 10       		.uleb128 0x10
+ 1337 04ed 01       		.uleb128 0x1
+ 1338 04ee 51       		.byte	0x51
+ 1339 04ef 05       		.uleb128 0x5
+ 1340 04f0 03       		.byte	0x3
+ 1341 04f1 E4000000 		.4byte	.LC19
+ 1342 04f5 10       		.uleb128 0x10
+ 1343 04f6 01       		.uleb128 0x1
+ 1344 04f7 50       		.byte	0x50
+ 1345 04f8 03       		.uleb128 0x3
+ 1346 04f9 91       		.byte	0x91
+ 1347 04fa EC7E     		.sleb128 -148
+ 1348 04fc 00       		.byte	0
+ 1349 04fd 0F       		.uleb128 0xf
+ 1350 04fe 4E010000 		.4byte	.LVL37
+ 1351 0502 26080000 		.4byte	0x826
+ 1352 0506 1B050000 		.4byte	0x51b
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 28
+
+
+ 1353 050a 10       		.uleb128 0x10
+ 1354 050b 01       		.uleb128 0x1
+ 1355 050c 51       		.byte	0x51
+ 1356 050d 05       		.uleb128 0x5
+ 1357 050e 03       		.byte	0x3
+ 1358 050f F4000000 		.4byte	.LC20
+ 1359 0513 10       		.uleb128 0x10
+ 1360 0514 01       		.uleb128 0x1
+ 1361 0515 50       		.byte	0x50
+ 1362 0516 03       		.uleb128 0x3
+ 1363 0517 91       		.byte	0x91
+ 1364 0518 EC7E     		.sleb128 -148
+ 1365 051a 00       		.byte	0
+ 1366 051b 0F       		.uleb128 0xf
+ 1367 051c 62010000 		.4byte	.LVL38
+ 1368 0520 40080000 		.4byte	0x840
+ 1369 0524 3E050000 		.4byte	0x53e
+ 1370 0528 10       		.uleb128 0x10
+ 1371 0529 01       		.uleb128 0x1
+ 1372 052a 52       		.byte	0x52
+ 1373 052b 01       		.uleb128 0x1
+ 1374 052c 37       		.byte	0x37
+ 1375 052d 10       		.uleb128 0x10
+ 1376 052e 01       		.uleb128 0x1
+ 1377 052f 51       		.byte	0x51
+ 1378 0530 05       		.uleb128 0x5
+ 1379 0531 03       		.byte	0x3
+ 1380 0532 FC000000 		.4byte	.LC21
+ 1381 0536 10       		.uleb128 0x10
+ 1382 0537 01       		.uleb128 0x1
+ 1383 0538 50       		.byte	0x50
+ 1384 0539 03       		.uleb128 0x3
+ 1385 053a 91       		.byte	0x91
+ 1386 053b EC7E     		.sleb128 -148
+ 1387 053d 00       		.byte	0
+ 1388 053e 0F       		.uleb128 0xf
+ 1389 053f 76010000 		.4byte	.LVL39
+ 1390 0543 40080000 		.4byte	0x840
+ 1391 0547 61050000 		.4byte	0x561
+ 1392 054b 10       		.uleb128 0x10
+ 1393 054c 01       		.uleb128 0x1
+ 1394 054d 52       		.byte	0x52
+ 1395 054e 01       		.uleb128 0x1
+ 1396 054f 37       		.byte	0x37
+ 1397 0550 10       		.uleb128 0x10
+ 1398 0551 01       		.uleb128 0x1
+ 1399 0552 51       		.byte	0x51
+ 1400 0553 05       		.uleb128 0x5
+ 1401 0554 03       		.byte	0x3
+ 1402 0555 04010000 		.4byte	.LC22
+ 1403 0559 10       		.uleb128 0x10
+ 1404 055a 01       		.uleb128 0x1
+ 1405 055b 50       		.byte	0x50
+ 1406 055c 03       		.uleb128 0x3
+ 1407 055d 91       		.byte	0x91
+ 1408 055e EC7E     		.sleb128 -148
+ 1409 0560 00       		.byte	0
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 29
+
+
+ 1410 0561 0F       		.uleb128 0xf
+ 1411 0562 8A010000 		.4byte	.LVL40
+ 1412 0566 40080000 		.4byte	0x840
+ 1413 056a 84050000 		.4byte	0x584
+ 1414 056e 10       		.uleb128 0x10
+ 1415 056f 01       		.uleb128 0x1
+ 1416 0570 52       		.byte	0x52
+ 1417 0571 01       		.uleb128 0x1
+ 1418 0572 37       		.byte	0x37
+ 1419 0573 10       		.uleb128 0x10
+ 1420 0574 01       		.uleb128 0x1
+ 1421 0575 51       		.byte	0x51
+ 1422 0576 05       		.uleb128 0x5
+ 1423 0577 03       		.byte	0x3
+ 1424 0578 0C010000 		.4byte	.LC23
+ 1425 057c 10       		.uleb128 0x10
+ 1426 057d 01       		.uleb128 0x1
+ 1427 057e 50       		.byte	0x50
+ 1428 057f 03       		.uleb128 0x3
+ 1429 0580 91       		.byte	0x91
+ 1430 0581 EC7E     		.sleb128 -148
+ 1431 0583 00       		.byte	0
+ 1432 0584 0F       		.uleb128 0xf
+ 1433 0585 9E010000 		.4byte	.LVL41
+ 1434 0589 40080000 		.4byte	0x840
+ 1435 058d A7050000 		.4byte	0x5a7
+ 1436 0591 10       		.uleb128 0x10
+ 1437 0592 01       		.uleb128 0x1
+ 1438 0593 52       		.byte	0x52
+ 1439 0594 01       		.uleb128 0x1
+ 1440 0595 37       		.byte	0x37
+ 1441 0596 10       		.uleb128 0x10
+ 1442 0597 01       		.uleb128 0x1
+ 1443 0598 51       		.byte	0x51
+ 1444 0599 05       		.uleb128 0x5
+ 1445 059a 03       		.byte	0x3
+ 1446 059b 14010000 		.4byte	.LC24
+ 1447 059f 10       		.uleb128 0x10
+ 1448 05a0 01       		.uleb128 0x1
+ 1449 05a1 50       		.byte	0x50
+ 1450 05a2 03       		.uleb128 0x3
+ 1451 05a3 91       		.byte	0x91
+ 1452 05a4 EC7E     		.sleb128 -148
+ 1453 05a6 00       		.byte	0
+ 1454 05a7 0F       		.uleb128 0xf
+ 1455 05a8 B2010000 		.4byte	.LVL42
+ 1456 05ac 40080000 		.4byte	0x840
+ 1457 05b0 CA050000 		.4byte	0x5ca
+ 1458 05b4 10       		.uleb128 0x10
+ 1459 05b5 01       		.uleb128 0x1
+ 1460 05b6 52       		.byte	0x52
+ 1461 05b7 01       		.uleb128 0x1
+ 1462 05b8 37       		.byte	0x37
+ 1463 05b9 10       		.uleb128 0x10
+ 1464 05ba 01       		.uleb128 0x1
+ 1465 05bb 51       		.byte	0x51
+ 1466 05bc 05       		.uleb128 0x5
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 30
+
+
+ 1467 05bd 03       		.byte	0x3
+ 1468 05be 1C010000 		.4byte	.LC25
+ 1469 05c2 10       		.uleb128 0x10
+ 1470 05c3 01       		.uleb128 0x1
+ 1471 05c4 50       		.byte	0x50
+ 1472 05c5 03       		.uleb128 0x3
+ 1473 05c6 91       		.byte	0x91
+ 1474 05c7 EC7E     		.sleb128 -148
+ 1475 05c9 00       		.byte	0
+ 1476 05ca 0F       		.uleb128 0xf
+ 1477 05cb C6010000 		.4byte	.LVL43
+ 1478 05cf 40080000 		.4byte	0x840
+ 1479 05d3 ED050000 		.4byte	0x5ed
+ 1480 05d7 10       		.uleb128 0x10
+ 1481 05d8 01       		.uleb128 0x1
+ 1482 05d9 52       		.byte	0x52
+ 1483 05da 01       		.uleb128 0x1
+ 1484 05db 37       		.byte	0x37
+ 1485 05dc 10       		.uleb128 0x10
+ 1486 05dd 01       		.uleb128 0x1
+ 1487 05de 51       		.byte	0x51
+ 1488 05df 05       		.uleb128 0x5
+ 1489 05e0 03       		.byte	0x3
+ 1490 05e1 24010000 		.4byte	.LC26
+ 1491 05e5 10       		.uleb128 0x10
+ 1492 05e6 01       		.uleb128 0x1
+ 1493 05e7 50       		.byte	0x50
+ 1494 05e8 03       		.uleb128 0x3
+ 1495 05e9 91       		.byte	0x91
+ 1496 05ea EC7E     		.sleb128 -148
+ 1497 05ec 00       		.byte	0
+ 1498 05ed 0F       		.uleb128 0xf
+ 1499 05ee DA010000 		.4byte	.LVL44
+ 1500 05f2 40080000 		.4byte	0x840
+ 1501 05f6 10060000 		.4byte	0x610
+ 1502 05fa 10       		.uleb128 0x10
+ 1503 05fb 01       		.uleb128 0x1
+ 1504 05fc 52       		.byte	0x52
+ 1505 05fd 01       		.uleb128 0x1
+ 1506 05fe 36       		.byte	0x36
+ 1507 05ff 10       		.uleb128 0x10
+ 1508 0600 01       		.uleb128 0x1
+ 1509 0601 51       		.byte	0x51
+ 1510 0602 05       		.uleb128 0x5
+ 1511 0603 03       		.byte	0x3
+ 1512 0604 2C010000 		.4byte	.LC27
+ 1513 0608 10       		.uleb128 0x10
+ 1514 0609 01       		.uleb128 0x1
+ 1515 060a 50       		.byte	0x50
+ 1516 060b 03       		.uleb128 0x3
+ 1517 060c 91       		.byte	0x91
+ 1518 060d EC7E     		.sleb128 -148
+ 1519 060f 00       		.byte	0
+ 1520 0610 0F       		.uleb128 0xf
+ 1521 0611 EE010000 		.4byte	.LVL45
+ 1522 0615 40080000 		.4byte	0x840
+ 1523 0619 33060000 		.4byte	0x633
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 31
+
+
+ 1524 061d 10       		.uleb128 0x10
+ 1525 061e 01       		.uleb128 0x1
+ 1526 061f 52       		.byte	0x52
+ 1527 0620 01       		.uleb128 0x1
+ 1528 0621 34       		.byte	0x34
+ 1529 0622 10       		.uleb128 0x10
+ 1530 0623 01       		.uleb128 0x1
+ 1531 0624 51       		.byte	0x51
+ 1532 0625 05       		.uleb128 0x5
+ 1533 0626 03       		.byte	0x3
+ 1534 0627 34010000 		.4byte	.LC28
+ 1535 062b 10       		.uleb128 0x10
+ 1536 062c 01       		.uleb128 0x1
+ 1537 062d 50       		.byte	0x50
+ 1538 062e 03       		.uleb128 0x3
+ 1539 062f 91       		.byte	0x91
+ 1540 0630 EC7E     		.sleb128 -148
+ 1541 0632 00       		.byte	0
+ 1542 0633 0F       		.uleb128 0xf
+ 1543 0634 00020000 		.4byte	.LVL46
+ 1544 0638 26080000 		.4byte	0x826
+ 1545 063c 51060000 		.4byte	0x651
+ 1546 0640 10       		.uleb128 0x10
+ 1547 0641 01       		.uleb128 0x1
+ 1548 0642 51       		.byte	0x51
+ 1549 0643 05       		.uleb128 0x5
+ 1550 0644 03       		.byte	0x3
+ 1551 0645 3C010000 		.4byte	.LC29
+ 1552 0649 10       		.uleb128 0x10
+ 1553 064a 01       		.uleb128 0x1
+ 1554 064b 50       		.byte	0x50
+ 1555 064c 03       		.uleb128 0x3
+ 1556 064d 91       		.byte	0x91
+ 1557 064e EC7E     		.sleb128 -148
+ 1558 0650 00       		.byte	0
+ 1559 0651 0F       		.uleb128 0xf
+ 1560 0652 12020000 		.4byte	.LVL47
+ 1561 0656 26080000 		.4byte	0x826
+ 1562 065a 6F060000 		.4byte	0x66f
+ 1563 065e 10       		.uleb128 0x10
+ 1564 065f 01       		.uleb128 0x1
+ 1565 0660 51       		.byte	0x51
+ 1566 0661 05       		.uleb128 0x5
+ 1567 0662 03       		.byte	0x3
+ 1568 0663 44010000 		.4byte	.LC30
+ 1569 0667 10       		.uleb128 0x10
+ 1570 0668 01       		.uleb128 0x1
+ 1571 0669 50       		.byte	0x50
+ 1572 066a 03       		.uleb128 0x3
+ 1573 066b 91       		.byte	0x91
+ 1574 066c EC7E     		.sleb128 -148
+ 1575 066e 00       		.byte	0
+ 1576 066f 0F       		.uleb128 0xf
+ 1577 0670 26020000 		.4byte	.LVL48
+ 1578 0674 40080000 		.4byte	0x840
+ 1579 0678 92060000 		.4byte	0x692
+ 1580 067c 10       		.uleb128 0x10
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 32
+
+
+ 1581 067d 01       		.uleb128 0x1
+ 1582 067e 52       		.byte	0x52
+ 1583 067f 01       		.uleb128 0x1
+ 1584 0680 36       		.byte	0x36
+ 1585 0681 10       		.uleb128 0x10
+ 1586 0682 01       		.uleb128 0x1
+ 1587 0683 51       		.byte	0x51
+ 1588 0684 05       		.uleb128 0x5
+ 1589 0685 03       		.byte	0x3
+ 1590 0686 4C010000 		.4byte	.LC31
+ 1591 068a 10       		.uleb128 0x10
+ 1592 068b 01       		.uleb128 0x1
+ 1593 068c 50       		.byte	0x50
+ 1594 068d 03       		.uleb128 0x3
+ 1595 068e 91       		.byte	0x91
+ 1596 068f EC7E     		.sleb128 -148
+ 1597 0691 00       		.byte	0
+ 1598 0692 0F       		.uleb128 0xf
+ 1599 0693 38020000 		.4byte	.LVL49
+ 1600 0697 26080000 		.4byte	0x826
+ 1601 069b B0060000 		.4byte	0x6b0
+ 1602 069f 10       		.uleb128 0x10
+ 1603 06a0 01       		.uleb128 0x1
+ 1604 06a1 51       		.byte	0x51
+ 1605 06a2 05       		.uleb128 0x5
+ 1606 06a3 03       		.byte	0x3
+ 1607 06a4 54010000 		.4byte	.LC32
+ 1608 06a8 10       		.uleb128 0x10
+ 1609 06a9 01       		.uleb128 0x1
+ 1610 06aa 50       		.byte	0x50
+ 1611 06ab 03       		.uleb128 0x3
+ 1612 06ac 91       		.byte	0x91
+ 1613 06ad EC7E     		.sleb128 -148
+ 1614 06af 00       		.byte	0
+ 1615 06b0 11       		.uleb128 0x11
+ 1616 06b1 52020000 		.4byte	.LVL50
+ 1617 06b5 5F080000 		.4byte	0x85f
+ 1618 06b9 10       		.uleb128 0x10
+ 1619 06ba 01       		.uleb128 0x1
+ 1620 06bb 52       		.byte	0x52
+ 1621 06bc 02       		.uleb128 0x2
+ 1622 06bd 08       		.byte	0x8
+ 1623 06be 83       		.byte	0x83
+ 1624 06bf 10       		.uleb128 0x10
+ 1625 06c0 01       		.uleb128 0x1
+ 1626 06c1 51       		.byte	0x51
+ 1627 06c2 03       		.uleb128 0x3
+ 1628 06c3 91       		.byte	0x91
+ 1629 06c4 EC7E     		.sleb128 -148
+ 1630 06c6 10       		.uleb128 0x10
+ 1631 06c7 01       		.uleb128 0x1
+ 1632 06c8 50       		.byte	0x50
+ 1633 06c9 02       		.uleb128 0x2
+ 1634 06ca 76       		.byte	0x76
+ 1635 06cb 00       		.sleb128 0
+ 1636 06cc 00       		.byte	0
+ 1637 06cd 00       		.byte	0
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 33
+
+
+ 1638 06ce 15       		.uleb128 0x15
+ 1639 06cf 1F000000 		.4byte	.LASF43
+ 1640 06d3 01       		.byte	0x1
+ 1641 06d4 82       		.byte	0x82
+ 1642 06d5 00000000 		.4byte	.LFB65
+ 1643 06d9 20000000 		.4byte	.LFE65-.LFB65
+ 1644 06dd 01       		.uleb128 0x1
+ 1645 06de 9C       		.byte	0x9c
+ 1646 06df 21070000 		.4byte	0x721
+ 1647 06e3 0F       		.uleb128 0xf
+ 1648 06e4 08000000 		.4byte	.LVL52
+ 1649 06e8 96070000 		.4byte	0x796
+ 1650 06ec FA060000 		.4byte	0x6fa
+ 1651 06f0 10       		.uleb128 0x10
+ 1652 06f1 01       		.uleb128 0x1
+ 1653 06f2 50       		.byte	0x50
+ 1654 06f3 05       		.uleb128 0x5
+ 1655 06f4 03       		.byte	0x3
+ 1656 06f5 5C010000 		.4byte	.LC33
+ 1657 06f9 00       		.byte	0
+ 1658 06fa 0F       		.uleb128 0xf
+ 1659 06fb 0E000000 		.4byte	.LVL53
+ 1660 06ff B2070000 		.4byte	0x7b2
+ 1661 0703 0D070000 		.4byte	0x70d
+ 1662 0707 10       		.uleb128 0x10
+ 1663 0708 01       		.uleb128 0x1
+ 1664 0709 50       		.byte	0x50
+ 1665 070a 01       		.uleb128 0x1
+ 1666 070b 44       		.byte	0x44
+ 1667 070c 00       		.byte	0
+ 1668 070d 11       		.uleb128 0x11
+ 1669 070e 14000000 		.4byte	.LVL54
+ 1670 0712 96070000 		.4byte	0x796
+ 1671 0716 10       		.uleb128 0x10
+ 1672 0717 01       		.uleb128 0x1
+ 1673 0718 50       		.byte	0x50
+ 1674 0719 05       		.uleb128 0x5
+ 1675 071a 03       		.byte	0x3
+ 1676 071b 70010000 		.4byte	.LC34
+ 1677 071f 00       		.byte	0
+ 1678 0720 00       		.byte	0
+ 1679 0721 16       		.uleb128 0x16
+ 1680 0722 86020000 		.4byte	.LASF24
+ 1681 0726 06       		.byte	0x6
+ 1682 0727 1E       		.byte	0x1e
+ 1683 0728 31010000 		.4byte	0x131
+ 1684 072c 40       		.byte	0x40
+ 1685 072d 00       		.byte	0
+ 1686 072e 00       		.byte	0
+ 1687 072f 00       		.byte	0
+ 1688 0730 00       		.byte	0
+ 1689 0731 00       		.byte	0
+ 1690 0732 00       		.byte	0
+ 1691 0733 00       		.byte	0
+ 1692 0734 00       		.byte	0
+ 1693 0735 00       		.byte	0
+ 1694 0736 00       		.byte	0
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 34
+
+
+ 1695 0737 00       		.byte	0
+ 1696 0738 00       		.byte	0
+ 1697 0739 00       		.byte	0
+ 1698 073a 00       		.byte	0
+ 1699 073b 00       		.byte	0
+ 1700 073c 00       		.byte	0
+ 1701 073d 00       		.byte	0
+ 1702 073e 00       		.byte	0
+ 1703 073f 00       		.byte	0
+ 1704 0740 00       		.byte	0
+ 1705 0741 00       		.byte	0
+ 1706 0742 00       		.byte	0
+ 1707 0743 00       		.byte	0
+ 1708 0744 00       		.byte	0
+ 1709 0745 00       		.byte	0
+ 1710 0746 00       		.byte	0
+ 1711 0747 00       		.byte	0
+ 1712 0748 00       		.byte	0
+ 1713 0749 00       		.byte	0
+ 1714 074a 00       		.byte	0
+ 1715 074b 00       		.byte	0
+ 1716 074c 00       		.byte	0
+ 1717 074d 00       		.byte	0
+ 1718 074e 00       		.byte	0
+ 1719 074f 00       		.byte	0
+ 1720 0750 00       		.byte	0
+ 1721 0751 00       		.byte	0
+ 1722 0752 00       		.byte	0
+ 1723 0753 00       		.byte	0
+ 1724 0754 00       		.byte	0
+ 1725 0755 00       		.byte	0
+ 1726 0756 00       		.byte	0
+ 1727 0757 00       		.byte	0
+ 1728 0758 00       		.byte	0
+ 1729 0759 00       		.byte	0
+ 1730 075a 00       		.byte	0
+ 1731 075b 00       		.byte	0
+ 1732 075c 00       		.byte	0
+ 1733 075d 00       		.byte	0
+ 1734 075e 00       		.byte	0
+ 1735 075f 00       		.byte	0
+ 1736 0760 00       		.byte	0
+ 1737 0761 00       		.byte	0
+ 1738 0762 00       		.byte	0
+ 1739 0763 00       		.byte	0
+ 1740 0764 00       		.byte	0
+ 1741 0765 00       		.byte	0
+ 1742 0766 00       		.byte	0
+ 1743 0767 00       		.byte	0
+ 1744 0768 00       		.byte	0
+ 1745 0769 00       		.byte	0
+ 1746 076a 00       		.byte	0
+ 1747 076b 00       		.byte	0
+ 1748 076c 00       		.byte	0
+ 1749 076d 17       		.uleb128 0x17
+ 1750 076e 57000000 		.4byte	.LASF25
+ 1751 0772 06       		.byte	0x6
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 35
+
+
+ 1752 0773 1F       		.byte	0x1f
+ 1753 0774 81000000 		.4byte	0x81
+ 1754 0778 00       		.byte	0
+ 1755 0779 17       		.uleb128 0x17
+ 1756 077a 00000000 		.4byte	.LASF26
+ 1757 077e 06       		.byte	0x6
+ 1758 077f 20       		.byte	0x20
+ 1759 0780 81000000 		.4byte	0x81
+ 1760 0784 00       		.byte	0
+ 1761 0785 18       		.uleb128 0x18
+ 1762 0786 E7000000 		.4byte	.LASF44
+ 1763 078a 0A       		.byte	0xa
+ 1764 078b 9606     		.2byte	0x696
+ 1765 078d 91070000 		.4byte	0x791
+ 1766 0791 19       		.uleb128 0x19
+ 1767 0792 8C000000 		.4byte	0x8c
+ 1768 0796 1A       		.uleb128 0x1a
+ 1769 0797 63000000 		.4byte	.LASF27
+ 1770 079b 07       		.byte	0x7
+ 1771 079c 8B       		.byte	0x8b
+ 1772 079d A7070000 		.4byte	0x7a7
+ 1773 07a1 1B       		.uleb128 0x1b
+ 1774 07a2 A7070000 		.4byte	0x7a7
+ 1775 07a6 00       		.byte	0
+ 1776 07a7 07       		.uleb128 0x7
+ 1777 07a8 04       		.byte	0x4
+ 1778 07a9 AD070000 		.4byte	0x7ad
+ 1779 07ad 08       		.uleb128 0x8
+ 1780 07ae B1000000 		.4byte	0xb1
+ 1781 07b2 1A       		.uleb128 0x1a
+ 1782 07b3 A4020000 		.4byte	.LASF28
+ 1783 07b7 08       		.byte	0x8
+ 1784 07b8 76       		.byte	0x76
+ 1785 07b9 C3070000 		.4byte	0x7c3
+ 1786 07bd 1B       		.uleb128 0x1b
+ 1787 07be 97000000 		.4byte	0x97
+ 1788 07c2 00       		.byte	0
+ 1789 07c3 1C       		.uleb128 0x1c
+ 1790 07c4 BB000000 		.4byte	.LASF29
+ 1791 07c8 09       		.byte	0x9
+ 1792 07c9 1E       		.byte	0x1e
+ 1793 07ca D8000000 		.4byte	0xd8
+ 1794 07ce DD070000 		.4byte	0x7dd
+ 1795 07d2 1B       		.uleb128 0x1b
+ 1796 07d3 D8000000 		.4byte	0xd8
+ 1797 07d7 1B       		.uleb128 0x1b
+ 1798 07d8 DE000000 		.4byte	0xde
+ 1799 07dc 00       		.byte	0
+ 1800 07dd 1C       		.uleb128 0x1c
+ 1801 07de B5010000 		.4byte	.LASF30
+ 1802 07e2 09       		.byte	0x9
+ 1803 07e3 21       		.byte	0x21
+ 1804 07e4 C4000000 		.4byte	0xc4
+ 1805 07e8 F2070000 		.4byte	0x7f2
+ 1806 07ec 1B       		.uleb128 0x1b
+ 1807 07ed DE000000 		.4byte	0xde
+ 1808 07f1 00       		.byte	0
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 36
+
+
+ 1809 07f2 1C       		.uleb128 0x1c
+ 1810 07f3 9D020000 		.4byte	.LASF31
+ 1811 07f7 09       		.byte	0x9
+ 1812 07f8 28       		.byte	0x28
+ 1813 07f9 D8000000 		.4byte	0xd8
+ 1814 07fd 0C080000 		.4byte	0x80c
+ 1815 0801 1B       		.uleb128 0x1b
+ 1816 0802 DE000000 		.4byte	0xde
+ 1817 0806 1B       		.uleb128 0x1b
+ 1818 0807 DE000000 		.4byte	0xde
+ 1819 080b 00       		.byte	0
+ 1820 080c 1C       		.uleb128 0x1c
+ 1821 080d 3E000000 		.4byte	.LASF32
+ 1822 0811 09       		.byte	0x9
+ 1823 0812 1B       		.byte	0x1b
+ 1824 0813 D8000000 		.4byte	0xd8
+ 1825 0817 26080000 		.4byte	0x826
+ 1826 081b 1B       		.uleb128 0x1b
+ 1827 081c DE000000 		.4byte	0xde
+ 1828 0820 1B       		.uleb128 0x1b
+ 1829 0821 73000000 		.4byte	0x73
+ 1830 0825 00       		.byte	0
+ 1831 0826 1C       		.uleb128 0x1c
+ 1832 0827 07010000 		.4byte	.LASF33
+ 1833 082b 09       		.byte	0x9
+ 1834 082c 1C       		.byte	0x1c
+ 1835 082d 73000000 		.4byte	0x73
+ 1836 0831 40080000 		.4byte	0x840
+ 1837 0835 1B       		.uleb128 0x1b
+ 1838 0836 DE000000 		.4byte	0xde
+ 1839 083a 1B       		.uleb128 0x1b
+ 1840 083b DE000000 		.4byte	0xde
+ 1841 083f 00       		.byte	0
+ 1842 0840 1C       		.uleb128 0x1c
+ 1843 0841 63020000 		.4byte	.LASF34
+ 1844 0845 09       		.byte	0x9
+ 1845 0846 23       		.byte	0x23
+ 1846 0847 73000000 		.4byte	0x73
+ 1847 084b 5F080000 		.4byte	0x85f
+ 1848 084f 1B       		.uleb128 0x1b
+ 1849 0850 DE000000 		.4byte	0xde
+ 1850 0854 1B       		.uleb128 0x1b
+ 1851 0855 DE000000 		.4byte	0xde
+ 1852 0859 1B       		.uleb128 0x1b
+ 1853 085a C4000000 		.4byte	0xc4
+ 1854 085e 00       		.byte	0
+ 1855 085f 1D       		.uleb128 0x1d
+ 1856 0860 6B020000 		.4byte	.LASF35
+ 1857 0864 D6000000 		.4byte	0xd6
+ 1858 0868 7C080000 		.4byte	0x87c
+ 1859 086c 1B       		.uleb128 0x1b
+ 1860 086d D6000000 		.4byte	0xd6
+ 1861 0871 1B       		.uleb128 0x1b
+ 1862 0872 7C080000 		.4byte	0x87c
+ 1863 0876 1B       		.uleb128 0x1b
+ 1864 0877 CF000000 		.4byte	0xcf
+ 1865 087b 00       		.byte	0
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 37
+
+
+ 1866 087c 07       		.uleb128 0x7
+ 1867 087d 04       		.byte	0x4
+ 1868 087e 82080000 		.4byte	0x882
+ 1869 0882 1E       		.uleb128 0x1e
+ 1870 0883 00       		.byte	0
+ 1871              		.section	.debug_abbrev,"",%progbits
+ 1872              	.Ldebug_abbrev0:
+ 1873 0000 01       		.uleb128 0x1
+ 1874 0001 11       		.uleb128 0x11
+ 1875 0002 01       		.byte	0x1
+ 1876 0003 25       		.uleb128 0x25
+ 1877 0004 0E       		.uleb128 0xe
+ 1878 0005 13       		.uleb128 0x13
+ 1879 0006 0B       		.uleb128 0xb
+ 1880 0007 03       		.uleb128 0x3
+ 1881 0008 0E       		.uleb128 0xe
+ 1882 0009 1B       		.uleb128 0x1b
+ 1883 000a 0E       		.uleb128 0xe
+ 1884 000b 55       		.uleb128 0x55
+ 1885 000c 17       		.uleb128 0x17
+ 1886 000d 11       		.uleb128 0x11
+ 1887 000e 01       		.uleb128 0x1
+ 1888 000f 10       		.uleb128 0x10
+ 1889 0010 17       		.uleb128 0x17
+ 1890 0011 00       		.byte	0
+ 1891 0012 00       		.byte	0
+ 1892 0013 02       		.uleb128 0x2
+ 1893 0014 24       		.uleb128 0x24
+ 1894 0015 00       		.byte	0
+ 1895 0016 0B       		.uleb128 0xb
+ 1896 0017 0B       		.uleb128 0xb
+ 1897 0018 3E       		.uleb128 0x3e
+ 1898 0019 0B       		.uleb128 0xb
+ 1899 001a 03       		.uleb128 0x3
+ 1900 001b 0E       		.uleb128 0xe
+ 1901 001c 00       		.byte	0
+ 1902 001d 00       		.byte	0
+ 1903 001e 03       		.uleb128 0x3
+ 1904 001f 16       		.uleb128 0x16
+ 1905 0020 00       		.byte	0
+ 1906 0021 03       		.uleb128 0x3
+ 1907 0022 0E       		.uleb128 0xe
+ 1908 0023 3A       		.uleb128 0x3a
+ 1909 0024 0B       		.uleb128 0xb
+ 1910 0025 3B       		.uleb128 0x3b
+ 1911 0026 0B       		.uleb128 0xb
+ 1912 0027 49       		.uleb128 0x49
+ 1913 0028 13       		.uleb128 0x13
+ 1914 0029 00       		.byte	0
+ 1915 002a 00       		.byte	0
+ 1916 002b 04       		.uleb128 0x4
+ 1917 002c 24       		.uleb128 0x24
+ 1918 002d 00       		.byte	0
+ 1919 002e 0B       		.uleb128 0xb
+ 1920 002f 0B       		.uleb128 0xb
+ 1921 0030 3E       		.uleb128 0x3e
+ 1922 0031 0B       		.uleb128 0xb
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 38
+
+
+ 1923 0032 03       		.uleb128 0x3
+ 1924 0033 08       		.uleb128 0x8
+ 1925 0034 00       		.byte	0
+ 1926 0035 00       		.byte	0
+ 1927 0036 05       		.uleb128 0x5
+ 1928 0037 16       		.uleb128 0x16
+ 1929 0038 00       		.byte	0
+ 1930 0039 03       		.uleb128 0x3
+ 1931 003a 0E       		.uleb128 0xe
+ 1932 003b 3A       		.uleb128 0x3a
+ 1933 003c 0B       		.uleb128 0xb
+ 1934 003d 3B       		.uleb128 0x3b
+ 1935 003e 05       		.uleb128 0x5
+ 1936 003f 49       		.uleb128 0x49
+ 1937 0040 13       		.uleb128 0x13
+ 1938 0041 00       		.byte	0
+ 1939 0042 00       		.byte	0
+ 1940 0043 06       		.uleb128 0x6
+ 1941 0044 0F       		.uleb128 0xf
+ 1942 0045 00       		.byte	0
+ 1943 0046 0B       		.uleb128 0xb
+ 1944 0047 0B       		.uleb128 0xb
+ 1945 0048 00       		.byte	0
+ 1946 0049 00       		.byte	0
+ 1947 004a 07       		.uleb128 0x7
+ 1948 004b 0F       		.uleb128 0xf
+ 1949 004c 00       		.byte	0
+ 1950 004d 0B       		.uleb128 0xb
+ 1951 004e 0B       		.uleb128 0xb
+ 1952 004f 49       		.uleb128 0x49
+ 1953 0050 13       		.uleb128 0x13
+ 1954 0051 00       		.byte	0
+ 1955 0052 00       		.byte	0
+ 1956 0053 08       		.uleb128 0x8
+ 1957 0054 26       		.uleb128 0x26
+ 1958 0055 00       		.byte	0
+ 1959 0056 49       		.uleb128 0x49
+ 1960 0057 13       		.uleb128 0x13
+ 1961 0058 00       		.byte	0
+ 1962 0059 00       		.byte	0
+ 1963 005a 09       		.uleb128 0x9
+ 1964 005b 13       		.uleb128 0x13
+ 1965 005c 01       		.byte	0x1
+ 1966 005d 03       		.uleb128 0x3
+ 1967 005e 0E       		.uleb128 0xe
+ 1968 005f 0B       		.uleb128 0xb
+ 1969 0060 0B       		.uleb128 0xb
+ 1970 0061 3A       		.uleb128 0x3a
+ 1971 0062 0B       		.uleb128 0xb
+ 1972 0063 3B       		.uleb128 0x3b
+ 1973 0064 0B       		.uleb128 0xb
+ 1974 0065 01       		.uleb128 0x1
+ 1975 0066 13       		.uleb128 0x13
+ 1976 0067 00       		.byte	0
+ 1977 0068 00       		.byte	0
+ 1978 0069 0A       		.uleb128 0xa
+ 1979 006a 0D       		.uleb128 0xd
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 39
+
+
+ 1980 006b 00       		.byte	0
+ 1981 006c 03       		.uleb128 0x3
+ 1982 006d 0E       		.uleb128 0xe
+ 1983 006e 3A       		.uleb128 0x3a
+ 1984 006f 0B       		.uleb128 0xb
+ 1985 0070 3B       		.uleb128 0x3b
+ 1986 0071 0B       		.uleb128 0xb
+ 1987 0072 49       		.uleb128 0x49
+ 1988 0073 13       		.uleb128 0x13
+ 1989 0074 38       		.uleb128 0x38
+ 1990 0075 0B       		.uleb128 0xb
+ 1991 0076 00       		.byte	0
+ 1992 0077 00       		.byte	0
+ 1993 0078 0B       		.uleb128 0xb
+ 1994 0079 0D       		.uleb128 0xd
+ 1995 007a 00       		.byte	0
+ 1996 007b 03       		.uleb128 0x3
+ 1997 007c 08       		.uleb128 0x8
+ 1998 007d 3A       		.uleb128 0x3a
+ 1999 007e 0B       		.uleb128 0xb
+ 2000 007f 3B       		.uleb128 0x3b
+ 2001 0080 0B       		.uleb128 0xb
+ 2002 0081 49       		.uleb128 0x49
+ 2003 0082 13       		.uleb128 0x13
+ 2004 0083 38       		.uleb128 0x38
+ 2005 0084 0B       		.uleb128 0xb
+ 2006 0085 00       		.byte	0
+ 2007 0086 00       		.byte	0
+ 2008 0087 0C       		.uleb128 0xc
+ 2009 0088 01       		.uleb128 0x1
+ 2010 0089 01       		.byte	0x1
+ 2011 008a 49       		.uleb128 0x49
+ 2012 008b 13       		.uleb128 0x13
+ 2013 008c 01       		.uleb128 0x1
+ 2014 008d 13       		.uleb128 0x13
+ 2015 008e 00       		.byte	0
+ 2016 008f 00       		.byte	0
+ 2017 0090 0D       		.uleb128 0xd
+ 2018 0091 21       		.uleb128 0x21
+ 2019 0092 00       		.byte	0
+ 2020 0093 49       		.uleb128 0x49
+ 2021 0094 13       		.uleb128 0x13
+ 2022 0095 2F       		.uleb128 0x2f
+ 2023 0096 0B       		.uleb128 0xb
+ 2024 0097 00       		.byte	0
+ 2025 0098 00       		.byte	0
+ 2026 0099 0E       		.uleb128 0xe
+ 2027 009a 2E       		.uleb128 0x2e
+ 2028 009b 01       		.byte	0x1
+ 2029 009c 3F       		.uleb128 0x3f
+ 2030 009d 19       		.uleb128 0x19
+ 2031 009e 03       		.uleb128 0x3
+ 2032 009f 0E       		.uleb128 0xe
+ 2033 00a0 3A       		.uleb128 0x3a
+ 2034 00a1 0B       		.uleb128 0xb
+ 2035 00a2 3B       		.uleb128 0x3b
+ 2036 00a3 0B       		.uleb128 0xb
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 40
+
+
+ 2037 00a4 27       		.uleb128 0x27
+ 2038 00a5 19       		.uleb128 0x19
+ 2039 00a6 11       		.uleb128 0x11
+ 2040 00a7 01       		.uleb128 0x1
+ 2041 00a8 12       		.uleb128 0x12
+ 2042 00a9 06       		.uleb128 0x6
+ 2043 00aa 40       		.uleb128 0x40
+ 2044 00ab 18       		.uleb128 0x18
+ 2045 00ac 9742     		.uleb128 0x2117
+ 2046 00ae 19       		.uleb128 0x19
+ 2047 00af 01       		.uleb128 0x1
+ 2048 00b0 13       		.uleb128 0x13
+ 2049 00b1 00       		.byte	0
+ 2050 00b2 00       		.byte	0
+ 2051 00b3 0F       		.uleb128 0xf
+ 2052 00b4 898201   		.uleb128 0x4109
+ 2053 00b7 01       		.byte	0x1
+ 2054 00b8 11       		.uleb128 0x11
+ 2055 00b9 01       		.uleb128 0x1
+ 2056 00ba 31       		.uleb128 0x31
+ 2057 00bb 13       		.uleb128 0x13
+ 2058 00bc 01       		.uleb128 0x1
+ 2059 00bd 13       		.uleb128 0x13
+ 2060 00be 00       		.byte	0
+ 2061 00bf 00       		.byte	0
+ 2062 00c0 10       		.uleb128 0x10
+ 2063 00c1 8A8201   		.uleb128 0x410a
+ 2064 00c4 00       		.byte	0
+ 2065 00c5 02       		.uleb128 0x2
+ 2066 00c6 18       		.uleb128 0x18
+ 2067 00c7 9142     		.uleb128 0x2111
+ 2068 00c9 18       		.uleb128 0x18
+ 2069 00ca 00       		.byte	0
+ 2070 00cb 00       		.byte	0
+ 2071 00cc 11       		.uleb128 0x11
+ 2072 00cd 898201   		.uleb128 0x4109
+ 2073 00d0 01       		.byte	0x1
+ 2074 00d1 11       		.uleb128 0x11
+ 2075 00d2 01       		.uleb128 0x1
+ 2076 00d3 31       		.uleb128 0x31
+ 2077 00d4 13       		.uleb128 0x13
+ 2078 00d5 00       		.byte	0
+ 2079 00d6 00       		.byte	0
+ 2080 00d7 12       		.uleb128 0x12
+ 2081 00d8 2E       		.uleb128 0x2e
+ 2082 00d9 01       		.byte	0x1
+ 2083 00da 3F       		.uleb128 0x3f
+ 2084 00db 19       		.uleb128 0x19
+ 2085 00dc 03       		.uleb128 0x3
+ 2086 00dd 0E       		.uleb128 0xe
+ 2087 00de 3A       		.uleb128 0x3a
+ 2088 00df 0B       		.uleb128 0xb
+ 2089 00e0 3B       		.uleb128 0x3b
+ 2090 00e1 0B       		.uleb128 0xb
+ 2091 00e2 27       		.uleb128 0x27
+ 2092 00e3 19       		.uleb128 0x19
+ 2093 00e4 49       		.uleb128 0x49
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 41
+
+
+ 2094 00e5 13       		.uleb128 0x13
+ 2095 00e6 11       		.uleb128 0x11
+ 2096 00e7 01       		.uleb128 0x1
+ 2097 00e8 12       		.uleb128 0x12
+ 2098 00e9 06       		.uleb128 0x6
+ 2099 00ea 40       		.uleb128 0x40
+ 2100 00eb 18       		.uleb128 0x18
+ 2101 00ec 9742     		.uleb128 0x2117
+ 2102 00ee 19       		.uleb128 0x19
+ 2103 00ef 01       		.uleb128 0x1
+ 2104 00f0 13       		.uleb128 0x13
+ 2105 00f1 00       		.byte	0
+ 2106 00f2 00       		.byte	0
+ 2107 00f3 13       		.uleb128 0x13
+ 2108 00f4 05       		.uleb128 0x5
+ 2109 00f5 00       		.byte	0
+ 2110 00f6 03       		.uleb128 0x3
+ 2111 00f7 0E       		.uleb128 0xe
+ 2112 00f8 3A       		.uleb128 0x3a
+ 2113 00f9 0B       		.uleb128 0xb
+ 2114 00fa 3B       		.uleb128 0x3b
+ 2115 00fb 0B       		.uleb128 0xb
+ 2116 00fc 49       		.uleb128 0x49
+ 2117 00fd 13       		.uleb128 0x13
+ 2118 00fe 02       		.uleb128 0x2
+ 2119 00ff 17       		.uleb128 0x17
+ 2120 0100 00       		.byte	0
+ 2121 0101 00       		.byte	0
+ 2122 0102 14       		.uleb128 0x14
+ 2123 0103 34       		.uleb128 0x34
+ 2124 0104 00       		.byte	0
+ 2125 0105 03       		.uleb128 0x3
+ 2126 0106 0E       		.uleb128 0xe
+ 2127 0107 3A       		.uleb128 0x3a
+ 2128 0108 0B       		.uleb128 0xb
+ 2129 0109 3B       		.uleb128 0x3b
+ 2130 010a 0B       		.uleb128 0xb
+ 2131 010b 49       		.uleb128 0x49
+ 2132 010c 13       		.uleb128 0x13
+ 2133 010d 02       		.uleb128 0x2
+ 2134 010e 18       		.uleb128 0x18
+ 2135 010f 00       		.byte	0
+ 2136 0110 00       		.byte	0
+ 2137 0111 15       		.uleb128 0x15
+ 2138 0112 2E       		.uleb128 0x2e
+ 2139 0113 01       		.byte	0x1
+ 2140 0114 3F       		.uleb128 0x3f
+ 2141 0115 19       		.uleb128 0x19
+ 2142 0116 03       		.uleb128 0x3
+ 2143 0117 0E       		.uleb128 0xe
+ 2144 0118 3A       		.uleb128 0x3a
+ 2145 0119 0B       		.uleb128 0xb
+ 2146 011a 3B       		.uleb128 0x3b
+ 2147 011b 0B       		.uleb128 0xb
+ 2148 011c 11       		.uleb128 0x11
+ 2149 011d 01       		.uleb128 0x1
+ 2150 011e 12       		.uleb128 0x12
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 42
+
+
+ 2151 011f 06       		.uleb128 0x6
+ 2152 0120 40       		.uleb128 0x40
+ 2153 0121 18       		.uleb128 0x18
+ 2154 0122 9742     		.uleb128 0x2117
+ 2155 0124 19       		.uleb128 0x19
+ 2156 0125 01       		.uleb128 0x1
+ 2157 0126 13       		.uleb128 0x13
+ 2158 0127 00       		.byte	0
+ 2159 0128 00       		.byte	0
+ 2160 0129 16       		.uleb128 0x16
+ 2161 012a 34       		.uleb128 0x34
+ 2162 012b 00       		.byte	0
+ 2163 012c 03       		.uleb128 0x3
+ 2164 012d 0E       		.uleb128 0xe
+ 2165 012e 3A       		.uleb128 0x3a
+ 2166 012f 0B       		.uleb128 0xb
+ 2167 0130 3B       		.uleb128 0x3b
+ 2168 0131 0B       		.uleb128 0xb
+ 2169 0132 49       		.uleb128 0x49
+ 2170 0133 13       		.uleb128 0x13
+ 2171 0134 1C       		.uleb128 0x1c
+ 2172 0135 0A       		.uleb128 0xa
+ 2173 0136 00       		.byte	0
+ 2174 0137 00       		.byte	0
+ 2175 0138 17       		.uleb128 0x17
+ 2176 0139 34       		.uleb128 0x34
+ 2177 013a 00       		.byte	0
+ 2178 013b 03       		.uleb128 0x3
+ 2179 013c 0E       		.uleb128 0xe
+ 2180 013d 3A       		.uleb128 0x3a
+ 2181 013e 0B       		.uleb128 0xb
+ 2182 013f 3B       		.uleb128 0x3b
+ 2183 0140 0B       		.uleb128 0xb
+ 2184 0141 49       		.uleb128 0x49
+ 2185 0142 13       		.uleb128 0x13
+ 2186 0143 1C       		.uleb128 0x1c
+ 2187 0144 0B       		.uleb128 0xb
+ 2188 0145 00       		.byte	0
+ 2189 0146 00       		.byte	0
+ 2190 0147 18       		.uleb128 0x18
+ 2191 0148 34       		.uleb128 0x34
+ 2192 0149 00       		.byte	0
+ 2193 014a 03       		.uleb128 0x3
+ 2194 014b 0E       		.uleb128 0xe
+ 2195 014c 3A       		.uleb128 0x3a
+ 2196 014d 0B       		.uleb128 0xb
+ 2197 014e 3B       		.uleb128 0x3b
+ 2198 014f 05       		.uleb128 0x5
+ 2199 0150 49       		.uleb128 0x49
+ 2200 0151 13       		.uleb128 0x13
+ 2201 0152 3F       		.uleb128 0x3f
+ 2202 0153 19       		.uleb128 0x19
+ 2203 0154 3C       		.uleb128 0x3c
+ 2204 0155 19       		.uleb128 0x19
+ 2205 0156 00       		.byte	0
+ 2206 0157 00       		.byte	0
+ 2207 0158 19       		.uleb128 0x19
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 43
+
+
+ 2208 0159 35       		.uleb128 0x35
+ 2209 015a 00       		.byte	0
+ 2210 015b 49       		.uleb128 0x49
+ 2211 015c 13       		.uleb128 0x13
+ 2212 015d 00       		.byte	0
+ 2213 015e 00       		.byte	0
+ 2214 015f 1A       		.uleb128 0x1a
+ 2215 0160 2E       		.uleb128 0x2e
+ 2216 0161 01       		.byte	0x1
+ 2217 0162 3F       		.uleb128 0x3f
+ 2218 0163 19       		.uleb128 0x19
+ 2219 0164 03       		.uleb128 0x3
+ 2220 0165 0E       		.uleb128 0xe
+ 2221 0166 3A       		.uleb128 0x3a
+ 2222 0167 0B       		.uleb128 0xb
+ 2223 0168 3B       		.uleb128 0x3b
+ 2224 0169 0B       		.uleb128 0xb
+ 2225 016a 27       		.uleb128 0x27
+ 2226 016b 19       		.uleb128 0x19
+ 2227 016c 3C       		.uleb128 0x3c
+ 2228 016d 19       		.uleb128 0x19
+ 2229 016e 01       		.uleb128 0x1
+ 2230 016f 13       		.uleb128 0x13
+ 2231 0170 00       		.byte	0
+ 2232 0171 00       		.byte	0
+ 2233 0172 1B       		.uleb128 0x1b
+ 2234 0173 05       		.uleb128 0x5
+ 2235 0174 00       		.byte	0
+ 2236 0175 49       		.uleb128 0x49
+ 2237 0176 13       		.uleb128 0x13
+ 2238 0177 00       		.byte	0
+ 2239 0178 00       		.byte	0
+ 2240 0179 1C       		.uleb128 0x1c
+ 2241 017a 2E       		.uleb128 0x2e
+ 2242 017b 01       		.byte	0x1
+ 2243 017c 3F       		.uleb128 0x3f
+ 2244 017d 19       		.uleb128 0x19
+ 2245 017e 03       		.uleb128 0x3
+ 2246 017f 0E       		.uleb128 0xe
+ 2247 0180 3A       		.uleb128 0x3a
+ 2248 0181 0B       		.uleb128 0xb
+ 2249 0182 3B       		.uleb128 0x3b
+ 2250 0183 0B       		.uleb128 0xb
+ 2251 0184 27       		.uleb128 0x27
+ 2252 0185 19       		.uleb128 0x19
+ 2253 0186 49       		.uleb128 0x49
+ 2254 0187 13       		.uleb128 0x13
+ 2255 0188 3C       		.uleb128 0x3c
+ 2256 0189 19       		.uleb128 0x19
+ 2257 018a 01       		.uleb128 0x1
+ 2258 018b 13       		.uleb128 0x13
+ 2259 018c 00       		.byte	0
+ 2260 018d 00       		.byte	0
+ 2261 018e 1D       		.uleb128 0x1d
+ 2262 018f 2E       		.uleb128 0x2e
+ 2263 0190 01       		.byte	0x1
+ 2264 0191 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 44
+
+
+ 2265 0192 19       		.uleb128 0x19
+ 2266 0193 03       		.uleb128 0x3
+ 2267 0194 0E       		.uleb128 0xe
+ 2268 0195 27       		.uleb128 0x27
+ 2269 0196 19       		.uleb128 0x19
+ 2270 0197 49       		.uleb128 0x49
+ 2271 0198 13       		.uleb128 0x13
+ 2272 0199 34       		.uleb128 0x34
+ 2273 019a 19       		.uleb128 0x19
+ 2274 019b 3C       		.uleb128 0x3c
+ 2275 019c 19       		.uleb128 0x19
+ 2276 019d 01       		.uleb128 0x1
+ 2277 019e 13       		.uleb128 0x13
+ 2278 019f 00       		.byte	0
+ 2279 01a0 00       		.byte	0
+ 2280 01a1 1E       		.uleb128 0x1e
+ 2281 01a2 26       		.uleb128 0x26
+ 2282 01a3 00       		.byte	0
+ 2283 01a4 00       		.byte	0
+ 2284 01a5 00       		.byte	0
+ 2285 01a6 00       		.byte	0
+ 2286              		.section	.debug_loc,"",%progbits
+ 2287              	.Ldebug_loc0:
+ 2288              	.LLST0:
+ 2289 0000 00000000 		.4byte	.LVL14
+ 2290 0004 0D000000 		.4byte	.LVL16-1
+ 2291 0008 0100     		.2byte	0x1
+ 2292 000a 51       		.byte	0x51
+ 2293 000b 0D000000 		.4byte	.LVL16-1
+ 2294 000f 58020000 		.4byte	.LVL51
+ 2295 0013 0100     		.2byte	0x1
+ 2296 0015 54       		.byte	0x54
+ 2297 0016 58020000 		.4byte	.LVL51
+ 2298 001a C0020000 		.4byte	.LFE64
+ 2299 001e 0400     		.2byte	0x4
+ 2300 0020 F3       		.byte	0xf3
+ 2301 0021 01       		.uleb128 0x1
+ 2302 0022 51       		.byte	0x51
+ 2303 0023 9F       		.byte	0x9f
+ 2304 0024 00000000 		.4byte	0
+ 2305 0028 00000000 		.4byte	0
+ 2306              		.section	.debug_aranges,"",%progbits
+ 2307 0000 2C000000 		.4byte	0x2c
+ 2308 0004 0200     		.2byte	0x2
+ 2309 0006 00000000 		.4byte	.Ldebug_info0
+ 2310 000a 04       		.byte	0x4
+ 2311 000b 00       		.byte	0
+ 2312 000c 0000     		.2byte	0
+ 2313 000e 0000     		.2byte	0
+ 2314 0010 00000000 		.4byte	.LFB63
+ 2315 0014 78000000 		.4byte	.LFE63-.LFB63
+ 2316 0018 00000000 		.4byte	.LFB64
+ 2317 001c C0020000 		.4byte	.LFE64-.LFB64
+ 2318 0020 00000000 		.4byte	.LFB65
+ 2319 0024 20000000 		.4byte	.LFE65-.LFB65
+ 2320 0028 00000000 		.4byte	0
+ 2321 002c 00000000 		.4byte	0
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 45
+
+
+ 2322              		.section	.debug_ranges,"",%progbits
+ 2323              	.Ldebug_ranges0:
+ 2324 0000 00000000 		.4byte	.LFB63
+ 2325 0004 78000000 		.4byte	.LFE63
+ 2326 0008 00000000 		.4byte	.LFB64
+ 2327 000c C0020000 		.4byte	.LFE64
+ 2328 0010 00000000 		.4byte	.LFB65
+ 2329 0014 20000000 		.4byte	.LFE65
+ 2330 0018 00000000 		.4byte	0
+ 2331 001c 00000000 		.4byte	0
+ 2332              		.section	.debug_line,"",%progbits
+ 2333              	.Ldebug_line0:
+ 2334 0000 7F020000 		.section	.debug_str,"MS",%progbits,1
+ 2334      0200FC01 
+ 2334      00000201 
+ 2334      FB0E0D00 
+ 2334      01010101 
+ 2335              	.LASF26:
+ 2336 0000 45535030 		.ascii	"ESP07_Connected\000"
+ 2336      375F436F 
+ 2336      6E6E6563 
+ 2336      74656400 
+ 2337              	.LASF21:
+ 2338 0010 6C656E67 		.ascii	"length_payload\000"
+ 2338      74685F70 
+ 2338      61796C6F 
+ 2338      616400
+ 2339              	.LASF43:
+ 2340 001f 45535030 		.ascii	"ESP07_SendAck\000"
+ 2340      375F5365 
+ 2340      6E644163 
+ 2340      6B00
+ 2341              	.LASF18:
+ 2342 002d 73697A65 		.ascii	"size_t\000"
+ 2342      5F7400
+ 2343              	.LASF4:
+ 2344 0034 5F5F7569 		.ascii	"__uint8_t\000"
+ 2344      6E74385F 
+ 2344      7400
+ 2345              	.LASF32:
+ 2346 003e 73747263 		.ascii	"strchr\000"
+ 2346      687200
+ 2347              	.LASF37:
+ 2348 0045 65737030 		.ascii	"esp07.c\000"
+ 2348      372E6300 
+ 2349              	.LASF5:
+ 2350 004d 5F5F696E 		.ascii	"__int32_t\000"
+ 2350      7433325F 
+ 2350      7400
+ 2351              	.LASF25:
+ 2352 0057 45535030 		.ascii	"ESP07_Ready\000"
+ 2352      375F5265 
+ 2352      61647900 
+ 2353              	.LASF27:
+ 2354 0063 45535030 		.ascii	"ESP07_UART_PutString\000"
+ 2354      375F5541 
+ 2354      52545F50 
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 46
+
+
+ 2354      75745374 
+ 2354      72696E67 
+ 2355              	.LASF10:
+ 2356 0078 756E7369 		.ascii	"unsigned int\000"
+ 2356      676E6564 
+ 2356      20696E74 
+ 2356      00
+ 2357              	.LASF12:
+ 2358 0085 696E7433 		.ascii	"int32_t\000"
+ 2358      325F7400 
+ 2359              	.LASF14:
+ 2360 008d 666C6F61 		.ascii	"float\000"
+ 2360      7400
+ 2361              	.LASF42:
+ 2362 0093 64617461 		.ascii	"data\000"
+ 2362      00
+ 2363              	.LASF1:
+ 2364 0098 756E7369 		.ascii	"unsigned char\000"
+ 2364      676E6564 
+ 2364      20636861 
+ 2364      7200
+ 2365              	.LASF39:
+ 2366 00a6 45535030 		.ascii	"ESP07_Datagram\000"
+ 2366      375F4461 
+ 2366      74616772 
+ 2366      616D00
+ 2367              	.LASF16:
+ 2368 00b5 63686172 		.ascii	"char8\000"
+ 2368      3800
+ 2369              	.LASF29:
+ 2370 00bb 73747263 		.ascii	"strcpy\000"
+ 2370      707900
+ 2371              	.LASF7:
+ 2372 00c2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2372      20756E73 
+ 2372      69676E65 
+ 2372      6420696E 
+ 2372      7400
+ 2373              	.LASF3:
+ 2374 00d4 73686F72 		.ascii	"short unsigned int\000"
+ 2374      7420756E 
+ 2374      7369676E 
+ 2374      65642069 
+ 2374      6E7400
+ 2375              	.LASF44:
+ 2376 00e7 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2376      52784275 
+ 2376      66666572 
+ 2376      00
+ 2377              	.LASF41:
+ 2378 00f4 45535030 		.ascii	"ESP07_Parse\000"
+ 2378      375F5061 
+ 2378      72736500 
+ 2379              	.LASF15:
+ 2380 0100 646F7562 		.ascii	"double\000"
+ 2380      6C6500
+ 2381              	.LASF33:
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 47
+
+
+ 2382 0107 73747263 		.ascii	"strcmp\000"
+ 2382      6D7000
+ 2383              	.LASF2:
+ 2384 010e 73686F72 		.ascii	"short int\000"
+ 2384      7420696E 
+ 2384      7400
+ 2385              	.LASF23:
+ 2386 0118 776F726B 		.ascii	"working\000"
+ 2386      696E6700 
+ 2387              	.LASF13:
+ 2388 0120 75696E74 		.ascii	"uint32\000"
+ 2388      333200
+ 2389              	.LASF36:
+ 2390 0127 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2390      4320342E 
+ 2390      392E3320 
+ 2390      32303135 
+ 2390      30333033 
+ 2391 015a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2391      20726576 
+ 2391      6973696F 
+ 2391      6E203232 
+ 2391      31323230 
+ 2392 018d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2392      66756E63 
+ 2392      74696F6E 
+ 2392      2D736563 
+ 2392      74696F6E 
+ 2393              	.LASF30:
+ 2394 01b5 7374726C 		.ascii	"strlen\000"
+ 2394      656E00
+ 2395              	.LASF9:
+ 2396 01bc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2396      206C6F6E 
+ 2396      6720756E 
+ 2396      7369676E 
+ 2396      65642069 
+ 2397              	.LASF11:
+ 2398 01d3 75696E74 		.ascii	"uint8_t\000"
+ 2398      385F7400 
+ 2399              	.LASF20:
+ 2400 01db 7061796C 		.ascii	"payload\000"
+ 2400      6F616400 
+ 2401              	.LASF38:
+ 2402 01e3 433A5C55 		.ascii	"C:\\Users\\Ryan Kelley\\Documents\\CMPEN480\\PSoC F"
+ 2402      73657273 
+ 2402      5C527961 
+ 2402      6E204B65 
+ 2402      6C6C6579 
+ 2403 0211 69726D65 		.ascii	"irmestware\\Platform Control Firmware.cydsn\000"
+ 2403      73747761 
+ 2403      72655C50 
+ 2403      6C617466 
+ 2403      6F726D20 
+ 2404              	.LASF22:
+ 2405 023c 6C656E67 		.ascii	"length_raw\000"
+ 2405      74685F72 
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\ccn15oBT.s 			page 48
+
+
+ 2405      617700
+ 2406              	.LASF19:
+ 2407 0247 73697A65 		.ascii	"sizetype\000"
+ 2407      74797065 
+ 2407      00
+ 2408              	.LASF8:
+ 2409 0250 6C6F6E67 		.ascii	"long long int\000"
+ 2409      206C6F6E 
+ 2409      6720696E 
+ 2409      7400
+ 2410              	.LASF17:
+ 2411 025e 63686172 		.ascii	"char\000"
+ 2411      00
+ 2412              	.LASF34:
+ 2413 0263 7374726E 		.ascii	"strncmp\000"
+ 2413      636D7000 
+ 2414              	.LASF35:
+ 2415 026b 6D656D63 		.ascii	"memcpy\000"
+ 2415      707900
+ 2416              	.LASF40:
+ 2417 0272 45535030 		.ascii	"ESP07_Boot\000"
+ 2417      375F426F 
+ 2417      6F7400
+ 2418              	.LASF6:
+ 2419 027d 6C6F6E67 		.ascii	"long int\000"
+ 2419      20696E74 
+ 2419      00
+ 2420              	.LASF24:
+ 2421 0286 45535030 		.ascii	"ESP07_Data\000"
+ 2421      375F4461 
+ 2421      746100
+ 2422              	.LASF0:
+ 2423 0291 7369676E 		.ascii	"signed char\000"
+ 2423      65642063 
+ 2423      68617200 
+ 2424              	.LASF31:
+ 2425 029d 73747273 		.ascii	"strstr\000"
+ 2425      747200
+ 2426              	.LASF28:
+ 2427 02a4 43794465 		.ascii	"CyDelay\000"
+ 2427      6C617900 
+ 2428              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

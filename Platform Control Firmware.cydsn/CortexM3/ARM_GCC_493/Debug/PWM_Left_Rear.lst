@@ -1,0 +1,2310 @@
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"PWM_Left_Rear.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.PWM_Left_Rear_Enable,"ax",%progbits
+  19              		.align	2
+  20              		.global	PWM_Left_Rear_Enable
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	PWM_Left_Rear_Enable, %function
+  24              	PWM_Left_Rear_Enable:
+  25              	.LFB2:
+  26              		.file 1 "Generated_Source\\PSoC5\\PWM_Left_Rear.c"
+   1:Generated_Source\PSoC5/PWM_Left_Rear.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/PWM_Left_Rear.c **** * File Name: PWM_Left_Rear.c
+   3:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Version 3.30
+   4:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+   5:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Description:
+   6:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  The PWM User Module consist of an 8 or 16-bit counter with two 8 or 16-bit
+   7:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  comparitors. Each instance of this user module is capable of generating
+   8:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  two PWM outputs with the same period. The pulse width is selectable between
+   9:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  1 and 255/65535. The period is selectable between 2 and 255/65536 clocks.
+  10:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  The compare value output may be configured to be active when the present
+  11:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  counter is less than or less than/equal to the compare value.
+  12:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  A terminal count output is also provided. It generates a pulse one clock
+  13:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  width wide when the counter is equal to zero.
+  14:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  15:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Note:
+  16:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  17:Generated_Source\PSoC5/PWM_Left_Rear.c **** *******************************************************************************
+  18:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  19:Generated_Source\PSoC5/PWM_Left_Rear.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:Generated_Source\PSoC5/PWM_Left_Rear.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:Generated_Source\PSoC5/PWM_Left_Rear.c **** * the software package with which this file was provided.
+  22:Generated_Source\PSoC5/PWM_Left_Rear.c **** ********************************************************************************/
+  23:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+  24:Generated_Source\PSoC5/PWM_Left_Rear.c **** #include "PWM_Left_Rear.h"
+  25:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+  26:Generated_Source\PSoC5/PWM_Left_Rear.c **** /* Error message for removed <resource> through optimization */
+  27:Generated_Source\PSoC5/PWM_Left_Rear.c **** #ifdef PWM_Left_Rear_PWMUDB_genblk1_ctrlreg__REMOVED
+  28:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #error PWM_v3_30 detected with a constant 0 for the enable or \
+  29:Generated_Source\PSoC5/PWM_Left_Rear.c ****          constant 1 for reset. This will prevent the component from operating.
+  30:Generated_Source\PSoC5/PWM_Left_Rear.c **** #endif /* PWM_Left_Rear_PWMUDB_genblk1_ctrlreg__REMOVED */
+  31:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 2
+
+
+  32:Generated_Source\PSoC5/PWM_Left_Rear.c **** uint8 PWM_Left_Rear_initVar = 0u;
+  33:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+  34:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+  35:Generated_Source\PSoC5/PWM_Left_Rear.c **** /*******************************************************************************
+  36:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Function Name: PWM_Left_Rear_Start
+  37:Generated_Source\PSoC5/PWM_Left_Rear.c **** ********************************************************************************
+  38:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  39:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Summary:
+  40:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  The start function initializes the pwm with the default values, the
+  41:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  enables the counter to begin counting.  It does not enable interrupts,
+  42:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  the EnableInt command should be called if interrupt generation is required.
+  43:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  44:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Parameters:
+  45:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  None
+  46:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  47:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Return:
+  48:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  None
+  49:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  50:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Global variables:
+  51:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  PWM_Left_Rear_initVar: Is modified when this function is called for the
+  52:Generated_Source\PSoC5/PWM_Left_Rear.c **** *   first time. Is used to ensure that initialization happens only once.
+  53:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  54:Generated_Source\PSoC5/PWM_Left_Rear.c **** *******************************************************************************/
+  55:Generated_Source\PSoC5/PWM_Left_Rear.c **** void PWM_Left_Rear_Start(void) 
+  56:Generated_Source\PSoC5/PWM_Left_Rear.c **** {
+  57:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /* If not Initialized then initialize all required hardware and software */
+  58:Generated_Source\PSoC5/PWM_Left_Rear.c ****     if(PWM_Left_Rear_initVar == 0u)
+  59:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+  60:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_Init();
+  61:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_initVar = 1u;
+  62:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+  63:Generated_Source\PSoC5/PWM_Left_Rear.c ****     PWM_Left_Rear_Enable();
+  64:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+  65:Generated_Source\PSoC5/PWM_Left_Rear.c **** }
+  66:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+  67:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+  68:Generated_Source\PSoC5/PWM_Left_Rear.c **** /*******************************************************************************
+  69:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Function Name: PWM_Left_Rear_Init
+  70:Generated_Source\PSoC5/PWM_Left_Rear.c **** ********************************************************************************
+  71:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  72:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Summary:
+  73:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  Initialize component's parameters to the parameters set by user in the
+  74:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  customizer of the component placed onto schematic. Usually called in
+  75:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  PWM_Left_Rear_Start().
+  76:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  77:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Parameters:
+  78:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  None
+  79:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  80:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Return:
+  81:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  None
+  82:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+  83:Generated_Source\PSoC5/PWM_Left_Rear.c **** *******************************************************************************/
+  84:Generated_Source\PSoC5/PWM_Left_Rear.c **** void PWM_Left_Rear_Init(void) 
+  85:Generated_Source\PSoC5/PWM_Left_Rear.c **** {
+  86:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_UsingFixedFunction || PWM_Left_Rear_UseControl)
+  87:Generated_Source\PSoC5/PWM_Left_Rear.c ****         uint8 ctrl;
+  88:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UsingFixedFunction || PWM_Left_Rear_UseControl) */
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 3
+
+
+  89:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+  90:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if(!PWM_Left_Rear_UsingFixedFunction)
+  91:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if(PWM_Left_Rear_UseStatus)
+  92:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* Interrupt State Backup for Critical Region*/
+  93:Generated_Source\PSoC5/PWM_Left_Rear.c ****             uint8 PWM_Left_Rear_interruptState;
+  94:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_UseStatus) */
+  95:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (!PWM_Left_Rear_UsingFixedFunction) */
+  96:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+  97:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_UsingFixedFunction)
+  98:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* You are allowed to write the compare value (FF only) */
+  99:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_CONTROL |= PWM_Left_Rear_CFG0_MODE;
+ 100:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if (PWM_Left_Rear_DeadBand2_4)
+ 101:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_CONTROL |= PWM_Left_Rear_CFG0_DB;
+ 102:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_DeadBand2_4) */
+ 103:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 104:Generated_Source\PSoC5/PWM_Left_Rear.c ****         ctrl = PWM_Left_Rear_CONTROL3 & ((uint8 )(~PWM_Left_Rear_CTRL_CMPMODE1_MASK));
+ 105:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_CONTROL3 = ctrl | PWM_Left_Rear_DEFAULT_COMPARE1_MODE;
+ 106:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 107:Generated_Source\PSoC5/PWM_Left_Rear.c ****          /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+ 108:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_RT1 &= ((uint8)(~PWM_Left_Rear_RT1_MASK));
+ 109:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_RT1 |= PWM_Left_Rear_SYNC;
+ 110:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 111:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /*Enable DSI Sync all all inputs of the PWM*/
+ 112:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_RT1 &= ((uint8)(~PWM_Left_Rear_SYNCDSI_MASK));
+ 113:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_RT1 |= PWM_Left_Rear_SYNCDSI_EN;
+ 114:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 115:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #elif (PWM_Left_Rear_UseControl)
+ 116:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* Set the default compare mode defined in the parameter */
+ 117:Generated_Source\PSoC5/PWM_Left_Rear.c ****         ctrl = PWM_Left_Rear_CONTROL & ((uint8)(~PWM_Left_Rear_CTRL_CMPMODE2_MASK)) &
+ 118:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 ((uint8)(~PWM_Left_Rear_CTRL_CMPMODE1_MASK));
+ 119:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_CONTROL = ctrl | PWM_Left_Rear_DEFAULT_COMPARE2_MODE |
+ 120:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                    PWM_Left_Rear_DEFAULT_COMPARE1_MODE;
+ 121:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 122:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 123:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (!PWM_Left_Rear_UsingFixedFunction)
+ 124:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if (PWM_Left_Rear_Resolution == 8)
+ 125:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* Set FIFO 0 to 1 byte register for period*/
+ 126:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_AUX_CONTROLDP0 |= (PWM_Left_Rear_AUX_CTRL_FIFO0_CLR);
+ 127:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #else /* (PWM_Left_Rear_Resolution == 16)*/
+ 128:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* Set FIFO 0 to 1 byte register for period */
+ 129:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_AUX_CONTROLDP0 |= (PWM_Left_Rear_AUX_CTRL_FIFO0_CLR);
+ 130:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_AUX_CONTROLDP1 |= (PWM_Left_Rear_AUX_CTRL_FIFO0_CLR);
+ 131:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_Resolution == 8) */
+ 132:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 133:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_WriteCounter(PWM_Left_Rear_INIT_PERIOD_VALUE);
+ 134:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (!PWM_Left_Rear_UsingFixedFunction) */
+ 135:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 136:Generated_Source\PSoC5/PWM_Left_Rear.c ****     PWM_Left_Rear_WritePeriod(PWM_Left_Rear_INIT_PERIOD_VALUE);
+ 137:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 138:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if (PWM_Left_Rear_UseOneCompareMode)
+ 139:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_WriteCompare(PWM_Left_Rear_INIT_COMPARE_VALUE1);
+ 140:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #else
+ 141:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_WriteCompare1(PWM_Left_Rear_INIT_COMPARE_VALUE1);
+ 142:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_WriteCompare2(PWM_Left_Rear_INIT_COMPARE_VALUE2);
+ 143:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_UseOneCompareMode) */
+ 144:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 145:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if (PWM_Left_Rear_KillModeMinTime)
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 4
+
+
+ 146:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_WriteKillTime(PWM_Left_Rear_MinimumKillTime);
+ 147:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_KillModeMinTime) */
+ 148:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 149:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if (PWM_Left_Rear_DeadBandUsed)
+ 150:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_WriteDeadTime(PWM_Left_Rear_INIT_DEAD_TIME);
+ 151:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_DeadBandUsed) */
+ 152:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 153:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_UseStatus || PWM_Left_Rear_UsingFixedFunction)
+ 154:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_SetInterruptMode(PWM_Left_Rear_INIT_INTERRUPTS_MODE);
+ 155:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UseStatus || PWM_Left_Rear_UsingFixedFunction) */
+ 156:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 157:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_UsingFixedFunction)
+ 158:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* Globally Enable the Fixed Function Block chosen */
+ 159:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_GLOBAL_ENABLE |= PWM_Left_Rear_BLOCK_EN_MASK;
+ 160:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* Set the Interrupt source to come from the status register */
+ 161:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_CONTROL2 |= PWM_Left_Rear_CTRL2_IRQ_SEL;
+ 162:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #else
+ 163:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if(PWM_Left_Rear_UseStatus)
+ 164:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 165:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region cri
+ 166:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* Enter Critical Region*/
+ 167:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_interruptState = CyEnterCriticalSection();
+ 168:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 169:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_STATUS_AUX_CTRL |= PWM_Left_Rear_STATUS_ACTL_INT_EN_MASK;
+ 170:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 171:Generated_Source\PSoC5/PWM_Left_Rear.c ****              /* Exit Critical Region*/
+ 172:Generated_Source\PSoC5/PWM_Left_Rear.c ****             CyExitCriticalSection(PWM_Left_Rear_interruptState);
+ 173:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 174:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* Clear the FIFO to enable the PWM_Left_Rear_STATUS_FIFOFULL
+ 175:Generated_Source\PSoC5/PWM_Left_Rear.c ****                    bit to be set on FIFO full. */
+ 176:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_ClearFIFO();
+ 177:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_UseStatus) */
+ 178:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 179:Generated_Source\PSoC5/PWM_Left_Rear.c **** }
+ 180:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 181:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 182:Generated_Source\PSoC5/PWM_Left_Rear.c **** /*******************************************************************************
+ 183:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Function Name: PWM_Left_Rear_Enable
+ 184:Generated_Source\PSoC5/PWM_Left_Rear.c **** ********************************************************************************
+ 185:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 186:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Summary:
+ 187:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  Enables the PWM block operation
+ 188:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 189:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Parameters:
+ 190:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  None
+ 191:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 192:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Return:
+ 193:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  None
+ 194:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 195:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Side Effects:
+ 196:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  This works only if software enable mode is chosen
+ 197:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 198:Generated_Source\PSoC5/PWM_Left_Rear.c **** *******************************************************************************/
+ 199:Generated_Source\PSoC5/PWM_Left_Rear.c **** void PWM_Left_Rear_Enable(void) 
+ 200:Generated_Source\PSoC5/PWM_Left_Rear.c **** {
+  27              		.loc 1 200 0
+  28              		.cfi_startproc
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 5
+
+
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+ 201:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 202:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_UsingFixedFunction)
+ 203:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_GLOBAL_ENABLE |= PWM_Left_Rear_BLOCK_EN_MASK;
+  32              		.loc 1 203 0
+  33 0000 084A     		ldr	r2, .L2
+  34 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  35 0004 43F00203 		orr	r3, r3, #2
+  36 0008 1370     		strb	r3, [r2]
+ 204:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_GLOBAL_STBY_ENABLE |= PWM_Left_Rear_BLOCK_STBY_EN_MASK;
+  37              		.loc 1 204 0
+  38 000a 1032     		adds	r2, r2, #16
+  39 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  40 000e 43F00203 		orr	r3, r3, #2
+  41 0012 1370     		strb	r3, [r2]
+ 205:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 206:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 207:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /* Enable the PWM from the control register  */
+ 208:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_UseControl || PWM_Left_Rear_UsingFixedFunction)
+ 209:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_CONTROL |= PWM_Left_Rear_CTRL_ENABLE;
+  42              		.loc 1 209 0
+  43 0014 02F65932 		addw	r2, r2, #2905
+  44 0018 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  45 001a 43F00103 		orr	r3, r3, #1
+  46 001e 1370     		strb	r3, [r2]
+  47 0020 7047     		bx	lr
+  48              	.L3:
+  49 0022 00BF     		.align	2
+  50              	.L2:
+  51 0024 A3430040 		.word	1073759139
+  52              		.cfi_endproc
+  53              	.LFE2:
+  54              		.size	PWM_Left_Rear_Enable, .-PWM_Left_Rear_Enable
+  55              		.section	.text.PWM_Left_Rear_Stop,"ax",%progbits
+  56              		.align	2
+  57              		.global	PWM_Left_Rear_Stop
+  58              		.thumb
+  59              		.thumb_func
+  60              		.type	PWM_Left_Rear_Stop, %function
+  61              	PWM_Left_Rear_Stop:
+  62              	.LFB3:
+ 210:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UseControl || PWM_Left_Rear_UsingFixedFunction) */
+ 211:Generated_Source\PSoC5/PWM_Left_Rear.c **** }
+ 212:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 213:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 214:Generated_Source\PSoC5/PWM_Left_Rear.c **** /*******************************************************************************
+ 215:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Function Name: PWM_Left_Rear_Stop
+ 216:Generated_Source\PSoC5/PWM_Left_Rear.c **** ********************************************************************************
+ 217:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 218:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Summary:
+ 219:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  The stop function halts the PWM, but does not change any modes or disable
+ 220:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  interrupts.
+ 221:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 222:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Parameters:
+ 223:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  None
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 6
+
+
+ 224:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 225:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Return:
+ 226:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  None
+ 227:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 228:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Side Effects:
+ 229:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  If the Enable mode is set to Hardware only then this function
+ 230:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  has no effect on the operation of the PWM
+ 231:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 232:Generated_Source\PSoC5/PWM_Left_Rear.c **** *******************************************************************************/
+ 233:Generated_Source\PSoC5/PWM_Left_Rear.c **** void PWM_Left_Rear_Stop(void) 
+ 234:Generated_Source\PSoC5/PWM_Left_Rear.c **** {
+  63              		.loc 1 234 0
+  64              		.cfi_startproc
+  65              		@ args = 0, pretend = 0, frame = 0
+  66              		@ frame_needed = 0, uses_anonymous_args = 0
+  67              		@ link register save eliminated.
+ 235:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_UseControl || PWM_Left_Rear_UsingFixedFunction)
+ 236:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_CONTROL &= ((uint8)(~PWM_Left_Rear_CTRL_ENABLE));
+  68              		.loc 1 236 0
+  69 0000 084A     		ldr	r2, .L5
+  70 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  71 0004 03F0FE03 		and	r3, r3, #254
+  72 0008 1370     		strb	r3, [r2]
+ 237:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UseControl || PWM_Left_Rear_UsingFixedFunction) */
+ 238:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 239:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /* Globally disable the Fixed Function Block chosen */
+ 240:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_UsingFixedFunction)
+ 241:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_GLOBAL_ENABLE &= ((uint8)(~PWM_Left_Rear_BLOCK_EN_MASK));
+  73              		.loc 1 241 0
+  74 000a A2F66932 		subw	r2, r2, #2921
+  75 000e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  76 0010 03F0FD03 		and	r3, r3, #253
+  77 0014 1370     		strb	r3, [r2]
+ 242:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_GLOBAL_STBY_ENABLE &= ((uint8)(~PWM_Left_Rear_BLOCK_STBY_EN_MASK));
+  78              		.loc 1 242 0
+  79 0016 1032     		adds	r2, r2, #16
+  80 0018 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  81 001a 03F0FD03 		and	r3, r3, #253
+  82 001e 1370     		strb	r3, [r2]
+  83 0020 7047     		bx	lr
+  84              	.L6:
+  85 0022 00BF     		.align	2
+  86              	.L5:
+  87 0024 0C4F0040 		.word	1073762060
+  88              		.cfi_endproc
+  89              	.LFE3:
+  90              		.size	PWM_Left_Rear_Stop, .-PWM_Left_Rear_Stop
+  91              		.section	.text.PWM_Left_Rear_WritePeriod,"ax",%progbits
+  92              		.align	2
+  93              		.global	PWM_Left_Rear_WritePeriod
+  94              		.thumb
+  95              		.thumb_func
+  96              		.type	PWM_Left_Rear_WritePeriod, %function
+  97              	PWM_Left_Rear_WritePeriod:
+  98              	.LFB4:
+ 243:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 244:Generated_Source\PSoC5/PWM_Left_Rear.c **** }
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 7
+
+
+ 245:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 246:Generated_Source\PSoC5/PWM_Left_Rear.c **** #if (PWM_Left_Rear_UseOneCompareMode)
+ 247:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_CompareMode1SW)
+ 248:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 249:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 250:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /*******************************************************************************
+ 251:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Function Name: PWM_Left_Rear_SetCompareMode
+ 252:Generated_Source\PSoC5/PWM_Left_Rear.c ****         ********************************************************************************
+ 253:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 254:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Summary:
+ 255:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *  This function writes the Compare Mode for the pwm output when in Dither mode,
+ 256:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *  Center Align Mode or One Output Mode.
+ 257:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 258:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Parameters:
+ 259:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 260:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *                defined in the H file as input arguments.
+ 261:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 262:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Return:
+ 263:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *  None
+ 264:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 265:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *******************************************************************************/
+ 266:Generated_Source\PSoC5/PWM_Left_Rear.c ****         void PWM_Left_Rear_SetCompareMode(uint8 comparemode) 
+ 267:Generated_Source\PSoC5/PWM_Left_Rear.c ****         {
+ 268:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #if(PWM_Left_Rear_UsingFixedFunction)
+ 269:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 270:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 #if(0 != PWM_Left_Rear_CTRL_CMPMODE1_SHIFT)
+ 271:Generated_Source\PSoC5/PWM_Left_Rear.c ****                     uint8 comparemodemasked = ((uint8)((uint8)comparemode << PWM_Left_Rear_CTRL_CMP
+ 272:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 #else
+ 273:Generated_Source\PSoC5/PWM_Left_Rear.c ****                     uint8 comparemodemasked = comparemode;
+ 274:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 #endif /* (0 != PWM_Left_Rear_CTRL_CMPMODE1_SHIFT) */
+ 275:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 276:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 PWM_Left_Rear_CONTROL3 &= ((uint8)(~PWM_Left_Rear_CTRL_CMPMODE1_MASK)); /*Clear Exi
+ 277:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 PWM_Left_Rear_CONTROL3 |= comparemodemasked;
+ 278:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 279:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #elif (PWM_Left_Rear_UseControl)
+ 280:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 281:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 #if(0 != PWM_Left_Rear_CTRL_CMPMODE1_SHIFT)
+ 282:Generated_Source\PSoC5/PWM_Left_Rear.c ****                     uint8 comparemode1masked = ((uint8)((uint8)comparemode << PWM_Left_Rear_CTRL_CM
+ 283:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                                 PWM_Left_Rear_CTRL_CMPMODE1_MASK;
+ 284:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 #else
+ 285:Generated_Source\PSoC5/PWM_Left_Rear.c ****                     uint8 comparemode1masked = comparemode & PWM_Left_Rear_CTRL_CMPMODE1_MASK;
+ 286:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 #endif /* (0 != PWM_Left_Rear_CTRL_CMPMODE1_SHIFT) */
+ 287:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 288:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 #if(0 != PWM_Left_Rear_CTRL_CMPMODE2_SHIFT)
+ 289:Generated_Source\PSoC5/PWM_Left_Rear.c ****                     uint8 comparemode2masked = ((uint8)((uint8)comparemode << PWM_Left_Rear_CTRL_CM
+ 290:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                                PWM_Left_Rear_CTRL_CMPMODE2_MASK;
+ 291:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 #else
+ 292:Generated_Source\PSoC5/PWM_Left_Rear.c ****                     uint8 comparemode2masked = comparemode & PWM_Left_Rear_CTRL_CMPMODE2_MASK;
+ 293:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 #endif /* (0 != PWM_Left_Rear_CTRL_CMPMODE2_SHIFT) */
+ 294:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 295:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 /*Clear existing mode */
+ 296:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 PWM_Left_Rear_CONTROL &= ((uint8)(~(PWM_Left_Rear_CTRL_CMPMODE1_MASK |
+ 297:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                             PWM_Left_Rear_CTRL_CMPMODE2_MASK)));
+ 298:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 PWM_Left_Rear_CONTROL |= (comparemode1masked | comparemode2masked);
+ 299:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 300:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #else
+ 301:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 uint8 temp = comparemode;
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 8
+
+
+ 302:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 303:Generated_Source\PSoC5/PWM_Left_Rear.c ****         }
+ 304:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* PWM_Left_Rear_CompareMode1SW */
+ 305:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 306:Generated_Source\PSoC5/PWM_Left_Rear.c **** #else /* UseOneCompareMode */
+ 307:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 308:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_CompareMode1SW)
+ 309:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 310:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 311:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /*******************************************************************************
+ 312:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Function Name: PWM_Left_Rear_SetCompareMode1
+ 313:Generated_Source\PSoC5/PWM_Left_Rear.c ****         ********************************************************************************
+ 314:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 315:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Summary:
+ 316:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *  This function writes the Compare Mode for the pwm or pwm1 output
+ 317:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 318:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Parameters:
+ 319:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 320:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *                defined in the H file as input arguments.
+ 321:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 322:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Return:
+ 323:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *  None
+ 324:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 325:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *******************************************************************************/
+ 326:Generated_Source\PSoC5/PWM_Left_Rear.c ****         void PWM_Left_Rear_SetCompareMode1(uint8 comparemode) 
+ 327:Generated_Source\PSoC5/PWM_Left_Rear.c ****         {
+ 328:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #if(0 != PWM_Left_Rear_CTRL_CMPMODE1_SHIFT)
+ 329:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 uint8 comparemodemasked = ((uint8)((uint8)comparemode << PWM_Left_Rear_CTRL_CMPMODE
+ 330:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                            PWM_Left_Rear_CTRL_CMPMODE1_MASK;
+ 331:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #else
+ 332:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 uint8 comparemodemasked = comparemode & PWM_Left_Rear_CTRL_CMPMODE1_MASK;
+ 333:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #endif /* (0 != PWM_Left_Rear_CTRL_CMPMODE1_SHIFT) */
+ 334:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 335:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #if (PWM_Left_Rear_UseControl)
+ 336:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 PWM_Left_Rear_CONTROL &= ((uint8)(~PWM_Left_Rear_CTRL_CMPMODE1_MASK)); /*Clear exis
+ 337:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 PWM_Left_Rear_CONTROL |= comparemodemasked;
+ 338:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #endif /* (PWM_Left_Rear_UseControl) */
+ 339:Generated_Source\PSoC5/PWM_Left_Rear.c ****         }
+ 340:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* PWM_Left_Rear_CompareMode1SW */
+ 341:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 342:Generated_Source\PSoC5/PWM_Left_Rear.c **** #if (PWM_Left_Rear_CompareMode2SW)
+ 343:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 344:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 345:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 346:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_SetCompareMode2
+ 347:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 348:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 349:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 350:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  This function writes the Compare Mode for the pwm or pwm2 output
+ 351:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 352:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 353:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  comparemode:  The new compare mode for the PWM output. Use the compare types
+ 354:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *                defined in the H file as input arguments.
+ 355:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 356:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 357:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 358:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 9
+
+
+ 359:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 360:Generated_Source\PSoC5/PWM_Left_Rear.c ****     void PWM_Left_Rear_SetCompareMode2(uint8 comparemode) 
+ 361:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 362:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 363:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if(0 != PWM_Left_Rear_CTRL_CMPMODE2_SHIFT)
+ 364:Generated_Source\PSoC5/PWM_Left_Rear.c ****             uint8 comparemodemasked = ((uint8)((uint8)comparemode << PWM_Left_Rear_CTRL_CMPMODE2_SH
+ 365:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                                  PWM_Left_Rear_CTRL_CMPMODE2_MASK;
+ 366:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #else
+ 367:Generated_Source\PSoC5/PWM_Left_Rear.c ****             uint8 comparemodemasked = comparemode & PWM_Left_Rear_CTRL_CMPMODE2_MASK;
+ 368:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (0 != PWM_Left_Rear_CTRL_CMPMODE2_SHIFT) */
+ 369:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 370:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if (PWM_Left_Rear_UseControl)
+ 371:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_CONTROL &= ((uint8)(~PWM_Left_Rear_CTRL_CMPMODE2_MASK)); /*Clear existing
+ 372:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_CONTROL |= comparemodemasked;
+ 373:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_UseControl) */
+ 374:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 375:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /*PWM_Left_Rear_CompareMode2SW */
+ 376:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 377:Generated_Source\PSoC5/PWM_Left_Rear.c **** #endif /* UseOneCompareMode */
+ 378:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 379:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 380:Generated_Source\PSoC5/PWM_Left_Rear.c **** #if (!PWM_Left_Rear_UsingFixedFunction)
+ 381:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 382:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 383:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 384:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_WriteCounter
+ 385:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 386:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 387:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 388:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  Writes a new counter value directly to the counter register. This will be
+ 389:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  implemented for that currently running period and only that period. This API
+ 390:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  is valid only for UDB implementation and not available for fixed function
+ 391:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  PWM implementation.
+ 392:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 393:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 394:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  counter:  The period new period counter value.
+ 395:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 396:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 397:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 398:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 399:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Side Effects:
+ 400:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  The PWM Period will be reloaded when a counter value will be a zero
+ 401:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 402:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 403:Generated_Source\PSoC5/PWM_Left_Rear.c ****     void PWM_Left_Rear_WriteCounter(uint8 counter) \
+ 404:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                        
+ 405:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 406:Generated_Source\PSoC5/PWM_Left_Rear.c ****         CY_SET_REG8(PWM_Left_Rear_COUNTER_LSB_PTR, counter);
+ 407:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 408:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 409:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 410:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 411:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_ReadCounter
+ 412:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 413:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 414:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 415:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  This function returns the current value of the counter.  It doesn't matter
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 10
+
+
+ 416:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  if the counter is enabled or running.
+ 417:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 418:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 419:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 420:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 421:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 422:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  The current value of the counter.
+ 423:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 424:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 425:Generated_Source\PSoC5/PWM_Left_Rear.c ****     uint8 PWM_Left_Rear_ReadCounter(void) 
+ 426:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 427:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* Force capture by reading Accumulator */
+ 428:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* Must first do a software capture to be able to read the counter */
+ 429:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 430:Generated_Source\PSoC5/PWM_Left_Rear.c ****           (void)CY_GET_REG8(PWM_Left_Rear_COUNTERCAP_LSB_PTR_8BIT);
+ 431:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 432:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* Read the data from the FIFO */
+ 433:Generated_Source\PSoC5/PWM_Left_Rear.c ****         return (CY_GET_REG8(PWM_Left_Rear_CAPTURE_LSB_PTR));
+ 434:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 435:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 436:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_UseStatus)
+ 437:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 438:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 439:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /*******************************************************************************
+ 440:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Function Name: PWM_Left_Rear_ClearFIFO
+ 441:Generated_Source\PSoC5/PWM_Left_Rear.c ****         ********************************************************************************
+ 442:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 443:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Summary:
+ 444:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *  This function clears all capture data from the capture FIFO
+ 445:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 446:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Parameters:
+ 447:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *  None
+ 448:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 449:Generated_Source\PSoC5/PWM_Left_Rear.c ****         * Return:
+ 450:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *  None
+ 451:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *
+ 452:Generated_Source\PSoC5/PWM_Left_Rear.c ****         *******************************************************************************/
+ 453:Generated_Source\PSoC5/PWM_Left_Rear.c ****         void PWM_Left_Rear_ClearFIFO(void) 
+ 454:Generated_Source\PSoC5/PWM_Left_Rear.c ****         {
+ 455:Generated_Source\PSoC5/PWM_Left_Rear.c ****             while(0u != (PWM_Left_Rear_ReadStatusRegister() & PWM_Left_Rear_STATUS_FIFONEMPTY))
+ 456:Generated_Source\PSoC5/PWM_Left_Rear.c ****             {
+ 457:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 (void)PWM_Left_Rear_ReadCapture();
+ 458:Generated_Source\PSoC5/PWM_Left_Rear.c ****             }
+ 459:Generated_Source\PSoC5/PWM_Left_Rear.c ****         }
+ 460:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 461:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* PWM_Left_Rear_UseStatus */
+ 462:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 463:Generated_Source\PSoC5/PWM_Left_Rear.c **** #endif /* !PWM_Left_Rear_UsingFixedFunction */
+ 464:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 465:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 466:Generated_Source\PSoC5/PWM_Left_Rear.c **** /*******************************************************************************
+ 467:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Function Name: PWM_Left_Rear_WritePeriod
+ 468:Generated_Source\PSoC5/PWM_Left_Rear.c **** ********************************************************************************
+ 469:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 470:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Summary:
+ 471:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  This function is used to change the period of the counter.  The new period
+ 472:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  will be loaded the next time terminal count is detected.
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 11
+
+
+ 473:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 474:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Parameters:
+ 475:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  period:  Period value. May be between 1 and (2^Resolution)-1.  A value of 0
+ 476:Generated_Source\PSoC5/PWM_Left_Rear.c **** *           will result in the counter remaining at zero.
+ 477:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 478:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Return:
+ 479:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  None
+ 480:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 481:Generated_Source\PSoC5/PWM_Left_Rear.c **** *******************************************************************************/
+ 482:Generated_Source\PSoC5/PWM_Left_Rear.c **** void PWM_Left_Rear_WritePeriod(uint8 period) 
+ 483:Generated_Source\PSoC5/PWM_Left_Rear.c **** {
+  99              		.loc 1 483 0
+ 100              		.cfi_startproc
+ 101              		@ args = 0, pretend = 0, frame = 0
+ 102              		@ frame_needed = 0, uses_anonymous_args = 0
+ 103              		@ link register save eliminated.
+ 104              	.LVL0:
+ 484:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if(PWM_Left_Rear_UsingFixedFunction)
+ 485:Generated_Source\PSoC5/PWM_Left_Rear.c ****         CY_SET_REG16(PWM_Left_Rear_PERIOD_LSB_PTR, (uint16)period);
+ 105              		.loc 1 485 0
+ 106 0000 014B     		ldr	r3, .L8
+ 107 0002 1880     		strh	r0, [r3]	@ movhi
+ 108 0004 7047     		bx	lr
+ 109              	.L9:
+ 110 0006 00BF     		.align	2
+ 111              	.L8:
+ 112 0008 104F0040 		.word	1073762064
+ 113              		.cfi_endproc
+ 114              	.LFE4:
+ 115              		.size	PWM_Left_Rear_WritePeriod, .-PWM_Left_Rear_WritePeriod
+ 116              		.section	.text.PWM_Left_Rear_WriteCompare,"ax",%progbits
+ 117              		.align	2
+ 118              		.global	PWM_Left_Rear_WriteCompare
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.type	PWM_Left_Rear_WriteCompare, %function
+ 122              	PWM_Left_Rear_WriteCompare:
+ 123              	.LFB5:
+ 486:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #else
+ 487:Generated_Source\PSoC5/PWM_Left_Rear.c ****         CY_SET_REG8(PWM_Left_Rear_PERIOD_LSB_PTR, period);
+ 488:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 489:Generated_Source\PSoC5/PWM_Left_Rear.c **** }
+ 490:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 491:Generated_Source\PSoC5/PWM_Left_Rear.c **** #if (PWM_Left_Rear_UseOneCompareMode)
+ 492:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 493:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 494:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 495:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_WriteCompare
+ 496:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 497:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 498:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 499:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  This funtion is used to change the compare1 value when the PWM is in Dither
+ 500:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  mode. The compare output will reflect the new value on the next UDB clock.
+ 501:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  The compare output will be driven high when the present counter value is
+ 502:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  compared to the compare value based on the compare mode defined in
+ 503:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  Dither Mode.
+ 504:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 12
+
+
+ 505:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 506:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  compare:  New compare value.
+ 507:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 508:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 509:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 510:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 511:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Side Effects:
+ 512:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  This function is only available if the PWM mode parameter is set to
+ 513:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  Dither Mode, Center Aligned Mode or One Output Mode
+ 514:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 515:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 516:Generated_Source\PSoC5/PWM_Left_Rear.c ****     void PWM_Left_Rear_WriteCompare(uint8 compare) \
+ 517:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                        
+ 518:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 124              		.loc 1 518 0
+ 125              		.cfi_startproc
+ 126              		@ args = 0, pretend = 0, frame = 0
+ 127              		@ frame_needed = 0, uses_anonymous_args = 0
+ 128              		@ link register save eliminated.
+ 129              	.LVL1:
+ 519:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if(PWM_Left_Rear_UsingFixedFunction)
+ 520:Generated_Source\PSoC5/PWM_Left_Rear.c ****             CY_SET_REG16(PWM_Left_Rear_COMPARE1_LSB_PTR, (uint16)compare);
+ 130              		.loc 1 520 0
+ 131 0000 014B     		ldr	r3, .L11
+ 132 0002 1880     		strh	r0, [r3]	@ movhi
+ 133 0004 7047     		bx	lr
+ 134              	.L12:
+ 135 0006 00BF     		.align	2
+ 136              	.L11:
+ 137 0008 124F0040 		.word	1073762066
+ 138              		.cfi_endproc
+ 139              	.LFE5:
+ 140              		.size	PWM_Left_Rear_WriteCompare, .-PWM_Left_Rear_WriteCompare
+ 141              		.section	.text.PWM_Left_Rear_SetInterruptMode,"ax",%progbits
+ 142              		.align	2
+ 143              		.global	PWM_Left_Rear_SetInterruptMode
+ 144              		.thumb
+ 145              		.thumb_func
+ 146              		.type	PWM_Left_Rear_SetInterruptMode, %function
+ 147              	PWM_Left_Rear_SetInterruptMode:
+ 148              	.LFB6:
+ 521:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #else
+ 522:Generated_Source\PSoC5/PWM_Left_Rear.c ****             CY_SET_REG8(PWM_Left_Rear_COMPARE1_LSB_PTR, compare);
+ 523:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 524:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 525:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if (PWM_Left_Rear_PWMMode == PWM_Left_Rear__B_PWM__DITHER)
+ 526:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #if(PWM_Left_Rear_UsingFixedFunction)
+ 527:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 CY_SET_REG16(PWM_Left_Rear_COMPARE2_LSB_PTR, (uint16)(compare + 1u));
+ 528:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #else
+ 529:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 CY_SET_REG8(PWM_Left_Rear_COMPARE2_LSB_PTR, (compare + 1u));
+ 530:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 531:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_PWMMode == PWM_Left_Rear__B_PWM__DITHER) */
+ 532:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 533:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 534:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 535:Generated_Source\PSoC5/PWM_Left_Rear.c **** #else
+ 536:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 13
+
+
+ 537:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 538:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 539:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_WriteCompare1
+ 540:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 541:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 542:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 543:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  This funtion is used to change the compare1 value.  The compare output will
+ 544:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  reflect the new value on the next UDB clock.  The compare output will be
+ 545:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  driven high when the present counter value is less than or less than or
+ 546:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  equal to the compare register, depending on the mode.
+ 547:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 548:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 549:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  compare:  New compare value.
+ 550:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 551:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 552:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 553:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 554:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 555:Generated_Source\PSoC5/PWM_Left_Rear.c ****     void PWM_Left_Rear_WriteCompare1(uint8 compare) \
+ 556:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                         
+ 557:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 558:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if(PWM_Left_Rear_UsingFixedFunction)
+ 559:Generated_Source\PSoC5/PWM_Left_Rear.c ****             CY_SET_REG16(PWM_Left_Rear_COMPARE1_LSB_PTR, (uint16)compare);
+ 560:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #else
+ 561:Generated_Source\PSoC5/PWM_Left_Rear.c ****             CY_SET_REG8(PWM_Left_Rear_COMPARE1_LSB_PTR, compare);
+ 562:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 563:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 564:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 565:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 566:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 567:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_WriteCompare2
+ 568:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 569:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 570:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 571:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  This funtion is used to change the compare value, for compare1 output.
+ 572:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  The compare output will reflect the new value on the next UDB clock.
+ 573:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  The compare output will be driven high when the present counter value is
+ 574:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  less than or less than or equal to the compare register, depending on the
+ 575:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  mode.
+ 576:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 577:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 578:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  compare:  New compare value.
+ 579:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 580:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 581:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 582:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 583:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 584:Generated_Source\PSoC5/PWM_Left_Rear.c ****     void PWM_Left_Rear_WriteCompare2(uint8 compare) \
+ 585:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                         
+ 586:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 587:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if(PWM_Left_Rear_UsingFixedFunction)
+ 588:Generated_Source\PSoC5/PWM_Left_Rear.c ****             CY_SET_REG16(PWM_Left_Rear_COMPARE2_LSB_PTR, compare);
+ 589:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #else
+ 590:Generated_Source\PSoC5/PWM_Left_Rear.c ****             CY_SET_REG8(PWM_Left_Rear_COMPARE2_LSB_PTR, compare);
+ 591:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 592:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 593:Generated_Source\PSoC5/PWM_Left_Rear.c **** #endif /* UseOneCompareMode */
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 14
+
+
+ 594:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 595:Generated_Source\PSoC5/PWM_Left_Rear.c **** #if (PWM_Left_Rear_DeadBandUsed)
+ 596:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 597:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 598:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 599:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_WriteDeadTime
+ 600:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 601:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 602:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 603:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  This function writes the dead-band counts to the corresponding register
+ 604:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 605:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 606:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  deadtime:  Number of counts for dead time
+ 607:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 608:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 609:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 610:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 611:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 612:Generated_Source\PSoC5/PWM_Left_Rear.c ****     void PWM_Left_Rear_WriteDeadTime(uint8 deadtime) 
+ 613:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 614:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* If using the Dead Band 1-255 mode then just write the register */
+ 615:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if(!PWM_Left_Rear_DeadBand2_4)
+ 616:Generated_Source\PSoC5/PWM_Left_Rear.c ****             CY_SET_REG8(PWM_Left_Rear_DEADBAND_COUNT_PTR, deadtime);
+ 617:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #else
+ 618:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* Otherwise the data has to be masked and offset */
+ 619:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* Clear existing data */
+ 620:Generated_Source\PSoC5/PWM_Left_Rear.c ****             PWM_Left_Rear_DEADBAND_COUNT &= ((uint8)(~PWM_Left_Rear_DEADBAND_COUNT_MASK));
+ 621:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 622:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* Set new dead time */
+ 623:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #if(PWM_Left_Rear_DEADBAND_COUNT_SHIFT)
+ 624:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 PWM_Left_Rear_DEADBAND_COUNT |= ((uint8)((uint8)deadtime << PWM_Left_Rear_DEADBAND_
+ 625:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                                     PWM_Left_Rear_DEADBAND_COUNT_MASK;
+ 626:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #else
+ 627:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 PWM_Left_Rear_DEADBAND_COUNT |= deadtime & PWM_Left_Rear_DEADBAND_COUNT_MASK;
+ 628:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #endif /* (PWM_Left_Rear_DEADBAND_COUNT_SHIFT) */
+ 629:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 630:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (!PWM_Left_Rear_DeadBand2_4) */
+ 631:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 632:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 633:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 634:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 635:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_ReadDeadTime
+ 636:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 637:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 638:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 639:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  This function reads the dead-band counts from the corresponding register
+ 640:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 641:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 642:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 643:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 644:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 645:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  Dead Band Counts
+ 646:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 647:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 648:Generated_Source\PSoC5/PWM_Left_Rear.c ****     uint8 PWM_Left_Rear_ReadDeadTime(void) 
+ 649:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 650:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* If using the Dead Band 1-255 mode then just read the register */
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 15
+
+
+ 651:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if(!PWM_Left_Rear_DeadBand2_4)
+ 652:Generated_Source\PSoC5/PWM_Left_Rear.c ****             return (CY_GET_REG8(PWM_Left_Rear_DEADBAND_COUNT_PTR));
+ 653:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #else
+ 654:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 655:Generated_Source\PSoC5/PWM_Left_Rear.c ****             /* Otherwise the data has to be masked and offset */
+ 656:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #if(PWM_Left_Rear_DEADBAND_COUNT_SHIFT)
+ 657:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 return ((uint8)(((uint8)(PWM_Left_Rear_DEADBAND_COUNT & PWM_Left_Rear_DEADBAND_COUN
+ 658:Generated_Source\PSoC5/PWM_Left_Rear.c ****                                                                            PWM_Left_Rear_DEADBAND_C
+ 659:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #else
+ 660:Generated_Source\PSoC5/PWM_Left_Rear.c ****                 return (PWM_Left_Rear_DEADBAND_COUNT & PWM_Left_Rear_DEADBAND_COUNT_MASK);
+ 661:Generated_Source\PSoC5/PWM_Left_Rear.c ****             #endif /* (PWM_Left_Rear_DEADBAND_COUNT_SHIFT) */
+ 662:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (!PWM_Left_Rear_DeadBand2_4) */
+ 663:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 664:Generated_Source\PSoC5/PWM_Left_Rear.c **** #endif /* DeadBandUsed */
+ 665:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 666:Generated_Source\PSoC5/PWM_Left_Rear.c **** #if (PWM_Left_Rear_UseStatus || PWM_Left_Rear_UsingFixedFunction)
+ 667:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 668:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 669:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 670:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_SetInterruptMode
+ 671:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 672:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 673:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 674:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  This function configures the interrupts mask control of theinterrupt
+ 675:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  source status register.
+ 676:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 677:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 678:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  uint8 interruptMode: Bit field containing the interrupt sources enabled
+ 679:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 680:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 681:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 682:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 683:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 684:Generated_Source\PSoC5/PWM_Left_Rear.c ****     void PWM_Left_Rear_SetInterruptMode(uint8 interruptMode) 
+ 685:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 149              		.loc 1 685 0
+ 150              		.cfi_startproc
+ 151              		@ args = 0, pretend = 0, frame = 0
+ 152              		@ frame_needed = 0, uses_anonymous_args = 0
+ 153              		@ link register save eliminated.
+ 154              	.LVL2:
+ 686:Generated_Source\PSoC5/PWM_Left_Rear.c ****         CY_SET_REG8(PWM_Left_Rear_STATUS_MASK_PTR, interruptMode);
+ 155              		.loc 1 686 0
+ 156 0000 014B     		ldr	r3, .L14
+ 157 0002 1870     		strb	r0, [r3]
+ 158 0004 7047     		bx	lr
+ 159              	.L15:
+ 160 0006 00BF     		.align	2
+ 161              	.L14:
+ 162 0008 0F4F0040 		.word	1073762063
+ 163              		.cfi_endproc
+ 164              	.LFE6:
+ 165              		.size	PWM_Left_Rear_SetInterruptMode, .-PWM_Left_Rear_SetInterruptMode
+ 166              		.section	.text.PWM_Left_Rear_Init,"ax",%progbits
+ 167              		.align	2
+ 168              		.global	PWM_Left_Rear_Init
+ 169              		.thumb
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 16
+
+
+ 170              		.thumb_func
+ 171              		.type	PWM_Left_Rear_Init, %function
+ 172              	PWM_Left_Rear_Init:
+ 173              	.LFB1:
+  85:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if (PWM_Left_Rear_UsingFixedFunction || PWM_Left_Rear_UseControl)
+ 174              		.loc 1 85 0
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178 0000 08B5     		push	{r3, lr}
+ 179              		.cfi_def_cfa_offset 8
+ 180              		.cfi_offset 3, -8
+ 181              		.cfi_offset 14, -4
+  99:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if (PWM_Left_Rear_DeadBand2_4)
+ 182              		.loc 1 99 0
+ 183 0002 194A     		ldr	r2, .L18
+ 184 0004 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 185 0006 43F00203 		orr	r3, r3, #2
+ 186 000a 1370     		strb	r3, [r2]
+ 104:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_CONTROL3 = ctrl | PWM_Left_Rear_DEFAULT_COMPARE1_MODE;
+ 187              		.loc 1 104 0
+ 188 000c 0232     		adds	r2, r2, #2
+ 189 000e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 190 0010 03F08F03 		and	r3, r3, #143
+ 191              	.LVL3:
+ 105:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 192              		.loc 1 105 0
+ 193 0014 43F01003 		orr	r3, r3, #16
+ 194              	.LVL4:
+ 195 0018 1370     		strb	r3, [r2]
+ 108:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_RT1 |= PWM_Left_Rear_SYNC;
+ 196              		.loc 1 108 0
+ 197 001a 144B     		ldr	r3, .L18+4
+ 198 001c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 199 001e 02F0CF02 		and	r2, r2, #207
+ 200 0022 1A70     		strb	r2, [r3]
+ 109:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 201              		.loc 1 109 0
+ 202 0024 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 203 0026 42F03002 		orr	r2, r2, #48
+ 204 002a 1A70     		strb	r2, [r3]
+ 112:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_RT1 |= PWM_Left_Rear_SYNCDSI_EN;
+ 205              		.loc 1 112 0
+ 206 002c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 207 002e 02F0F002 		and	r2, r2, #240
+ 208 0032 1A70     		strb	r2, [r3]
+ 113:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 209              		.loc 1 113 0
+ 210 0034 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 211 0036 42F00F02 		orr	r2, r2, #15
+ 212 003a 1A70     		strb	r2, [r3]
+ 136:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 213              		.loc 1 136 0
+ 214 003c 6420     		movs	r0, #100
+ 215 003e FFF7FEFF 		bl	PWM_Left_Rear_WritePeriod
+ 216              	.LVL5:
+ 139:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #else
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 17
+
+
+ 217              		.loc 1 139 0
+ 218 0042 0020     		movs	r0, #0
+ 219 0044 FFF7FEFF 		bl	PWM_Left_Rear_WriteCompare
+ 220              	.LVL6:
+ 154:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UseStatus || PWM_Left_Rear_UsingFixedFunction) */
+ 221              		.loc 1 154 0
+ 222 0048 0020     		movs	r0, #0
+ 223 004a FFF7FEFF 		bl	PWM_Left_Rear_SetInterruptMode
+ 224              	.LVL7:
+ 159:Generated_Source\PSoC5/PWM_Left_Rear.c ****         /* Set the Interrupt source to come from the status register */
+ 225              		.loc 1 159 0
+ 226 004e 084A     		ldr	r2, .L18+8
+ 227 0050 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 228 0052 43F00203 		orr	r3, r3, #2
+ 229 0056 1370     		strb	r3, [r2]
+ 161:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #else
+ 230              		.loc 1 161 0
+ 231 0058 02F66A32 		addw	r2, r2, #2922
+ 232 005c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 233 005e 43F00103 		orr	r3, r3, #1
+ 234 0062 1370     		strb	r3, [r2]
+ 235 0064 08BD     		pop	{r3, pc}
+ 236              	.L19:
+ 237 0066 00BF     		.align	2
+ 238              	.L18:
+ 239 0068 0C4F0040 		.word	1073762060
+ 240 006c 174F0040 		.word	1073762071
+ 241 0070 A3430040 		.word	1073759139
+ 242              		.cfi_endproc
+ 243              	.LFE1:
+ 244              		.size	PWM_Left_Rear_Init, .-PWM_Left_Rear_Init
+ 245              		.section	.text.PWM_Left_Rear_Start,"ax",%progbits
+ 246              		.align	2
+ 247              		.global	PWM_Left_Rear_Start
+ 248              		.thumb
+ 249              		.thumb_func
+ 250              		.type	PWM_Left_Rear_Start, %function
+ 251              	PWM_Left_Rear_Start:
+ 252              	.LFB0:
+  56:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /* If not Initialized then initialize all required hardware and software */
+ 253              		.loc 1 56 0
+ 254              		.cfi_startproc
+ 255              		@ args = 0, pretend = 0, frame = 0
+ 256              		@ frame_needed = 0, uses_anonymous_args = 0
+ 257 0000 08B5     		push	{r3, lr}
+ 258              		.cfi_def_cfa_offset 8
+ 259              		.cfi_offset 3, -8
+ 260              		.cfi_offset 14, -4
+  58:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 261              		.loc 1 58 0
+ 262 0002 054B     		ldr	r3, .L23
+ 263 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 264 0006 23B9     		cbnz	r3, .L21
+  60:Generated_Source\PSoC5/PWM_Left_Rear.c ****         PWM_Left_Rear_initVar = 1u;
+ 265              		.loc 1 60 0
+ 266 0008 FFF7FEFF 		bl	PWM_Left_Rear_Init
+ 267              	.LVL8:
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 18
+
+
+  61:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 268              		.loc 1 61 0
+ 269 000c 0122     		movs	r2, #1
+ 270 000e 024B     		ldr	r3, .L23
+ 271 0010 1A70     		strb	r2, [r3]
+ 272              	.L21:
+  63:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 273              		.loc 1 63 0
+ 274 0012 FFF7FEFF 		bl	PWM_Left_Rear_Enable
+ 275              	.LVL9:
+ 276 0016 08BD     		pop	{r3, pc}
+ 277              	.L24:
+ 278              		.align	2
+ 279              	.L23:
+ 280 0018 00000000 		.word	.LANCHOR0
+ 281              		.cfi_endproc
+ 282              	.LFE0:
+ 283              		.size	PWM_Left_Rear_Start, .-PWM_Left_Rear_Start
+ 284              		.section	.text.PWM_Left_Rear_ReadStatusRegister,"ax",%progbits
+ 285              		.align	2
+ 286              		.global	PWM_Left_Rear_ReadStatusRegister
+ 287              		.thumb
+ 288              		.thumb_func
+ 289              		.type	PWM_Left_Rear_ReadStatusRegister, %function
+ 290              	PWM_Left_Rear_ReadStatusRegister:
+ 291              	.LFB7:
+ 687:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 688:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 689:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 690:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 691:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_ReadStatusRegister
+ 692:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 693:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 694:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 695:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  This function returns the current state of the status register.
+ 696:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 697:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 698:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 699:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 700:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 701:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  uint8 : Current status register value. The status register bits are:
+ 702:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [7:6] : Unused(0)
+ 703:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [5]   : Kill event output
+ 704:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [4]   : FIFO not empty
+ 705:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [3]   : FIFO full
+ 706:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [2]   : Terminal count
+ 707:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [1]   : Compare output 2
+ 708:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [0]   : Compare output 1
+ 709:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 710:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 711:Generated_Source\PSoC5/PWM_Left_Rear.c ****     uint8 PWM_Left_Rear_ReadStatusRegister(void) 
+ 712:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 292              		.loc 1 712 0
+ 293              		.cfi_startproc
+ 294              		@ args = 0, pretend = 0, frame = 0
+ 295              		@ frame_needed = 0, uses_anonymous_args = 0
+ 296              		@ link register save eliminated.
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 19
+
+
+ 713:Generated_Source\PSoC5/PWM_Left_Rear.c ****         return (CY_GET_REG8(PWM_Left_Rear_STATUS_PTR));
+ 297              		.loc 1 713 0
+ 298 0000 014B     		ldr	r3, .L26
+ 299 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 714:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 300              		.loc 1 714 0
+ 301 0004 7047     		bx	lr
+ 302              	.L27:
+ 303 0006 00BF     		.align	2
+ 304              	.L26:
+ 305 0008 0F4F0040 		.word	1073762063
+ 306              		.cfi_endproc
+ 307              	.LFE7:
+ 308              		.size	PWM_Left_Rear_ReadStatusRegister, .-PWM_Left_Rear_ReadStatusRegister
+ 309              		.section	.text.PWM_Left_Rear_ReadControlRegister,"ax",%progbits
+ 310              		.align	2
+ 311              		.global	PWM_Left_Rear_ReadControlRegister
+ 312              		.thumb
+ 313              		.thumb_func
+ 314              		.type	PWM_Left_Rear_ReadControlRegister, %function
+ 315              	PWM_Left_Rear_ReadControlRegister:
+ 316              	.LFB8:
+ 715:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 716:Generated_Source\PSoC5/PWM_Left_Rear.c **** #endif /* (PWM_Left_Rear_UseStatus || PWM_Left_Rear_UsingFixedFunction) */
+ 717:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 718:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 719:Generated_Source\PSoC5/PWM_Left_Rear.c **** #if (PWM_Left_Rear_UseControl)
+ 720:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 721:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 722:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 723:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_ReadControlRegister
+ 724:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 725:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 726:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 727:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  Returns the current state of the control register. This API is available
+ 728:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  only if the control register is not removed.
+ 729:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 730:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 731:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 732:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 733:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 734:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  uint8 : Current control register value
+ 735:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 736:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 737:Generated_Source\PSoC5/PWM_Left_Rear.c ****     uint8 PWM_Left_Rear_ReadControlRegister(void) 
+ 738:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 317              		.loc 1 738 0
+ 318              		.cfi_startproc
+ 319              		@ args = 0, pretend = 0, frame = 0
+ 320              		@ frame_needed = 0, uses_anonymous_args = 0
+ 321              		@ link register save eliminated.
+ 739:Generated_Source\PSoC5/PWM_Left_Rear.c ****         uint8 result;
+ 740:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 741:Generated_Source\PSoC5/PWM_Left_Rear.c ****         result = CY_GET_REG8(PWM_Left_Rear_CONTROL_PTR);
+ 322              		.loc 1 741 0
+ 323 0000 014B     		ldr	r3, .L29
+ 324 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 20
+
+
+ 325              	.LVL10:
+ 742:Generated_Source\PSoC5/PWM_Left_Rear.c ****         return (result);
+ 743:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 326              		.loc 1 743 0
+ 327 0004 7047     		bx	lr
+ 328              	.L30:
+ 329 0006 00BF     		.align	2
+ 330              	.L29:
+ 331 0008 0C4F0040 		.word	1073762060
+ 332              		.cfi_endproc
+ 333              	.LFE8:
+ 334              		.size	PWM_Left_Rear_ReadControlRegister, .-PWM_Left_Rear_ReadControlRegister
+ 335              		.section	.text.PWM_Left_Rear_WriteControlRegister,"ax",%progbits
+ 336              		.align	2
+ 337              		.global	PWM_Left_Rear_WriteControlRegister
+ 338              		.thumb
+ 339              		.thumb_func
+ 340              		.type	PWM_Left_Rear_WriteControlRegister, %function
+ 341              	PWM_Left_Rear_WriteControlRegister:
+ 342              	.LFB9:
+ 744:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 745:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 746:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 747:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_WriteControlRegister
+ 748:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 749:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 750:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 751:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  Sets the bit field of the control register. This API is available only if
+ 752:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  the control register is not removed.
+ 753:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 754:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 755:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  uint8 control: Control register bit field, The status register bits are:
+ 756:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [7]   : PWM Enable
+ 757:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [6]   : Reset
+ 758:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [5:3] : Compare Mode2
+ 759:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  [2:0] : Compare Mode2
+ 760:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 761:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 762:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 763:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 764:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 765:Generated_Source\PSoC5/PWM_Left_Rear.c ****     void PWM_Left_Rear_WriteControlRegister(uint8 control) 
+ 766:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 343              		.loc 1 766 0
+ 344              		.cfi_startproc
+ 345              		@ args = 0, pretend = 0, frame = 0
+ 346              		@ frame_needed = 0, uses_anonymous_args = 0
+ 347              		@ link register save eliminated.
+ 348              	.LVL11:
+ 767:Generated_Source\PSoC5/PWM_Left_Rear.c ****         CY_SET_REG8(PWM_Left_Rear_CONTROL_PTR, control);
+ 349              		.loc 1 767 0
+ 350 0000 014B     		ldr	r3, .L32
+ 351 0002 1870     		strb	r0, [r3]
+ 352 0004 7047     		bx	lr
+ 353              	.L33:
+ 354 0006 00BF     		.align	2
+ 355              	.L32:
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 21
+
+
+ 356 0008 0C4F0040 		.word	1073762060
+ 357              		.cfi_endproc
+ 358              	.LFE9:
+ 359              		.size	PWM_Left_Rear_WriteControlRegister, .-PWM_Left_Rear_WriteControlRegister
+ 360              		.section	.text.PWM_Left_Rear_ReadCompare,"ax",%progbits
+ 361              		.align	2
+ 362              		.global	PWM_Left_Rear_ReadCompare
+ 363              		.thumb
+ 364              		.thumb_func
+ 365              		.type	PWM_Left_Rear_ReadCompare, %function
+ 366              	PWM_Left_Rear_ReadCompare:
+ 367              	.LFB10:
+ 768:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 769:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 770:Generated_Source\PSoC5/PWM_Left_Rear.c **** #endif /* (PWM_Left_Rear_UseControl) */
+ 771:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 772:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 773:Generated_Source\PSoC5/PWM_Left_Rear.c **** #if (!PWM_Left_Rear_UsingFixedFunction)
+ 774:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 775:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 776:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 777:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_ReadCapture
+ 778:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 779:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 780:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 781:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  Reads the capture value from the capture FIFO.
+ 782:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 783:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 784:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 785:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 786:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 787:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  uint8/uint16: The current capture value
+ 788:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 789:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 790:Generated_Source\PSoC5/PWM_Left_Rear.c ****     uint8 PWM_Left_Rear_ReadCapture(void) 
+ 791:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 792:Generated_Source\PSoC5/PWM_Left_Rear.c ****         return (CY_GET_REG8(PWM_Left_Rear_CAPTURE_LSB_PTR));
+ 793:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 794:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 795:Generated_Source\PSoC5/PWM_Left_Rear.c **** #endif /* (!PWM_Left_Rear_UsingFixedFunction) */
+ 796:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 797:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 798:Generated_Source\PSoC5/PWM_Left_Rear.c **** #if (PWM_Left_Rear_UseOneCompareMode)
+ 799:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 800:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 801:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 802:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_ReadCompare
+ 803:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 804:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 805:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 806:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  Reads the compare value for the compare output when the PWM Mode parameter is
+ 807:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  set to Dither mode, Center Aligned mode, or One Output mode.
+ 808:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 809:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 810:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 811:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 812:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 22
+
+
+ 813:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  uint8/uint16: Current compare value
+ 814:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 815:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 816:Generated_Source\PSoC5/PWM_Left_Rear.c ****     uint8 PWM_Left_Rear_ReadCompare(void) 
+ 817:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 368              		.loc 1 817 0
+ 369              		.cfi_startproc
+ 370              		@ args = 0, pretend = 0, frame = 0
+ 371              		@ frame_needed = 0, uses_anonymous_args = 0
+ 372              		@ link register save eliminated.
+ 818:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #if(PWM_Left_Rear_UsingFixedFunction)
+ 819:Generated_Source\PSoC5/PWM_Left_Rear.c ****             return ((uint8)CY_GET_REG16(PWM_Left_Rear_COMPARE1_LSB_PTR));
+ 373              		.loc 1 819 0
+ 374 0000 014B     		ldr	r3, .L35
+ 375 0002 1888     		ldrh	r0, [r3]
+ 820:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #else
+ 821:Generated_Source\PSoC5/PWM_Left_Rear.c ****             return (CY_GET_REG8(PWM_Left_Rear_COMPARE1_LSB_PTR));
+ 822:Generated_Source\PSoC5/PWM_Left_Rear.c ****         #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 823:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 376              		.loc 1 823 0
+ 377 0004 C0B2     		uxtb	r0, r0
+ 378 0006 7047     		bx	lr
+ 379              	.L36:
+ 380              		.align	2
+ 381              	.L35:
+ 382 0008 124F0040 		.word	1073762066
+ 383              		.cfi_endproc
+ 384              	.LFE10:
+ 385              		.size	PWM_Left_Rear_ReadCompare, .-PWM_Left_Rear_ReadCompare
+ 386              		.section	.text.PWM_Left_Rear_ReadPeriod,"ax",%progbits
+ 387              		.align	2
+ 388              		.global	PWM_Left_Rear_ReadPeriod
+ 389              		.thumb
+ 390              		.thumb_func
+ 391              		.type	PWM_Left_Rear_ReadPeriod, %function
+ 392              	PWM_Left_Rear_ReadPeriod:
+ 393              	.LFB11:
+ 824:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 825:Generated_Source\PSoC5/PWM_Left_Rear.c **** #else
+ 826:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 827:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 828:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 829:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_ReadCompare1
+ 830:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 831:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 832:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 833:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  Reads the compare value for the compare1 output.
+ 834:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 835:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 836:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 837:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 838:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 839:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  uint8/uint16: Current compare value.
+ 840:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 841:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 842:Generated_Source\PSoC5/PWM_Left_Rear.c ****     uint8 PWM_Left_Rear_ReadCompare1(void) 
+ 843:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 23
+
+
+ 844:Generated_Source\PSoC5/PWM_Left_Rear.c ****         return (CY_GET_REG8(PWM_Left_Rear_COMPARE1_LSB_PTR));
+ 845:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 846:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 847:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 848:Generated_Source\PSoC5/PWM_Left_Rear.c ****     /*******************************************************************************
+ 849:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Function Name: PWM_Left_Rear_ReadCompare2
+ 850:Generated_Source\PSoC5/PWM_Left_Rear.c ****     ********************************************************************************
+ 851:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 852:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Summary:
+ 853:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  Reads the compare value for the compare2 output.
+ 854:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 855:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Parameters:
+ 856:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  None
+ 857:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 858:Generated_Source\PSoC5/PWM_Left_Rear.c ****     * Return:
+ 859:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *  uint8/uint16: Current compare value.
+ 860:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *
+ 861:Generated_Source\PSoC5/PWM_Left_Rear.c ****     *******************************************************************************/
+ 862:Generated_Source\PSoC5/PWM_Left_Rear.c ****     uint8 PWM_Left_Rear_ReadCompare2(void) 
+ 863:Generated_Source\PSoC5/PWM_Left_Rear.c ****     {
+ 864:Generated_Source\PSoC5/PWM_Left_Rear.c ****         return (CY_GET_REG8(PWM_Left_Rear_COMPARE2_LSB_PTR));
+ 865:Generated_Source\PSoC5/PWM_Left_Rear.c ****     }
+ 866:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 867:Generated_Source\PSoC5/PWM_Left_Rear.c **** #endif /* (PWM_Left_Rear_UseOneCompareMode) */
+ 868:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 869:Generated_Source\PSoC5/PWM_Left_Rear.c **** 
+ 870:Generated_Source\PSoC5/PWM_Left_Rear.c **** /*******************************************************************************
+ 871:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Function Name: PWM_Left_Rear_ReadPeriod
+ 872:Generated_Source\PSoC5/PWM_Left_Rear.c **** ********************************************************************************
+ 873:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 874:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Summary:
+ 875:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  Reads the period value used by the PWM hardware.
+ 876:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 877:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Parameters:
+ 878:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  None
+ 879:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 880:Generated_Source\PSoC5/PWM_Left_Rear.c **** * Return:
+ 881:Generated_Source\PSoC5/PWM_Left_Rear.c **** *  uint8/16: Period value
+ 882:Generated_Source\PSoC5/PWM_Left_Rear.c **** *
+ 883:Generated_Source\PSoC5/PWM_Left_Rear.c **** *******************************************************************************/
+ 884:Generated_Source\PSoC5/PWM_Left_Rear.c **** uint8 PWM_Left_Rear_ReadPeriod(void) 
+ 885:Generated_Source\PSoC5/PWM_Left_Rear.c **** {
+ 394              		.loc 1 885 0
+ 395              		.cfi_startproc
+ 396              		@ args = 0, pretend = 0, frame = 0
+ 397              		@ frame_needed = 0, uses_anonymous_args = 0
+ 398              		@ link register save eliminated.
+ 886:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #if(PWM_Left_Rear_UsingFixedFunction)
+ 887:Generated_Source\PSoC5/PWM_Left_Rear.c ****         return ((uint8)CY_GET_REG16(PWM_Left_Rear_PERIOD_LSB_PTR));
+ 399              		.loc 1 887 0
+ 400 0000 014B     		ldr	r3, .L38
+ 401 0002 1888     		ldrh	r0, [r3]
+ 888:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #else
+ 889:Generated_Source\PSoC5/PWM_Left_Rear.c ****         return (CY_GET_REG8(PWM_Left_Rear_PERIOD_LSB_PTR));
+ 890:Generated_Source\PSoC5/PWM_Left_Rear.c ****     #endif /* (PWM_Left_Rear_UsingFixedFunction) */
+ 891:Generated_Source\PSoC5/PWM_Left_Rear.c **** }
+ 402              		.loc 1 891 0
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 24
+
+
+ 403 0004 C0B2     		uxtb	r0, r0
+ 404 0006 7047     		bx	lr
+ 405              	.L39:
+ 406              		.align	2
+ 407              	.L38:
+ 408 0008 104F0040 		.word	1073762064
+ 409              		.cfi_endproc
+ 410              	.LFE11:
+ 411              		.size	PWM_Left_Rear_ReadPeriod, .-PWM_Left_Rear_ReadPeriod
+ 412              		.global	PWM_Left_Rear_initVar
+ 413              		.bss
+ 414              		.set	.LANCHOR0,. + 0
+ 415              		.type	PWM_Left_Rear_initVar, %object
+ 416              		.size	PWM_Left_Rear_initVar, 1
+ 417              	PWM_Left_Rear_initVar:
+ 418 0000 00       		.space	1
+ 419              		.text
+ 420              	.Letext0:
+ 421              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 422              		.section	.debug_info,"",%progbits
+ 423              	.Ldebug_info0:
+ 424 0000 73020000 		.4byte	0x273
+ 425 0004 0400     		.2byte	0x4
+ 426 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 427 000a 04       		.byte	0x4
+ 428 000b 01       		.uleb128 0x1
+ 429 000c 31010000 		.4byte	.LASF34
+ 430 0010 01       		.byte	0x1
+ 431 0011 CB020000 		.4byte	.LASF35
+ 432 0015 FD010000 		.4byte	.LASF36
+ 433 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 434 001d 00000000 		.4byte	0
+ 435 0021 00000000 		.4byte	.Ldebug_line0
+ 436 0025 02       		.uleb128 0x2
+ 437 0026 01       		.byte	0x1
+ 438 0027 06       		.byte	0x6
+ 439 0028 50000000 		.4byte	.LASF0
+ 440 002c 02       		.uleb128 0x2
+ 441 002d 01       		.byte	0x1
+ 442 002e 08       		.byte	0x8
+ 443 002f 6F000000 		.4byte	.LASF1
+ 444 0033 02       		.uleb128 0x2
+ 445 0034 02       		.byte	0x2
+ 446 0035 05       		.byte	0x5
+ 447 0036 9A020000 		.4byte	.LASF2
+ 448 003a 02       		.uleb128 0x2
+ 449 003b 02       		.byte	0x2
+ 450 003c 07       		.byte	0x7
+ 451 003d 37000000 		.4byte	.LASF3
+ 452 0041 02       		.uleb128 0x2
+ 453 0042 04       		.byte	0x4
+ 454 0043 05       		.byte	0x5
+ 455 0044 BD020000 		.4byte	.LASF4
+ 456 0048 02       		.uleb128 0x2
+ 457 0049 04       		.byte	0x4
+ 458 004a 07       		.byte	0x7
+ 459 004b C7000000 		.4byte	.LASF5
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 25
+
+
+ 460 004f 02       		.uleb128 0x2
+ 461 0050 08       		.byte	0x8
+ 462 0051 05       		.byte	0x5
+ 463 0052 7E020000 		.4byte	.LASF6
+ 464 0056 02       		.uleb128 0x2
+ 465 0057 08       		.byte	0x8
+ 466 0058 07       		.byte	0x7
+ 467 0059 CC010000 		.4byte	.LASF7
+ 468 005d 03       		.uleb128 0x3
+ 469 005e 04       		.byte	0x4
+ 470 005f 05       		.byte	0x5
+ 471 0060 696E7400 		.ascii	"int\000"
+ 472 0064 02       		.uleb128 0x2
+ 473 0065 04       		.byte	0x4
+ 474 0066 07       		.byte	0x7
+ 475 0067 BF010000 		.4byte	.LASF8
+ 476 006b 04       		.uleb128 0x4
+ 477 006c D9000000 		.4byte	.LASF9
+ 478 0070 02       		.byte	0x2
+ 479 0071 9201     		.2byte	0x192
+ 480 0073 2C000000 		.4byte	0x2c
+ 481 0077 04       		.uleb128 0x4
+ 482 0078 2A010000 		.4byte	.LASF10
+ 483 007c 02       		.byte	0x2
+ 484 007d 9301     		.2byte	0x193
+ 485 007f 3A000000 		.4byte	0x3a
+ 486 0083 02       		.uleb128 0x2
+ 487 0084 04       		.byte	0x4
+ 488 0085 04       		.byte	0x4
+ 489 0086 4A000000 		.4byte	.LASF11
+ 490 008a 02       		.uleb128 0x2
+ 491 008b 08       		.byte	0x8
+ 492 008c 04       		.byte	0x4
+ 493 008d 23010000 		.4byte	.LASF12
+ 494 0091 02       		.uleb128 0x2
+ 495 0092 01       		.byte	0x1
+ 496 0093 08       		.byte	0x8
+ 497 0094 C6020000 		.4byte	.LASF13
+ 498 0098 04       		.uleb128 0x4
+ 499 0099 9F000000 		.4byte	.LASF14
+ 500 009d 02       		.byte	0x2
+ 501 009e 3C02     		.2byte	0x23c
+ 502 00a0 A4000000 		.4byte	0xa4
+ 503 00a4 05       		.uleb128 0x5
+ 504 00a5 6B000000 		.4byte	0x6b
+ 505 00a9 04       		.uleb128 0x4
+ 506 00aa 00000000 		.4byte	.LASF15
+ 507 00ae 02       		.byte	0x2
+ 508 00af 3D02     		.2byte	0x23d
+ 509 00b1 B5000000 		.4byte	0xb5
+ 510 00b5 05       		.uleb128 0x5
+ 511 00b6 77000000 		.4byte	0x77
+ 512 00ba 02       		.uleb128 0x2
+ 513 00bb 04       		.byte	0x4
+ 514 00bc 07       		.byte	0x7
+ 515 00bd 75020000 		.4byte	.LASF16
+ 516 00c1 06       		.uleb128 0x6
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 26
+
+
+ 517 00c2 33030000 		.4byte	.LASF17
+ 518 00c6 01       		.byte	0x1
+ 519 00c7 C7       		.byte	0xc7
+ 520 00c8 00000000 		.4byte	.LFB2
+ 521 00cc 28000000 		.4byte	.LFE2-.LFB2
+ 522 00d0 01       		.uleb128 0x1
+ 523 00d1 9C       		.byte	0x9c
+ 524 00d2 06       		.uleb128 0x6
+ 525 00d3 EA010000 		.4byte	.LASF18
+ 526 00d7 01       		.byte	0x1
+ 527 00d8 E9       		.byte	0xe9
+ 528 00d9 00000000 		.4byte	.LFB3
+ 529 00dd 28000000 		.4byte	.LFE3-.LFB3
+ 530 00e1 01       		.uleb128 0x1
+ 531 00e2 9C       		.byte	0x9c
+ 532 00e3 07       		.uleb128 0x7
+ 533 00e4 19030000 		.4byte	.LASF19
+ 534 00e8 01       		.byte	0x1
+ 535 00e9 E201     		.2byte	0x1e2
+ 536 00eb 00000000 		.4byte	.LFB4
+ 537 00ef 0C000000 		.4byte	.LFE4-.LFB4
+ 538 00f3 01       		.uleb128 0x1
+ 539 00f4 9C       		.byte	0x9c
+ 540 00f5 08010000 		.4byte	0x108
+ 541 00f9 08       		.uleb128 0x8
+ 542 00fa 30000000 		.4byte	.LASF21
+ 543 00fe 01       		.byte	0x1
+ 544 00ff E201     		.2byte	0x1e2
+ 545 0101 6B000000 		.4byte	0x6b
+ 546 0105 01       		.uleb128 0x1
+ 547 0106 50       		.byte	0x50
+ 548 0107 00       		.byte	0
+ 549 0108 07       		.uleb128 0x7
+ 550 0109 08010000 		.4byte	.LASF20
+ 551 010d 01       		.byte	0x1
+ 552 010e 0402     		.2byte	0x204
+ 553 0110 00000000 		.4byte	.LFB5
+ 554 0114 0C000000 		.4byte	.LFE5-.LFB5
+ 555 0118 01       		.uleb128 0x1
+ 556 0119 9C       		.byte	0x9c
+ 557 011a 2D010000 		.4byte	0x12d
+ 558 011e 08       		.uleb128 0x8
+ 559 011f 11030000 		.4byte	.LASF22
+ 560 0123 01       		.byte	0x1
+ 561 0124 0402     		.2byte	0x204
+ 562 0126 6B000000 		.4byte	0x6b
+ 563 012a 01       		.uleb128 0x1
+ 564 012b 50       		.byte	0x50
+ 565 012c 00       		.byte	0
+ 566 012d 07       		.uleb128 0x7
+ 567 012e F2020000 		.4byte	.LASF23
+ 568 0132 01       		.byte	0x1
+ 569 0133 AC02     		.2byte	0x2ac
+ 570 0135 00000000 		.4byte	.LFB6
+ 571 0139 0C000000 		.4byte	.LFE6-.LFB6
+ 572 013d 01       		.uleb128 0x1
+ 573 013e 9C       		.byte	0x9c
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 27
+
+
+ 574 013f 52010000 		.4byte	0x152
+ 575 0143 08       		.uleb128 0x8
+ 576 0144 8C020000 		.4byte	.LASF24
+ 577 0148 01       		.byte	0x1
+ 578 0149 AC02     		.2byte	0x2ac
+ 579 014b 6B000000 		.4byte	0x6b
+ 580 014f 01       		.uleb128 0x1
+ 581 0150 50       		.byte	0x50
+ 582 0151 00       		.byte	0
+ 583 0152 09       		.uleb128 0x9
+ 584 0153 5C000000 		.4byte	.LASF25
+ 585 0157 01       		.byte	0x1
+ 586 0158 54       		.byte	0x54
+ 587 0159 00000000 		.4byte	.LFB1
+ 588 015d 74000000 		.4byte	.LFE1-.LFB1
+ 589 0161 01       		.uleb128 0x1
+ 590 0162 9C       		.byte	0x9c
+ 591 0163 AD010000 		.4byte	0x1ad
+ 592 0167 0A       		.uleb128 0xa
+ 593 0168 70020000 		.4byte	.LASF27
+ 594 016c 01       		.byte	0x1
+ 595 016d 57       		.byte	0x57
+ 596 016e 6B000000 		.4byte	0x6b
+ 597 0172 00000000 		.4byte	.LLST0
+ 598 0176 0B       		.uleb128 0xb
+ 599 0177 42000000 		.4byte	.LVL5
+ 600 017b E3000000 		.4byte	0xe3
+ 601 017f 8A010000 		.4byte	0x18a
+ 602 0183 0C       		.uleb128 0xc
+ 603 0184 01       		.uleb128 0x1
+ 604 0185 50       		.byte	0x50
+ 605 0186 02       		.uleb128 0x2
+ 606 0187 08       		.byte	0x8
+ 607 0188 64       		.byte	0x64
+ 608 0189 00       		.byte	0
+ 609 018a 0B       		.uleb128 0xb
+ 610 018b 48000000 		.4byte	.LVL6
+ 611 018f 08010000 		.4byte	0x108
+ 612 0193 9D010000 		.4byte	0x19d
+ 613 0197 0C       		.uleb128 0xc
+ 614 0198 01       		.uleb128 0x1
+ 615 0199 50       		.byte	0x50
+ 616 019a 01       		.uleb128 0x1
+ 617 019b 30       		.byte	0x30
+ 618 019c 00       		.byte	0
+ 619 019d 0D       		.uleb128 0xd
+ 620 019e 4E000000 		.4byte	.LVL7
+ 621 01a2 2D010000 		.4byte	0x12d
+ 622 01a6 0C       		.uleb128 0xc
+ 623 01a7 01       		.uleb128 0x1
+ 624 01a8 50       		.byte	0x50
+ 625 01a9 01       		.uleb128 0x1
+ 626 01aa 30       		.byte	0x30
+ 627 01ab 00       		.byte	0
+ 628 01ac 00       		.byte	0
+ 629 01ad 09       		.uleb128 0x9
+ 630 01ae 06000000 		.4byte	.LASF26
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 28
+
+
+ 631 01b2 01       		.byte	0x1
+ 632 01b3 37       		.byte	0x37
+ 633 01b4 00000000 		.4byte	.LFB0
+ 634 01b8 1C000000 		.4byte	.LFE0-.LFB0
+ 635 01bc 01       		.uleb128 0x1
+ 636 01bd 9C       		.byte	0x9c
+ 637 01be D5010000 		.4byte	0x1d5
+ 638 01c2 0E       		.uleb128 0xe
+ 639 01c3 0C000000 		.4byte	.LVL8
+ 640 01c7 52010000 		.4byte	0x152
+ 641 01cb 0E       		.uleb128 0xe
+ 642 01cc 16000000 		.4byte	.LVL9
+ 643 01d0 C1000000 		.4byte	0xc1
+ 644 01d4 00       		.byte	0
+ 645 01d5 0F       		.uleb128 0xf
+ 646 01d6 E7000000 		.4byte	.LASF31
+ 647 01da 01       		.byte	0x1
+ 648 01db C702     		.2byte	0x2c7
+ 649 01dd 6B000000 		.4byte	0x6b
+ 650 01e1 00000000 		.4byte	.LFB7
+ 651 01e5 0C000000 		.4byte	.LFE7-.LFB7
+ 652 01e9 01       		.uleb128 0x1
+ 653 01ea 9C       		.byte	0x9c
+ 654 01eb 10       		.uleb128 0x10
+ 655 01ec 7D000000 		.4byte	.LASF37
+ 656 01f0 01       		.byte	0x1
+ 657 01f1 E102     		.2byte	0x2e1
+ 658 01f3 6B000000 		.4byte	0x6b
+ 659 01f7 00000000 		.4byte	.LFB8
+ 660 01fb 0C000000 		.4byte	.LFE8-.LFB8
+ 661 01ff 01       		.uleb128 0x1
+ 662 0200 9C       		.byte	0x9c
+ 663 0201 14020000 		.4byte	0x214
+ 664 0205 11       		.uleb128 0x11
+ 665 0206 E3010000 		.4byte	.LASF28
+ 666 020a 01       		.byte	0x1
+ 667 020b E302     		.2byte	0x2e3
+ 668 020d 6B000000 		.4byte	0x6b
+ 669 0211 01       		.uleb128 0x1
+ 670 0212 50       		.byte	0x50
+ 671 0213 00       		.byte	0
+ 672 0214 07       		.uleb128 0x7
+ 673 0215 A4000000 		.4byte	.LASF29
+ 674 0219 01       		.byte	0x1
+ 675 021a FD02     		.2byte	0x2fd
+ 676 021c 00000000 		.4byte	.LFB9
+ 677 0220 0C000000 		.4byte	.LFE9-.LFB9
+ 678 0224 01       		.uleb128 0x1
+ 679 0225 9C       		.byte	0x9c
+ 680 0226 39020000 		.4byte	0x239
+ 681 022a 08       		.uleb128 0x8
+ 682 022b DF000000 		.4byte	.LASF30
+ 683 022f 01       		.byte	0x1
+ 684 0230 FD02     		.2byte	0x2fd
+ 685 0232 6B000000 		.4byte	0x6b
+ 686 0236 01       		.uleb128 0x1
+ 687 0237 50       		.byte	0x50
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 29
+
+
+ 688 0238 00       		.byte	0
+ 689 0239 0F       		.uleb128 0xf
+ 690 023a 56020000 		.4byte	.LASF32
+ 691 023e 01       		.byte	0x1
+ 692 023f 3003     		.2byte	0x330
+ 693 0241 6B000000 		.4byte	0x6b
+ 694 0245 00000000 		.4byte	.LFB10
+ 695 0249 0C000000 		.4byte	.LFE10-.LFB10
+ 696 024d 01       		.uleb128 0x1
+ 697 024e 9C       		.byte	0x9c
+ 698 024f 0F       		.uleb128 0xf
+ 699 0250 A4020000 		.4byte	.LASF33
+ 700 0254 01       		.byte	0x1
+ 701 0255 7403     		.2byte	0x374
+ 702 0257 6B000000 		.4byte	0x6b
+ 703 025b 00000000 		.4byte	.LFB11
+ 704 025f 0C000000 		.4byte	.LFE11-.LFB11
+ 705 0263 01       		.uleb128 0x1
+ 706 0264 9C       		.byte	0x9c
+ 707 0265 12       		.uleb128 0x12
+ 708 0266 1A000000 		.4byte	.LASF38
+ 709 026a 01       		.byte	0x1
+ 710 026b 20       		.byte	0x20
+ 711 026c 6B000000 		.4byte	0x6b
+ 712 0270 05       		.uleb128 0x5
+ 713 0271 03       		.byte	0x3
+ 714 0272 00000000 		.4byte	PWM_Left_Rear_initVar
+ 715 0276 00       		.byte	0
+ 716              		.section	.debug_abbrev,"",%progbits
+ 717              	.Ldebug_abbrev0:
+ 718 0000 01       		.uleb128 0x1
+ 719 0001 11       		.uleb128 0x11
+ 720 0002 01       		.byte	0x1
+ 721 0003 25       		.uleb128 0x25
+ 722 0004 0E       		.uleb128 0xe
+ 723 0005 13       		.uleb128 0x13
+ 724 0006 0B       		.uleb128 0xb
+ 725 0007 03       		.uleb128 0x3
+ 726 0008 0E       		.uleb128 0xe
+ 727 0009 1B       		.uleb128 0x1b
+ 728 000a 0E       		.uleb128 0xe
+ 729 000b 55       		.uleb128 0x55
+ 730 000c 17       		.uleb128 0x17
+ 731 000d 11       		.uleb128 0x11
+ 732 000e 01       		.uleb128 0x1
+ 733 000f 10       		.uleb128 0x10
+ 734 0010 17       		.uleb128 0x17
+ 735 0011 00       		.byte	0
+ 736 0012 00       		.byte	0
+ 737 0013 02       		.uleb128 0x2
+ 738 0014 24       		.uleb128 0x24
+ 739 0015 00       		.byte	0
+ 740 0016 0B       		.uleb128 0xb
+ 741 0017 0B       		.uleb128 0xb
+ 742 0018 3E       		.uleb128 0x3e
+ 743 0019 0B       		.uleb128 0xb
+ 744 001a 03       		.uleb128 0x3
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 30
+
+
+ 745 001b 0E       		.uleb128 0xe
+ 746 001c 00       		.byte	0
+ 747 001d 00       		.byte	0
+ 748 001e 03       		.uleb128 0x3
+ 749 001f 24       		.uleb128 0x24
+ 750 0020 00       		.byte	0
+ 751 0021 0B       		.uleb128 0xb
+ 752 0022 0B       		.uleb128 0xb
+ 753 0023 3E       		.uleb128 0x3e
+ 754 0024 0B       		.uleb128 0xb
+ 755 0025 03       		.uleb128 0x3
+ 756 0026 08       		.uleb128 0x8
+ 757 0027 00       		.byte	0
+ 758 0028 00       		.byte	0
+ 759 0029 04       		.uleb128 0x4
+ 760 002a 16       		.uleb128 0x16
+ 761 002b 00       		.byte	0
+ 762 002c 03       		.uleb128 0x3
+ 763 002d 0E       		.uleb128 0xe
+ 764 002e 3A       		.uleb128 0x3a
+ 765 002f 0B       		.uleb128 0xb
+ 766 0030 3B       		.uleb128 0x3b
+ 767 0031 05       		.uleb128 0x5
+ 768 0032 49       		.uleb128 0x49
+ 769 0033 13       		.uleb128 0x13
+ 770 0034 00       		.byte	0
+ 771 0035 00       		.byte	0
+ 772 0036 05       		.uleb128 0x5
+ 773 0037 35       		.uleb128 0x35
+ 774 0038 00       		.byte	0
+ 775 0039 49       		.uleb128 0x49
+ 776 003a 13       		.uleb128 0x13
+ 777 003b 00       		.byte	0
+ 778 003c 00       		.byte	0
+ 779 003d 06       		.uleb128 0x6
+ 780 003e 2E       		.uleb128 0x2e
+ 781 003f 00       		.byte	0
+ 782 0040 3F       		.uleb128 0x3f
+ 783 0041 19       		.uleb128 0x19
+ 784 0042 03       		.uleb128 0x3
+ 785 0043 0E       		.uleb128 0xe
+ 786 0044 3A       		.uleb128 0x3a
+ 787 0045 0B       		.uleb128 0xb
+ 788 0046 3B       		.uleb128 0x3b
+ 789 0047 0B       		.uleb128 0xb
+ 790 0048 27       		.uleb128 0x27
+ 791 0049 19       		.uleb128 0x19
+ 792 004a 11       		.uleb128 0x11
+ 793 004b 01       		.uleb128 0x1
+ 794 004c 12       		.uleb128 0x12
+ 795 004d 06       		.uleb128 0x6
+ 796 004e 40       		.uleb128 0x40
+ 797 004f 18       		.uleb128 0x18
+ 798 0050 9742     		.uleb128 0x2117
+ 799 0052 19       		.uleb128 0x19
+ 800 0053 00       		.byte	0
+ 801 0054 00       		.byte	0
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 31
+
+
+ 802 0055 07       		.uleb128 0x7
+ 803 0056 2E       		.uleb128 0x2e
+ 804 0057 01       		.byte	0x1
+ 805 0058 3F       		.uleb128 0x3f
+ 806 0059 19       		.uleb128 0x19
+ 807 005a 03       		.uleb128 0x3
+ 808 005b 0E       		.uleb128 0xe
+ 809 005c 3A       		.uleb128 0x3a
+ 810 005d 0B       		.uleb128 0xb
+ 811 005e 3B       		.uleb128 0x3b
+ 812 005f 05       		.uleb128 0x5
+ 813 0060 27       		.uleb128 0x27
+ 814 0061 19       		.uleb128 0x19
+ 815 0062 11       		.uleb128 0x11
+ 816 0063 01       		.uleb128 0x1
+ 817 0064 12       		.uleb128 0x12
+ 818 0065 06       		.uleb128 0x6
+ 819 0066 40       		.uleb128 0x40
+ 820 0067 18       		.uleb128 0x18
+ 821 0068 9742     		.uleb128 0x2117
+ 822 006a 19       		.uleb128 0x19
+ 823 006b 01       		.uleb128 0x1
+ 824 006c 13       		.uleb128 0x13
+ 825 006d 00       		.byte	0
+ 826 006e 00       		.byte	0
+ 827 006f 08       		.uleb128 0x8
+ 828 0070 05       		.uleb128 0x5
+ 829 0071 00       		.byte	0
+ 830 0072 03       		.uleb128 0x3
+ 831 0073 0E       		.uleb128 0xe
+ 832 0074 3A       		.uleb128 0x3a
+ 833 0075 0B       		.uleb128 0xb
+ 834 0076 3B       		.uleb128 0x3b
+ 835 0077 05       		.uleb128 0x5
+ 836 0078 49       		.uleb128 0x49
+ 837 0079 13       		.uleb128 0x13
+ 838 007a 02       		.uleb128 0x2
+ 839 007b 18       		.uleb128 0x18
+ 840 007c 00       		.byte	0
+ 841 007d 00       		.byte	0
+ 842 007e 09       		.uleb128 0x9
+ 843 007f 2E       		.uleb128 0x2e
+ 844 0080 01       		.byte	0x1
+ 845 0081 3F       		.uleb128 0x3f
+ 846 0082 19       		.uleb128 0x19
+ 847 0083 03       		.uleb128 0x3
+ 848 0084 0E       		.uleb128 0xe
+ 849 0085 3A       		.uleb128 0x3a
+ 850 0086 0B       		.uleb128 0xb
+ 851 0087 3B       		.uleb128 0x3b
+ 852 0088 0B       		.uleb128 0xb
+ 853 0089 27       		.uleb128 0x27
+ 854 008a 19       		.uleb128 0x19
+ 855 008b 11       		.uleb128 0x11
+ 856 008c 01       		.uleb128 0x1
+ 857 008d 12       		.uleb128 0x12
+ 858 008e 06       		.uleb128 0x6
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 32
+
+
+ 859 008f 40       		.uleb128 0x40
+ 860 0090 18       		.uleb128 0x18
+ 861 0091 9742     		.uleb128 0x2117
+ 862 0093 19       		.uleb128 0x19
+ 863 0094 01       		.uleb128 0x1
+ 864 0095 13       		.uleb128 0x13
+ 865 0096 00       		.byte	0
+ 866 0097 00       		.byte	0
+ 867 0098 0A       		.uleb128 0xa
+ 868 0099 34       		.uleb128 0x34
+ 869 009a 00       		.byte	0
+ 870 009b 03       		.uleb128 0x3
+ 871 009c 0E       		.uleb128 0xe
+ 872 009d 3A       		.uleb128 0x3a
+ 873 009e 0B       		.uleb128 0xb
+ 874 009f 3B       		.uleb128 0x3b
+ 875 00a0 0B       		.uleb128 0xb
+ 876 00a1 49       		.uleb128 0x49
+ 877 00a2 13       		.uleb128 0x13
+ 878 00a3 02       		.uleb128 0x2
+ 879 00a4 17       		.uleb128 0x17
+ 880 00a5 00       		.byte	0
+ 881 00a6 00       		.byte	0
+ 882 00a7 0B       		.uleb128 0xb
+ 883 00a8 898201   		.uleb128 0x4109
+ 884 00ab 01       		.byte	0x1
+ 885 00ac 11       		.uleb128 0x11
+ 886 00ad 01       		.uleb128 0x1
+ 887 00ae 31       		.uleb128 0x31
+ 888 00af 13       		.uleb128 0x13
+ 889 00b0 01       		.uleb128 0x1
+ 890 00b1 13       		.uleb128 0x13
+ 891 00b2 00       		.byte	0
+ 892 00b3 00       		.byte	0
+ 893 00b4 0C       		.uleb128 0xc
+ 894 00b5 8A8201   		.uleb128 0x410a
+ 895 00b8 00       		.byte	0
+ 896 00b9 02       		.uleb128 0x2
+ 897 00ba 18       		.uleb128 0x18
+ 898 00bb 9142     		.uleb128 0x2111
+ 899 00bd 18       		.uleb128 0x18
+ 900 00be 00       		.byte	0
+ 901 00bf 00       		.byte	0
+ 902 00c0 0D       		.uleb128 0xd
+ 903 00c1 898201   		.uleb128 0x4109
+ 904 00c4 01       		.byte	0x1
+ 905 00c5 11       		.uleb128 0x11
+ 906 00c6 01       		.uleb128 0x1
+ 907 00c7 31       		.uleb128 0x31
+ 908 00c8 13       		.uleb128 0x13
+ 909 00c9 00       		.byte	0
+ 910 00ca 00       		.byte	0
+ 911 00cb 0E       		.uleb128 0xe
+ 912 00cc 898201   		.uleb128 0x4109
+ 913 00cf 00       		.byte	0
+ 914 00d0 11       		.uleb128 0x11
+ 915 00d1 01       		.uleb128 0x1
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 33
+
+
+ 916 00d2 31       		.uleb128 0x31
+ 917 00d3 13       		.uleb128 0x13
+ 918 00d4 00       		.byte	0
+ 919 00d5 00       		.byte	0
+ 920 00d6 0F       		.uleb128 0xf
+ 921 00d7 2E       		.uleb128 0x2e
+ 922 00d8 00       		.byte	0
+ 923 00d9 3F       		.uleb128 0x3f
+ 924 00da 19       		.uleb128 0x19
+ 925 00db 03       		.uleb128 0x3
+ 926 00dc 0E       		.uleb128 0xe
+ 927 00dd 3A       		.uleb128 0x3a
+ 928 00de 0B       		.uleb128 0xb
+ 929 00df 3B       		.uleb128 0x3b
+ 930 00e0 05       		.uleb128 0x5
+ 931 00e1 27       		.uleb128 0x27
+ 932 00e2 19       		.uleb128 0x19
+ 933 00e3 49       		.uleb128 0x49
+ 934 00e4 13       		.uleb128 0x13
+ 935 00e5 11       		.uleb128 0x11
+ 936 00e6 01       		.uleb128 0x1
+ 937 00e7 12       		.uleb128 0x12
+ 938 00e8 06       		.uleb128 0x6
+ 939 00e9 40       		.uleb128 0x40
+ 940 00ea 18       		.uleb128 0x18
+ 941 00eb 9742     		.uleb128 0x2117
+ 942 00ed 19       		.uleb128 0x19
+ 943 00ee 00       		.byte	0
+ 944 00ef 00       		.byte	0
+ 945 00f0 10       		.uleb128 0x10
+ 946 00f1 2E       		.uleb128 0x2e
+ 947 00f2 01       		.byte	0x1
+ 948 00f3 3F       		.uleb128 0x3f
+ 949 00f4 19       		.uleb128 0x19
+ 950 00f5 03       		.uleb128 0x3
+ 951 00f6 0E       		.uleb128 0xe
+ 952 00f7 3A       		.uleb128 0x3a
+ 953 00f8 0B       		.uleb128 0xb
+ 954 00f9 3B       		.uleb128 0x3b
+ 955 00fa 05       		.uleb128 0x5
+ 956 00fb 27       		.uleb128 0x27
+ 957 00fc 19       		.uleb128 0x19
+ 958 00fd 49       		.uleb128 0x49
+ 959 00fe 13       		.uleb128 0x13
+ 960 00ff 11       		.uleb128 0x11
+ 961 0100 01       		.uleb128 0x1
+ 962 0101 12       		.uleb128 0x12
+ 963 0102 06       		.uleb128 0x6
+ 964 0103 40       		.uleb128 0x40
+ 965 0104 18       		.uleb128 0x18
+ 966 0105 9742     		.uleb128 0x2117
+ 967 0107 19       		.uleb128 0x19
+ 968 0108 01       		.uleb128 0x1
+ 969 0109 13       		.uleb128 0x13
+ 970 010a 00       		.byte	0
+ 971 010b 00       		.byte	0
+ 972 010c 11       		.uleb128 0x11
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 34
+
+
+ 973 010d 34       		.uleb128 0x34
+ 974 010e 00       		.byte	0
+ 975 010f 03       		.uleb128 0x3
+ 976 0110 0E       		.uleb128 0xe
+ 977 0111 3A       		.uleb128 0x3a
+ 978 0112 0B       		.uleb128 0xb
+ 979 0113 3B       		.uleb128 0x3b
+ 980 0114 05       		.uleb128 0x5
+ 981 0115 49       		.uleb128 0x49
+ 982 0116 13       		.uleb128 0x13
+ 983 0117 02       		.uleb128 0x2
+ 984 0118 18       		.uleb128 0x18
+ 985 0119 00       		.byte	0
+ 986 011a 00       		.byte	0
+ 987 011b 12       		.uleb128 0x12
+ 988 011c 34       		.uleb128 0x34
+ 989 011d 00       		.byte	0
+ 990 011e 03       		.uleb128 0x3
+ 991 011f 0E       		.uleb128 0xe
+ 992 0120 3A       		.uleb128 0x3a
+ 993 0121 0B       		.uleb128 0xb
+ 994 0122 3B       		.uleb128 0x3b
+ 995 0123 0B       		.uleb128 0xb
+ 996 0124 49       		.uleb128 0x49
+ 997 0125 13       		.uleb128 0x13
+ 998 0126 3F       		.uleb128 0x3f
+ 999 0127 19       		.uleb128 0x19
+ 1000 0128 02       		.uleb128 0x2
+ 1001 0129 18       		.uleb128 0x18
+ 1002 012a 00       		.byte	0
+ 1003 012b 00       		.byte	0
+ 1004 012c 00       		.byte	0
+ 1005              		.section	.debug_loc,"",%progbits
+ 1006              	.Ldebug_loc0:
+ 1007              	.LLST0:
+ 1008 0000 14000000 		.4byte	.LVL3
+ 1009 0004 18000000 		.4byte	.LVL4
+ 1010 0008 0100     		.2byte	0x1
+ 1011 000a 53       		.byte	0x53
+ 1012 000b 00000000 		.4byte	0
+ 1013 000f 00000000 		.4byte	0
+ 1014              		.section	.debug_aranges,"",%progbits
+ 1015 0000 74000000 		.4byte	0x74
+ 1016 0004 0200     		.2byte	0x2
+ 1017 0006 00000000 		.4byte	.Ldebug_info0
+ 1018 000a 04       		.byte	0x4
+ 1019 000b 00       		.byte	0
+ 1020 000c 0000     		.2byte	0
+ 1021 000e 0000     		.2byte	0
+ 1022 0010 00000000 		.4byte	.LFB2
+ 1023 0014 28000000 		.4byte	.LFE2-.LFB2
+ 1024 0018 00000000 		.4byte	.LFB3
+ 1025 001c 28000000 		.4byte	.LFE3-.LFB3
+ 1026 0020 00000000 		.4byte	.LFB4
+ 1027 0024 0C000000 		.4byte	.LFE4-.LFB4
+ 1028 0028 00000000 		.4byte	.LFB5
+ 1029 002c 0C000000 		.4byte	.LFE5-.LFB5
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 35
+
+
+ 1030 0030 00000000 		.4byte	.LFB6
+ 1031 0034 0C000000 		.4byte	.LFE6-.LFB6
+ 1032 0038 00000000 		.4byte	.LFB1
+ 1033 003c 74000000 		.4byte	.LFE1-.LFB1
+ 1034 0040 00000000 		.4byte	.LFB0
+ 1035 0044 1C000000 		.4byte	.LFE0-.LFB0
+ 1036 0048 00000000 		.4byte	.LFB7
+ 1037 004c 0C000000 		.4byte	.LFE7-.LFB7
+ 1038 0050 00000000 		.4byte	.LFB8
+ 1039 0054 0C000000 		.4byte	.LFE8-.LFB8
+ 1040 0058 00000000 		.4byte	.LFB9
+ 1041 005c 0C000000 		.4byte	.LFE9-.LFB9
+ 1042 0060 00000000 		.4byte	.LFB10
+ 1043 0064 0C000000 		.4byte	.LFE10-.LFB10
+ 1044 0068 00000000 		.4byte	.LFB11
+ 1045 006c 0C000000 		.4byte	.LFE11-.LFB11
+ 1046 0070 00000000 		.4byte	0
+ 1047 0074 00000000 		.4byte	0
+ 1048              		.section	.debug_ranges,"",%progbits
+ 1049              	.Ldebug_ranges0:
+ 1050 0000 00000000 		.4byte	.LFB2
+ 1051 0004 28000000 		.4byte	.LFE2
+ 1052 0008 00000000 		.4byte	.LFB3
+ 1053 000c 28000000 		.4byte	.LFE3
+ 1054 0010 00000000 		.4byte	.LFB4
+ 1055 0014 0C000000 		.4byte	.LFE4
+ 1056 0018 00000000 		.4byte	.LFB5
+ 1057 001c 0C000000 		.4byte	.LFE5
+ 1058 0020 00000000 		.4byte	.LFB6
+ 1059 0024 0C000000 		.4byte	.LFE6
+ 1060 0028 00000000 		.4byte	.LFB1
+ 1061 002c 74000000 		.4byte	.LFE1
+ 1062 0030 00000000 		.4byte	.LFB0
+ 1063 0034 1C000000 		.4byte	.LFE0
+ 1064 0038 00000000 		.4byte	.LFB7
+ 1065 003c 0C000000 		.4byte	.LFE7
+ 1066 0040 00000000 		.4byte	.LFB8
+ 1067 0044 0C000000 		.4byte	.LFE8
+ 1068 0048 00000000 		.4byte	.LFB9
+ 1069 004c 0C000000 		.4byte	.LFE9
+ 1070 0050 00000000 		.4byte	.LFB10
+ 1071 0054 0C000000 		.4byte	.LFE10
+ 1072 0058 00000000 		.4byte	.LFB11
+ 1073 005c 0C000000 		.4byte	.LFE11
+ 1074 0060 00000000 		.4byte	0
+ 1075 0064 00000000 		.4byte	0
+ 1076              		.section	.debug_line,"",%progbits
+ 1077              	.Ldebug_line0:
+ 1078 0000 37010000 		.section	.debug_str,"MS",%progbits,1
+ 1078      02004A00 
+ 1078      00000201 
+ 1078      FB0E0D00 
+ 1078      01010101 
+ 1079              	.LASF15:
+ 1080 0000 72656731 		.ascii	"reg16\000"
+ 1080      3600
+ 1081              	.LASF26:
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 36
+
+
+ 1082 0006 50574D5F 		.ascii	"PWM_Left_Rear_Start\000"
+ 1082      4C656674 
+ 1082      5F526561 
+ 1082      725F5374 
+ 1082      61727400 
+ 1083              	.LASF38:
+ 1084 001a 50574D5F 		.ascii	"PWM_Left_Rear_initVar\000"
+ 1084      4C656674 
+ 1084      5F526561 
+ 1084      725F696E 
+ 1084      69745661 
+ 1085              	.LASF21:
+ 1086 0030 70657269 		.ascii	"period\000"
+ 1086      6F6400
+ 1087              	.LASF3:
+ 1088 0037 73686F72 		.ascii	"short unsigned int\000"
+ 1088      7420756E 
+ 1088      7369676E 
+ 1088      65642069 
+ 1088      6E7400
+ 1089              	.LASF11:
+ 1090 004a 666C6F61 		.ascii	"float\000"
+ 1090      7400
+ 1091              	.LASF0:
+ 1092 0050 7369676E 		.ascii	"signed char\000"
+ 1092      65642063 
+ 1092      68617200 
+ 1093              	.LASF25:
+ 1094 005c 50574D5F 		.ascii	"PWM_Left_Rear_Init\000"
+ 1094      4C656674 
+ 1094      5F526561 
+ 1094      725F496E 
+ 1094      697400
+ 1095              	.LASF1:
+ 1096 006f 756E7369 		.ascii	"unsigned char\000"
+ 1096      676E6564 
+ 1096      20636861 
+ 1096      7200
+ 1097              	.LASF37:
+ 1098 007d 50574D5F 		.ascii	"PWM_Left_Rear_ReadControlRegister\000"
+ 1098      4C656674 
+ 1098      5F526561 
+ 1098      725F5265 
+ 1098      6164436F 
+ 1099              	.LASF14:
+ 1100 009f 72656738 		.ascii	"reg8\000"
+ 1100      00
+ 1101              	.LASF29:
+ 1102 00a4 50574D5F 		.ascii	"PWM_Left_Rear_WriteControlRegister\000"
+ 1102      4C656674 
+ 1102      5F526561 
+ 1102      725F5772 
+ 1102      69746543 
+ 1103              	.LASF5:
+ 1104 00c7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1104      20756E73 
+ 1104      69676E65 
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 37
+
+
+ 1104      6420696E 
+ 1104      7400
+ 1105              	.LASF9:
+ 1106 00d9 75696E74 		.ascii	"uint8\000"
+ 1106      3800
+ 1107              	.LASF30:
+ 1108 00df 636F6E74 		.ascii	"control\000"
+ 1108      726F6C00 
+ 1109              	.LASF31:
+ 1110 00e7 50574D5F 		.ascii	"PWM_Left_Rear_ReadStatusRegister\000"
+ 1110      4C656674 
+ 1110      5F526561 
+ 1110      725F5265 
+ 1110      61645374 
+ 1111              	.LASF20:
+ 1112 0108 50574D5F 		.ascii	"PWM_Left_Rear_WriteCompare\000"
+ 1112      4C656674 
+ 1112      5F526561 
+ 1112      725F5772 
+ 1112      69746543 
+ 1113              	.LASF12:
+ 1114 0123 646F7562 		.ascii	"double\000"
+ 1114      6C6500
+ 1115              	.LASF10:
+ 1116 012a 75696E74 		.ascii	"uint16\000"
+ 1116      313600
+ 1117              	.LASF34:
+ 1118 0131 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1118      4320342E 
+ 1118      392E3320 
+ 1118      32303135 
+ 1118      30333033 
+ 1119 0164 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1119      20726576 
+ 1119      6973696F 
+ 1119      6E203232 
+ 1119      31323230 
+ 1120 0197 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1120      66756E63 
+ 1120      74696F6E 
+ 1120      2D736563 
+ 1120      74696F6E 
+ 1121              	.LASF8:
+ 1122 01bf 756E7369 		.ascii	"unsigned int\000"
+ 1122      676E6564 
+ 1122      20696E74 
+ 1122      00
+ 1123              	.LASF7:
+ 1124 01cc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1124      206C6F6E 
+ 1124      6720756E 
+ 1124      7369676E 
+ 1124      65642069 
+ 1125              	.LASF28:
+ 1126 01e3 72657375 		.ascii	"result\000"
+ 1126      6C7400
+ 1127              	.LASF18:
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 38
+
+
+ 1128 01ea 50574D5F 		.ascii	"PWM_Left_Rear_Stop\000"
+ 1128      4C656674 
+ 1128      5F526561 
+ 1128      725F5374 
+ 1128      6F7000
+ 1129              	.LASF36:
+ 1130 01fd 433A5C55 		.ascii	"C:\\Users\\Ryan Kelley\\Documents\\CMPEN480\\PSoC F"
+ 1130      73657273 
+ 1130      5C527961 
+ 1130      6E204B65 
+ 1130      6C6C6579 
+ 1131 022b 69726D65 		.ascii	"irmestware\\Platform Control Firmware.cydsn\000"
+ 1131      73747761 
+ 1131      72655C50 
+ 1131      6C617466 
+ 1131      6F726D20 
+ 1132              	.LASF32:
+ 1133 0256 50574D5F 		.ascii	"PWM_Left_Rear_ReadCompare\000"
+ 1133      4C656674 
+ 1133      5F526561 
+ 1133      725F5265 
+ 1133      6164436F 
+ 1134              	.LASF27:
+ 1135 0270 6374726C 		.ascii	"ctrl\000"
+ 1135      00
+ 1136              	.LASF16:
+ 1137 0275 73697A65 		.ascii	"sizetype\000"
+ 1137      74797065 
+ 1137      00
+ 1138              	.LASF6:
+ 1139 027e 6C6F6E67 		.ascii	"long long int\000"
+ 1139      206C6F6E 
+ 1139      6720696E 
+ 1139      7400
+ 1140              	.LASF24:
+ 1141 028c 696E7465 		.ascii	"interruptMode\000"
+ 1141      72727570 
+ 1141      744D6F64 
+ 1141      6500
+ 1142              	.LASF2:
+ 1143 029a 73686F72 		.ascii	"short int\000"
+ 1143      7420696E 
+ 1143      7400
+ 1144              	.LASF33:
+ 1145 02a4 50574D5F 		.ascii	"PWM_Left_Rear_ReadPeriod\000"
+ 1145      4C656674 
+ 1145      5F526561 
+ 1145      725F5265 
+ 1145      61645065 
+ 1146              	.LASF4:
+ 1147 02bd 6C6F6E67 		.ascii	"long int\000"
+ 1147      20696E74 
+ 1147      00
+ 1148              	.LASF13:
+ 1149 02c6 63686172 		.ascii	"char\000"
+ 1149      00
+ 1150              	.LASF35:
+ARM GAS  C:\Users\RYANKE~1\AppData\Local\Temp\cct2XTNE.s 			page 39
+
+
+ 1151 02cb 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_Left_Rear.c\000"
+ 1151      72617465 
+ 1151      645F536F 
+ 1151      75726365 
+ 1151      5C50536F 
+ 1152              	.LASF23:
+ 1153 02f2 50574D5F 		.ascii	"PWM_Left_Rear_SetInterruptMode\000"
+ 1153      4C656674 
+ 1153      5F526561 
+ 1153      725F5365 
+ 1153      74496E74 
+ 1154              	.LASF22:
+ 1155 0311 636F6D70 		.ascii	"compare\000"
+ 1155      61726500 
+ 1156              	.LASF19:
+ 1157 0319 50574D5F 		.ascii	"PWM_Left_Rear_WritePeriod\000"
+ 1157      4C656674 
+ 1157      5F526561 
+ 1157      725F5772 
+ 1157      69746550 
+ 1158              	.LASF17:
+ 1159 0333 50574D5F 		.ascii	"PWM_Left_Rear_Enable\000"
+ 1159      4C656674 
+ 1159      5F526561 
+ 1159      725F456E 
+ 1159      61626C65 
+ 1160              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

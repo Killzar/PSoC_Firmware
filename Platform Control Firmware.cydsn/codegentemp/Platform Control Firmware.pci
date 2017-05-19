@@ -1,0 +1,32 @@
+# Platform Control Firmware
+# 2017-04-28 12:59:59Z
+
+set_io "ESP07_Rx(0)" iocell 0 0
+set_io "ESP07_Tx(0)" iocell 0 1
+set_io "FT232_Rx(0)" iocell 1 6
+set_io "FT232_Tx(0)" iocell 1 5
+set_io "Motor_Left_Front_PWM(0)" iocell 2 5
+set_io "FT232_Detect(0)" iocell 1 7
+set_io "Onboard_LED(0)" iocell 15 4
+set_io "I2C_SDA(0)" iocell 0 3
+set_io "I2C_SCL(0)" iocell 0 2
+set_io "RF_Enable(0)" iocell 12 2
+set_io "RX_PWM_Left(0)" iocell 2 6
+set_io "RX_PWM_Right(0)" iocell 2 7
+set_io "Motor_Left_Rear_PWM(0)" iocell 0 6
+set_io "Motor_Right_Front_PWM(0)" iocell 2 2
+set_io "Motor_Right_Rear_PWM(0)" iocell 1 0
+set_io "Motor_Left_Front_Input1(0)" iocell 2 4
+set_io "Motor_Left_Front_Input2(0)" iocell 2 3
+set_io "Motor_Left_Rear_Input1(0)" iocell 0 5
+set_io "Motor_Left_Rear_Input2(0)" iocell 0 4
+set_io "Motor_Right_Front_Input1(0)" iocell 2 1
+set_io "Motor_Right_Front_Input2(0)" iocell 2 0
+set_io "Motor_Right_Rear_Input1(0)" iocell 1 1
+set_io "Motor_Right_Rear_Input2(0)" iocell 1 2
+set_io "Decoder_Left_A(0)" iocell 15 2
+set_io "Decoder_Right_A(0)" iocell 15 1
+set_io "Decoder_Left_B(0)" iocell 15 3
+set_io "Decoder_Right_B(0)" iocell 15 0
+set_io "GPS_Rx(0)" iocell 1 4
+set_io "GPS_Tx(0)" iocell 1 3

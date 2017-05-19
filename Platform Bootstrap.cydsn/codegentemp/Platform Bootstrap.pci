@@ -1,0 +1,7 @@
+# Platform Bootstrap
+# 2017-04-28 12:59:39Z
+
+set_io "Status_LED(0)" iocell 15 4
+set_io "FT232_Detect(0)" iocell 1 7
+set_io "FT232_Rx(0)" iocell 1 6
+set_io "FT232_Tx(0)" iocell 1 5

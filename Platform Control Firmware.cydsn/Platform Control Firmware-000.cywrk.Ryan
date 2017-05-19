@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Bootloadable\Bootloadable.c">
+<ExpandedNodeIds>
+<v>Platform Control Firmware-000</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\TopDesign</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.cydwr\Pins</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.cydwr\Analog</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.cydwr\Clocks</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.cydwr\Interrupts</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.cydwr\DMA</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.cydwr\System</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.cydwr\Directives</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.cydwr\Flash Security</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.cydwr\EEPROM</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Source Files</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Source Files\main.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\Bootloader\Bootloader.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\Bootloader\Bootloader.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\Bootloader\Bootloader_PVT.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_Detect\FT232_Detect.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_Detect\FT232_Detect.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_Detect\FT232_Detect_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_UART\FT232_UART.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_UART\FT232_UART.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_UART\FT232_UART_BOOT.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_UART\FT232_UART_INT.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_UART\FT232_UART_PM.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_UART_IntClock</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_UART_IntClock\FT232_UART_IntClock.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\FT232_UART_IntClock\FT232_UART_IntClock.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\Status_LED</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\Status_LED\Status_LED.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\Status_LED\Status_LED.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\Status_LED\Status_LED_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cydevice.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cyfitter.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\cymetadata.c</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Generated_Source\PSoC5\project.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\TopDesign</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Pins</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Analog</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Clocks</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Interrupts</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\DMA</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\System</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Directives</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Flash Security</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\EEPROM</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\esp07.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\esp07.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\generic.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\generic.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\lsm303.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\lsm303.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\main.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Bootloadable</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Bootloadable\Bootloadable.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Bootloadable\Bootloadable.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Counter_Clock</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Counter_Clock\Counter_Clock.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Counter_Clock\Counter_Clock.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Clock</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Clock\Decoder_Clock.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Clock\Decoder_Clock.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left\Decoder_Left.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left\Decoder_Left.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left\Decoder_Left_INT.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left\Decoder_Left_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left\Decoder_Left_PVT.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_A</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_A\Decoder_Left_A.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_A\Decoder_Left_A.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_A\Decoder_Left_A_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_B</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_B\Decoder_Left_B.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_B\Decoder_Left_B.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_B\Decoder_Left_B_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_Cnt16</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_Cnt16\Decoder_Left_Cnt16.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_Cnt16\Decoder_Left_Cnt16.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_Cnt16\Decoder_Left_Cnt16_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_isr</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_isr\Decoder_Left_isr.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Left_isr\Decoder_Left_isr.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right\Decoder_Right.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right\Decoder_Right.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right\Decoder_Right_INT.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right\Decoder_Right_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right\Decoder_Right_PVT.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_A</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_A\Decoder_Right_A.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_A\Decoder_Right_A.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_A\Decoder_Right_A_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_B</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_B\Decoder_Right_B.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_B\Decoder_Right_B.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_B\Decoder_Right_B_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_Cnt16</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_Cnt16\Decoder_Right_Cnt16.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_Cnt16\Decoder_Right_Cnt16.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_Cnt16\Decoder_Right_Cnt16_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_isr</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_isr\Decoder_Right_isr.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Decoder_Right_isr\Decoder_Right_isr.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Left_Front</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Left_Front\Direction_Left_Front.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Left_Front\Direction_Left_Front.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Left_Front\Direction_Left_Front_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Left_Rear</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Left_Rear\Direction_Left_Rear.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Left_Rear\Direction_Left_Rear.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Left_Rear\Direction_Left_Rear_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Right_Front</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Right_Front\Direction_Right_Front.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Right_Front\Direction_Right_Front.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Right_Front\Direction_Right_Front_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Right_Rear</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Right_Rear\Direction_Right_Rear.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Right_Rear\Direction_Right_Rear.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Direction_Right_Rear\Direction_Right_Rear_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_Interrupt</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_Interrupt\ESP07_Interrupt.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_Interrupt\ESP07_Interrupt.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_UART</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_UART\ESP07_UART.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_UART\ESP07_UART.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_UART\ESP07_UART_BOOT.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_UART\ESP07_UART_INT.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_UART\ESP07_UART_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_UART_IntClock</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_UART_IntClock\ESP07_UART_IntClock.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\ESP07_UART_IntClock\ESP07_UART_IntClock.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\FT232_UART</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\FT232_UART\FT232_UART.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\FT232_UART\FT232_UART.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\FT232_UART\FT232_UART_BOOT.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\FT232_UART\FT232_UART_INT.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\FT232_UART\FT232_UART_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\FT232_UART_IntClock</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\FT232_UART_IntClock\FT232_UART_IntClock.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\FT232_UART_IntClock\FT232_UART_IntClock.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C\I2C.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C\I2C.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C\I2C_BOOT.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C\I2C_INT.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C\I2C_MASTER.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C\I2C_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C\I2C_PVT.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C\I2C_SLAVE.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C_SCL</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C_SCL\I2C_SCL.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C_SCL\I2C_SCL.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C_SCL\I2C_SCL_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C_SDA</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C_SDA\I2C_SDA.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C_SDA\I2C_SDA.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\I2C_SDA\I2C_SDA_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Interrupt_Channel_Left</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Interrupt_Channel_Left\Interrupt_Channel_Left.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Interrupt_Channel_Left\Interrupt_Channel_Left.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Interrupt_Channel_Right</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Interrupt_Channel_Right\Interrupt_Channel_Right.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Interrupt_Channel_Right\Interrupt_Channel_Right.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_Input1</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_Input1\Motor_Left_Front_Input1.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_Input1\Motor_Left_Front_Input1.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_Input1\Motor_Left_Front_Input1_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_Input2</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_Input2\Motor_Left_Front_Input2.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_Input2\Motor_Left_Front_Input2.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_Input2\Motor_Left_Front_Input2_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_PWM</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_PWM\Motor_Left_Front_PWM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_PWM\Motor_Left_Front_PWM.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Front_PWM\Motor_Left_Front_PWM_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_Input1</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_Input1\Motor_Left_Rear_Input1.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_Input1\Motor_Left_Rear_Input1.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_Input1\Motor_Left_Rear_Input1_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_Input2</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_Input2\Motor_Left_Rear_Input2.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_Input2\Motor_Left_Rear_Input2.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_Input2\Motor_Left_Rear_Input2_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_PWM</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_PWM\Motor_Left_Rear_PWM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_PWM\Motor_Left_Rear_PWM.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Left_Rear_PWM\Motor_Left_Rear_PWM_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_Input1</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_Input1\Motor_Right_Front_Input1.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_Input1\Motor_Right_Front_Input1.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_Input1\Motor_Right_Front_Input1_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_Input2</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_Input2\Motor_Right_Front_Input2.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_Input2\Motor_Right_Front_Input2.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_Input2\Motor_Right_Front_Input2_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_PWM</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_PWM\Motor_Right_Front_PWM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_PWM\Motor_Right_Front_PWM.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Front_PWM\Motor_Right_Front_PWM_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_Input1</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_Input1\Motor_Right_Rear_Input1.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_Input1\Motor_Right_Rear_Input1.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_Input1\Motor_Right_Rear_Input1_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_Input2</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_Input2\Motor_Right_Rear_Input2.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_Input2\Motor_Right_Rear_Input2.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_Input2\Motor_Right_Rear_Input2_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_PWM</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_PWM\Motor_Right_Rear_PWM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_PWM\Motor_Right_Rear_PWM.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Motor_Right_Rear_PWM\Motor_Right_Rear_PWM_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Onboard_LED</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Onboard_LED\Onboard_LED.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Onboard_LED\Onboard_LED.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Onboard_LED\Onboard_LED_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Clock</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Clock\PWM_Clock.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Clock\PWM_Clock.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Left_Front</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Left_Front\PWM_Left_Front.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Left_Front\PWM_Left_Front.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Left_Front\PWM_Left_Front_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Left_Rear</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Left_Rear\PWM_Left_Rear.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Left_Rear\PWM_Left_Rear.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Left_Rear\PWM_Left_Rear_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Right_Front</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Right_Front\PWM_Right_Front.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Right_Front\PWM_Right_Front.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Right_Front\PWM_Right_Front_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Right_Rear</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Right_Rear\PWM_Right_Rear.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Right_Rear\PWM_Right_Rear.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\PWM_Right_Rear\PWM_Right_Rear_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RF_Enable</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RF_Enable\RF_Enable.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RF_Enable\RF_Enable.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RF_Enable\RF_Enable_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RX_PWM_Left</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RX_PWM_Left\RX_PWM_Left.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RX_PWM_Left\RX_PWM_Left.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RX_PWM_Left\RX_PWM_Left_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RX_PWM_Right</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RX_PWM_Right\RX_PWM_Right.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RX_PWM_Right\RX_PWM_Right.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\RX_PWM_Right\RX_PWM_Right_aliases.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Timer_Channel_Left</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Timer_Channel_Left\Timer_Channel_Left.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Timer_Channel_Left\Timer_Channel_Left.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Timer_Channel_Left\Timer_Channel_Left_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Timer_Channel_Right</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Timer_Channel_Right\Timer_Channel_Right.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Timer_Channel_Right\Timer_Channel_Right.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Timer_Channel_Right\Timer_Channel_Right_PM.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cybootloader.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cybootloader.icf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cydevice.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cyfitter.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cymetadata.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\project.h</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Platform Control Firmware-000</v>
+<v>Platform Control Firmware-000\Platform Bootstrap</v>
+<v>Platform Control Firmware-000\Platform Control Firmware</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\TopDesign</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Pins</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Analog</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Clocks</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Interrupts</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\DMA</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\System</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Directives</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\Flash Security</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.cydwr\EEPROM</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\esp07.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\esp07.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\generic.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\generic.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\gps.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\gps.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\lsm303.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\lsm303.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Source Files\main.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Bootloadable</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Bootloadable\Bootloadable.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Bootloadable\Bootloadable.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Counter_Clock</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Counter_Clock\Counter_Clock.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\Counter_Clock\Counter_Clock.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Platform Control Firmware-000</v>
+<v>Platform Control Firmware-000\Platform Bootstrap</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\TopDesign</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\TopDesign\TopDesign.cysch</v>
+<v>Platform Control Firmware-000\Platform Control Firmware</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\TopDesign</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Platform Control Firmware-000</v>
+<v>Platform Control Firmware-000\Platform Bootstrap</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\TopDesign</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\TopDesign\TopDesign.cysch</v>
+<v>Platform Control Firmware-000\Platform Control Firmware</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\TopDesign</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Platform Control Firmware-000</v>
+<v>Platform Control Firmware-000\Platform Bootstrap</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloader.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_Detect.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_BOOT.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_INT.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_IntClock.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\Status_LED.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Platform Bootstrap.elf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Platform Bootstrap.hex</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Platform Bootstrap.map</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.gpdsc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.rpt</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap_timing.html</v>
+<v>Platform Control Firmware-000\Platform Control Firmware</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloadable.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Counter_Clock.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\cybootloader.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Debouncer_Clock.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Clock.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Left.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Left_A.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Left_B.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Left_Cnt16.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Left_Cnt16_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Left_INT.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Left_isr.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Left_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Right.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Right_A.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Right_B.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Right_Cnt16.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Right_Cnt16_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Right_INT.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Right_isr.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Decoder_Right_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Direction_Left_Front.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Direction_Left_Front_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Direction_Left_Rear.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Direction_Left_Rear_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Direction_Right_Front.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Direction_Right_Front_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Direction_Right_Rear.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Direction_Right_Rear_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\esp07.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\ESP07_Interrupt.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\ESP07_UART.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\ESP07_UART_BOOT.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\ESP07_UART_INT.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\ESP07_UART_IntClock.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\ESP07_UART_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_BOOT.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_INT.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_IntClock.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\generic.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\gps.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\GPS_Interrupt.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\GPS_UART.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\GPS_UART_BOOT.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\GPS_UART_INT.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\GPS_UART_IntClock.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\GPS_UART_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_INT.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_SCL.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_SDA.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_SLAVE.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Interrupt_Channel_Left.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Interrupt_Channel_Right.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\lsm303.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Left_Front_Input1.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Left_Front_Input2.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Left_Front_PWM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Left_Rear_Input1.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Left_Rear_Input2.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Left_Rear_PWM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Right_Front_Input1.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Right_Front_Input2.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Right_Front_PWM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Right_Rear_Input1.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Right_Rear_Input2.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Motor_Right_Rear_PWM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Onboard_LED.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_Clock.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_Left_Front.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_Left_Front_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_Left_Rear.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_Left_Rear_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_Right_Front.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_Right_Front_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_Right_Rear.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_Right_Rear_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\RF_Enable.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_PWM_Left.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_PWM_Right.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_Channel_Left.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_Channel_Left_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_Channel_Right.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_Channel_Right_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Platform Control Firmware.cyacd</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Platform Control Firmware.elf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Platform Control Firmware.hex</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Platform Control Firmware.map</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.gpdsc</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware.rpt</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Platform Control Firmware_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Platform Control Firmware-000</v>
+<v>Platform Control Firmware-000\Platform Bootstrap</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloader.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_Detect.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_BOOT.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_INT.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_IntClock.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\FT232_UART_PM.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Listing Files\Status_LED.lst</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Platform Bootstrap.elf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Platform Bootstrap.hex</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CortexM3\ARM_GCC_493\Debug\Platform Bootstrap.map</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.gpdsc</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap.rpt</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Platform Bootstrap_timing.html</v>
+<v>Platform Control Firmware-000\Platform Control Firmware</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloadable.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\Counter_Clock.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\cybootloader.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Platform Control Firmware-000</v>
+<v>Platform Control Firmware-000\Platform Bootstrap</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\PSoC 5LP Architecture TRM</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CY8C58LP Family Datasheet</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\System Reference Guides</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\System Reference Guides\cy_boot_v5_50</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\and_v1_0</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\and_v1_0\and_v1_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Bootloader_v1_50.pdf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\cy_constant_v1_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\cy_pins_v2_20</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\UART_v2_50.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\PSoC 5LP Architecture TRM</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CY8C58LP Family Datasheet</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\System Reference Guides</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\System Reference Guides\cy_boot_v5_50</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\and_v1_0</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\and_v1_0\and_v1_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Bootloadable_v1_50.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_clock_v2_20</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_constant_v1_0</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_isr_v1_70</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_pins_v2_20</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CyControlReg_v1_80</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Debouncer_v1_0</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Debouncer_v1_0\Debouncer_v1_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\I2C_v3_50.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\PWM_v3_30</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\QuadDec_v3_0</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Timer_v2_70</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Timer_v2_70\Timer_v2_70.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\UART_v2_50</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\UART_v2_50\UART_v2_50.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\ZeroTerminal</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\ZeroTerminal\ZeroTerminal.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Platform Control Firmware-000</v>
+<v>Platform Control Firmware-000\Platform Bootstrap</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\PSoC 5LP Architecture TRM</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\CY8C58LP Family Datasheet</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\System Reference Guides</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\System Reference Guides\cy_boot_v5_50</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\and_v1_0</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\and_v1_0\and_v1_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\Bootloader_v1_50.pdf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\cy_constant_v1_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\cy_pins_v2_20</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Platform Control Firmware-000\Platform Bootstrap\UART_v2_50.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\PSoC 5LP Architecture TRM</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CY8C58LP Family Datasheet</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\System Reference Guides</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\System Reference Guides\cy_boot_v5_50</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\and_v1_0</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\and_v1_0\and_v1_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Bootloadable_v1_50.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_clock_v2_20</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_constant_v1_0</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_isr_v1_70</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_pins_v2_20</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CyControlReg_v1_80</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Debouncer_v1_0</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Debouncer_v1_0\Debouncer_v1_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\I2C_v3_50.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\PWM_v3_30</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\QuadDec_v3_0</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Timer_v2_70</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\Timer_v2_70\Timer_v2_70.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\UART_v2_50</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\UART_v2_50\UART_v2_50.pdf</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\ZeroTerminal</v>
+<v>Platform Control Firmware-000\Platform Control Firmware\ZeroTerminal\ZeroTerminal.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\main.c" />
+<name v=".\esp07.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1473, 700" SelectedTabbedMdiWindow="da1afe15-5f0b-4c37-b256-c896a5c92e61"><DocumentWindow Key="8848879c-dff1-4215-a758-98a400042ab3" Guid="da1afe15-5f0b-4c37-b256-c896a5c92e61" /><DocumentWindow Key="d4d02230-61c0-46fb-9368-d6c895849200" Guid="6835d9d1-6648-4edb-91fd-4b6faffc58b7" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

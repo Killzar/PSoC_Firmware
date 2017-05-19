@@ -1,0 +1,6 @@
+C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Bootstrap.cydsn\Platform Bootstrap.cyprj|22756d47-eb64-4547-8a5d-246dcfbc9fba
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|c431fd98-6ee9-4c88-92e6-0fca8e976a02
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|4ff1a75d-a3e3-436f-96fd-95065beeeb74
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|3dd41311-4d2f-4d35-9807-b57ff1152c73
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|0e3c6ef5-df79-43b1-ad4f-3354a63184ba
+C:\Users\Ryan Kelley\Documents\CMPEN480\PSoC Firmestware\Platform Control Firmware.cydsn\Platform Control Firmware.cyprj|b9acbe48-00e7-4b74-9d92-7bb9c0328105
